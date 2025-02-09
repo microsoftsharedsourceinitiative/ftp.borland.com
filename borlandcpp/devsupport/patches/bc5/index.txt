@@ -1,0 +1,21 @@
+/borlandcpp/devsupport/patches/bc5
+
+File     Ext     Size   Date     Time   Description
+------   ---     ------ -------- ------ -------------------------------------------------------------
+bc501p1  zip     963000 11/06/96 05:00p BC++ 5.01 patch #1
+bc50p1   txt      21493 03/21/96 05:00p Details of Borland C++ 5.0 patch 1
+bc50p1   zip    1567837 03/22/96 08:00a BC++ 5.0 patch #1
+bc50p2   txt      20216 04/29/96 04:16p Explanation of BC++ 5.0 patch 2
+bc50p2   zip    1011927 03/07/96 08:00a BC++ v5.0 patch #2
+bcwhlp   zip     668000 05/17/96 00:00a BC5 Help files
+dllmix   txt       2664 06/05/96 03:10p Solution to compat probs between BC & non-BC 32 bit dlls
+dllmix   zip       2483 06/04/96 05:00a Solution to compat probs between BC & non-BC 32 bit dlls
+dllmixex txt       3139 06/05/96 03:40p Solution to compat probs between BC & non-BC 32 bit dlls
+dllmixex zip     734153 06/04/96 05:00a Solution to compat probs between BC & non-BC 32 bit dlls
+patch-nt exe      32256 05/07/96 08:00a Latest version of RT patch for NT
+patch-nt zip      76247 04/04/96 05:08p NT patch for bc5 and codeguard patches
+patch    exe      59000 04/03/96 02:58a .RTPatch(R) v3.10 (on bc5 cd, compatible w/ v2.11)
+patch    zip      58368 04/03/96 02:58a .RTPatch(R) v3.10 (on bc5 cd, compatible w/ v2.11)
+patchw32 dll     112640 05/07/96 08:00a DLL used with patch-nt
+
+

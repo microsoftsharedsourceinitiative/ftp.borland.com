@@ -1,0 +1,12 @@
+/borlandcpp/devsupport/patches/turbocpp
+
+File     Ext     Size   Date     Time   Description
+------   ---     ------ -------- ------ -------------------------------------------------------------
+server   zip       8395 01/19/93 12:37p This is needed if you have TC++/DOS v3.0 and are using EMM38
+tc21pat  zip      11080 05/08/90 08:00a TC 2.1 patch for EXEC and SPAWN
+tc2pat   zip      37364 04/17/90 08:00a TC++ 2.0 patch - fixes several problems
+tc45p1   zip       4743 04/18/95 08:00a TC++ 4.5 - patch #1
+tcppt1   zip      40323 08/30/90 08:00a TC++ 1.0 - patch fixes various problems
+tcppt2   zip       6927 03/08/91 08:00a TC++ v1.01 - patch for various problems
+tcppt3   zip     107324 06/21/91 08:00a TC++ v1.0, v1.01 - patch for various problems
+

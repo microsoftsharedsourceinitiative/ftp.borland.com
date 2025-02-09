@@ -1,0 +1,27 @@
+/borlandcpp/devsupport/patches/other
+
+File     Ext     Size   Date     Time   Description
+------   ---     ------ -------- ------ -------------------------------------------------------------
+bc20p1   zip      11304 03/13/91 03:41p Bor C++ 2.0 fixes: scroll insert disk in Drive A: probs
+bc20p2   zip      18470 10/29/91 11:31a Fixes mktime and delay in BC 2.0 and TC++
+bc30p1   zip       6282 01/20/92 10:54a Patch for BC++ 3.0 Fixes exec function
+bc30p2   zip       9309 02/05/92 12:17p Patches problem initializing two-dimensional array (-4 bytes
+bc30p3   zip      11804 01/29/92 02:10p BC++ 3.0 Improves compatibility with DesqView
+bc31p1   zip      15432 07/21/92 09:26a Apply patch if overriding new (as in Turbo Vision)
+bc31p2   zip      52479 07/27/92 02:06p TLINK patch for TABLE LIMIT EXCEEDED
+bc31p3   zip       8802 08/19/92 02:40p Patches TBROWSER.DLL for BCW 3.1 and TCW 3.1
+bc31p4   zip      21193 03/01/93 06:00p Patch for BC++ 3.1 OWL problem with Combobox transfer
+clspt1   zip      73371 06/21/91 08:00a Patch to make .LIB file for BC++ 2.0 & TC++ 1.0, 1.01
+dppp1    zip      10189 12/16/94 08:00a DOS Powerpack 1.0 patch #1
+dppp2    zip       6728 02/27/95 10:18a Borland DOS Power Pack 1.00 update patch 2.  BGI32.DLL fix.
+dppp3    zip      29021 04/25/95 02:00p Borland DOS Power Pack 1.00 update patch 3. DPMI32VM.OVL
+fixarr   zip       1441 04/30/92 10:21a Fixes problem with Classlib array class could affect OWL
+pvupdate zip      76805 06/15/93 10:25a ProtoView Protogen 2.2 update, fixes GP when adding button l
+rwpat1   zip       6801 09/23/91 03:32p Patch for Resource Workshop
+rwpt1    zip     109251 10/12/92 10:06a For Resource Workshop compatibility with ATI Graphics Ultra
+statpat  zip       4347 06/23/93 08:51a Patch for the memory leak in the stat() RTL function
+svga     zip      20000 04/30/93 00:00a Contains the svga.dll for TDW and instructions
+td386    zip      29900 08/02/91 03:00a New td386 which works better with DOS 5
+td386pat zip       6000 02/26/91 00:00a TD: TD386 patches: int controller init, keyboard Ctrl-C
+tddebug  zip       1000 01/18/93 00:00a This file contains the tddebug.386 device driver
+

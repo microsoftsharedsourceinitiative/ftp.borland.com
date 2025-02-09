@@ -1,0 +1,249 @@
+/pascal/devsupport/general
+
+File     Ext     Size   Date     Time   Description
+------   ---     ------ -------- ------ -------------------------------------------------------------
+10tlst   zip     246144 01/18/94 11:44a Network information for Pascal programmers                                 
+2data    zip       1460 04/19/91 10:33a TVision: Reading multiple input lines.                                     
+2menus   zip        870 04/19/91 10:32a Turbo Vision: 2 MenuBars at the top of your screen.                        
+3dlife   zip       5038 10/18/90 05:11p 3D version of John Conway's Game of Life.                                  
+animate  zip       1924 11/13/91 06:25a Shows simple animation                                                     
+asmobj   pas       2184 06/03/93 10:02a Addressing the fields of an object when you are using BASM                 
+async1   zip      43904 10/18/90 05:20p A serial communication utility.                                            
+bank     zip       2571 10/18/90 05:02p OOP Bank Simulation                                                        
+bgi256   zip     260864 05/11/93 12:39p Third part BGI driver for 256 colors and high resolution.                  
+bi3      zip      20598 08/28/95 10:01a OWL 2 serial communications program                                        
+bi4      zip       2538 03/23/93 01:18p Detecting available drives on a system                                     
+bi5      zip       7072 10/16/95 009:27 TDWIN.ZIP                                                                  
+bi6      zip       6767 10/16/95 009:27 To use TDW 3.0 with Windows 3.1                                            
+bigarray zip       1927 06/24/93 09:59a An object that simulates a huge array and a test program.                  
+bigstuff pas       1976 11/04/93 04:14p Arrays larger than 64k, improved version                                   
+blaise   zip      14530 07/22/92 03:25p Screen Saver Library for TPW 1.5                                           
+bmp256   zip       4514 10/11/91 12:24p TPW display 256 color bitmaps                                              
+bmpdesk2 zip       1576 11/22/93 09:26a Load a bmp from a resource, blit desktop into it, show it                  
+bmppaint zip       2166 04/14/93 01:00p Simple example of painting a bitmap using OWL                              
+bptools  zip      65644 12/10/92 08:43a Missing BP7.0 Tools                                                        
+breaknow zip       1865 04/15/91 10:10a Intercept interrupt $9/check for a Ctrl-Break key press.                   
+broadcas zip       1449 04/19/91 10:33a Turbo Vision: Message between dialogs/update background.                   
+btree1   zip       4500 10/18/90 05:21p A heap based binary tree unit for Turbo Pascal 5.0                         
+bufstuff zip        994 04/15/91 10:10a Routines to stuff the keyboard buffer.                                     
+burnin   zip       1380 03/12/92 11:00a Example of self modifying code.                                            
+calunit  zip       5357 01/11/91 09:03a Extended calendar TVision application.                                     
+center   zip       1566 12/07/89 11:14a How to center your dialog in a window                                      
+chain    zip      17919 10/18/90 05:26p Adds a chaining facility to TP4 and TP5.                                   
+childctl zip       1658 01/05/94 10:51a MDI Example: Placing controls on multiple child windows.                   
+chngicon zip      38216 11/30/93 09:43a Changing the title of an Icon in an MDI app (SetWindowText)                
+cmos     pas       2191 05/10/93 02:06p Read and write CMOS                                                        
+cmous2   zip      14632 10/18/90 09:23p                                                                            
+combodlg zip       1448 09/27/93 04:43p DropDown combo in dialog, use InitResource, select List item               
+comm     zip        772 03/12/92 10:47a Asynchronous, Serial Port, Modem, Buffered Input.                          
+compat   zip        624 03/12/92 10:48a Generic MS-DOS, Version 4 Toolboxes With Version 5.                        
+cpasdemo zip       2627 09/21/93 12:42p Sample demonstrating a very limited way to link C and Pascal               
+cpuid    zip       5982 05/06/93 09:08a Get the CPU ID of the machine                                              
+data     zip       3124 03/12/92 10:48a Largest Global Data Struct, Static Vars                                    
+database zip       1288 03/12/92 10:48a Running TABUILD and TACCESS.DEF File.                                      
+dates    zip       3328 11/01/91 12:09p Converts from mm/dd/yy to Julian day number.                               
+dbaseb   zip       2342 10/18/90 09:28p                                                                            
+dbinfo   zip       5019 04/16/91 08:17a Tips for using the Database Toolbox 4.0.                                   
+dblclick zip        826 11/13/91 06:26a How to act on a double mouse click                                         
+debugger zip       1521 03/12/92 10:48a Built-in Debugger, Invalid linker version error.                           
+deskblit zip        923 11/19/93 01:26p Copy the desktop window into your programs window. (Mirrors)               
+diffver  zip       2661 03/12/92 10:48a Stack Overflow Compiling v.2 Code Under v.4.                               
+directw  zip        770 12/07/92 04:21p Write a string directly to video memory.                                   
+diskinf3 zip       5056 12/22/93 05:41p Absolute disk reads and writes on harddrives larger than 32M               
+diskinfo zip       8587 04/16/93 10:33a Read the bootsector of a floppy disk                                       
+dlgkbhnd zip      32865 06/08/93 01:53p Handling tabs in a dialog window                                           
+dlgwin   zip       1948 06/10/92 02:54p TPW:Example for using BWCC dialog class                                    
+dlgwind2 zip       1266 06/11/93 11:43a Placing a child style dlgwindow inside a main window                       
+dllexp   zip        583 04/15/93 10:10a How to dynamically load a DLL to call a proc                               
+docdem   zip       5504 06/07/91 04:56p Sample programs missing from the TPW Programmer's Guide.                   
+dos      zip          0 12/04/92 04:05p How to Returning Error Levels to Batch Files                               
+doscrt   zip       3004 10/20/93 01:53p Replacement for the CRT unit                                               
+dotime   pas       1270 04/29/93 09:23a An ISR (Interrupt Service Routine) for the Timer Interrupt                 
+doubconv zip       2565 01/23/89 09:50a Converting double types                                                    
+drawbits zip       1302 03/12/92 11:00a Example DLL for Displaying BMPs                                            
+drives   fax       1024 11/01/91 01:08p Find the drives on the system while in protected mode                      
+editdown zip        957 08/16/93 03:29p Handle DOWNARROW in Edit control as you would a TAB                        
+editor   zip        336 03/12/92 10:48a Why Bined Compiled with {$F+} Locks Computer.                              
+egasav   zip       3620 10/18/90 05:29p Save/restore EGA (640x350) 16 color graphics screens.                      
+enhkbd   zip       8086 02/07/94 02:08p activate the IBM enhanced keyboard.                                        
+error    zip       1441 03/12/92 10:48a Internal Error Report To Borland, Type Mismatch Error                      
+execsw   zip      16376 10/18/90 05:34p An advanced technique to exec other programs.                              
+extend   zip       5703 11/02/90 09:58a Code for opening 15+ files in TP 40.                                       
+extend3  zip      12225 01/11/89 10:15a Files: Open 15+ files using TP 3.x.                                        
+extend6  zip       2564 01/25/91 01:34p Code for opening 15+ files in TP 6.0.                                      
+extend7  zip       2407 12/02/93 08:13a Extends the number of available file handles in BP/TP 7.0                  
+fastwr   zip       9494 10/18/90 09:32p Write strings directly to video memory.                                    
+flushkey pas        621 04/16/93 10:20a Code to flush the keyboard buffer                                          
+fontinfo zip       1496 04/17/92 09:56a TPW: Information for creating and using fonts in Windows.                  
+formline zip       6181 07/29/91 04:45p TVision: TInputLine type objects for formatting.                           
+frame3   zip       4096 09/22/93 01:01p Example of customizing a common dialog                                     
+functest pas        647 12/08/92 09:02a Pass a function as a parameter to another procedure.                       
+fviewer  zip       1902 10/11/91 12:22p Fix to TVDEMO.ZIP heap leak.                                               
+general  zip       3345 03/12/92 10:48a 64K limits, EXE file sizes, Conditional Compilation, etc.                  
+getput   zip       1380 03/12/92 11:00a Save/restore a rectangular screen region in text mode.                     
+getserno zip        769 02/11/93 12:11p Get the serial number from a disk.                                         
+graphin  zip       4733 01/27/93 01:21p Get user input while in graphics mode                                      
+heapary  pas       1211 02/23/93 03:53p Example of moving arrays up on the heap                                    
+heapspy  zip      65112 12/09/92 09:41a Windows Heap memory map utility                                            
+hint     zip       1788 03/12/92 11:00a TVision app for hints on status bar.                                       
+hook     com       9217 10/28/93 12:13p A Windows message hook demonstration program                               
+hpplot   zip       2573 10/18/90 09:32p                                                                            
+ibmcom   zip       7167 10/18/90 05:36p A communications driver for the IBM-PC.                                    
+inputpal zip       1562 11/05/93 02:07p Place an inputline in a window and clean up palette                        
+int24    zip       7138 10/18/90 09:34p Complements to Turbo 4 critical error handler.                             
+io       zip       3387 03/12/92 10:48a IO Tools and procedures.                                                   
+joystk   zip       9256 10/18/90 05:41p David Howorth's joystick support routines.                                 
+keyint   zip      30571 10/18/90 09:41p "Replacing the Keyboard Interrupt" -- Neil Rubenking                       
+keystuff pas        590 05/10/93 06:07p Stuff the keyboard buffer                                                  
+labelpas zip       2107 04/15/93 10:35a Read and set the labels on a disk, updated version                         
+lbsettab zip       2894 11/11/93 10:34a Info on LB_SETTABSTOPS                                                     
+linker   zip        566 03/12/92 10:49a Unused Data Eliminated, Smart Linker.                                      
+linklist pas       1628 02/24/93 02:02p Simple linked list example                                                 
+linklst2 zip       7383 12/21/93 10:10a Another linklist example, storing the list on disk, delete                 
+links    zip       3657 10/18/90 05:06p Oop Linked List Unit with Turbo 5.5                                        
+list1    zip        553 11/30/93 11:22a A simple example of a linked list.                                         
+listbox5 zip      66355 07/07/93 02:07p Listbox examples, including ExecuteDialog and Transfer data                
+listbx   zip       1708 04/19/91 10:31a Turbo Vision: ListBox of directory with double click.                      
+listsel  zip       1390 06/14/93 11:42a Doubleclick on item in listbox and display selected item                   
+loadbmps zip       1436 03/12/92 11:01a Used by DRAWBITS.ZIP for displaying BMPs                                   
+mac      zip          0 12/04/92 04:03p Portability between IBM and Mac TP versions.                               
+math     zip       2247 03/12/92 10:49a Match Tools and Procedures.                                                
+mdi      zip       1545 07/08/92 04:53p TPW: Tabbing between controls in MDI child window                          
+mdi_kb   pas       2367 03/18/93 08:35a Handle Virtual Keys in an MDI app, TABS, F1 etc...                         
+mdiactiv pas        641 04/16/93 04:53p Find the active window in an MDI app, iterate child windows                
+mdisplsh zip       5258 11/13/91 06:27a Background bitmap for MDI client area                                      
+memory   zip        137 09/21/93 10:38a Memory Tools and procedures.                                               
+memswap  pas       1022 11/16/93 11:52a Creating virtual memory swap files in prot mode with BOAHBFP               
+menu     zip       1000 04/19/91 10:34a Turbo Vision: Menubar change at runtime.                                   
+menuadd  pas       4269 05/24/93 12:12p Append menus, delete menus, deactivate menus, etc, in Window               
+menubox  pas       2163 08/31/92 10:38a Create a floating menubox in turbo vision, a floating menu                 
+menudemo zip       1491 11/13/91 06:28a Loading and changing menus                                                 
+menustat zip       1194 05/10/91 01:07p Turbo Vision: Menubar and Statusline change at runtime.                    
+message  zip       1852 06/28/93 02:17p Example of how to send messages between views in a Dialog TV               
+minhook  zip       1219 09/28/93 10:54a Set a Windows Hook                                                         
+minmax   zip        699 11/13/91 06:28a Changing Min and Max window sizes                                          
+miscti   zip     174936 04/04/91 09:29a Miscellaneous TI's from TP 2.0 to TP 6.0                                   
+mixlang  zip       1259 03/12/92 10:49a Linking OBJ Files From Turbo C or TASM and others.                         
+mmsystem zip      16233 08/13/92 02:19p MMSYSTEM.PAS Update                                                        
+modem    zip       8131 11/04/91 04:31p TPW: Serial Communications using API and Object Windows                    
+modemfax zip       3636 10/10/91 10:11a TPW example of serial communications                                       
+modemo   zip       4887 11/13/91 06:28a Simple modem communications program                                        
+modemx   zip      10391 10/04/93 11:56a Simple modem example featuring XMODEM                                      
+mouse    zip      21578 11/01/91 10:46a A general purpose mouse unit for text/graphics mode.                       
+mousprot zip     133120 04/08/93 09:20a Graphics/Text mouse works in protected mode by Michael Day                 
+multi    zip       2878 03/24/93 04:49p Powerful multitasking facilities for TP5 programs.                         
+myedit   zip        921 11/13/91 06:30a Edit Control keystroke trapping                                            
+ned103   zip     102020 04/30/93 10:58a Third party, non Borland TV Editors unit, with wordwrap.                   
+newfont  zip      52544 05/17/91 12:05p New version of the BGI font editor.                                        
+newrtm   zip      58419 12/10/93 10:36a RTM.EXE DPMI16BI.OVL from the BC++ 4.0 release. Lastest Rev.               
+numwrit2 pas       1194 11/12/93 11:27a Writing arrays of numbers to and from a text file                          
+obja     zip       3524 10/18/90 05:07p An OOP unit that extends TP's standard objects unit.                       
+odbc     zip      11776 01/24/94 10:38a Access files to reach ODBC from Pascal Windows                             
+oop      zip       2864 03/12/92 10:49a Object Oriented Programming Information.                                   
+ooppas   zip     546270 09/13/90 02:29p Demo programs from the OOP world tour.                                     
+openfi   zip      10104 09/22/93 01:00p example of customizing a common dialog                                     
+overlays zip       1414 03/12/92 10:49a Overlay Tools and procedures.                                              
+owltab   zip        758 12/17/93 04:47p Allow TAB to move focus for an OWL multiline edit control                  
+ownrdraw zip       1268 11/13/91 06:30a Creating custom bitmap buttons                                             
+palette  lzh       2373 03/12/92 11:06a Turbo Vision: Palette change background.                                   
+palette  zip       2373 03/12/92 11:06a Turbo Vision: Palette color discussion.                                    
+pas_all  zip     258810 02/17/94 02:21p All Pascal Technical Information files                                     
+pchart   zip      34214 05/07/91 02:10p TPW: A simple charting program                                             
+pcxshw   zip      21403 10/18/90 09:47p Draws various graphical formats on screen.                                 
+phello   zip     129841 04/25/91 01:47p TPW: Hello world demo programs                                             
+pick     zip       5260 10/18/90 06:07p Pop-up shadow menu file selection routines.                                
+picklst  zip       1571 04/19/91 10:32a Turbo Vision: Simple pick list example.                                    
+player   zip      64038 01/13/94 01:14p Player program by Charlie Calvert, Pascal Multimedia example               
+plife    zip      21855 05/02/91 02:58p TPW: Life game written with Turbo Pascal for Windows.                      
+print_it zip       5808 11/13/91 06:32a Printing from windows                                                      
+printbmp zip     104727 11/13/91 06:31a Printing bitmaps                                                           
+printer2 zip       2273 04/15/91 10:11a unit for sending Ctrl-Z and to write to two printers.                      
+printer3 pas       5228 02/23/88 03:50p Change device to which you are printing output on the fly                  
+prntpw   zip       1442 05/10/91 01:08p TPW: Printing in Turbo Pascal for Windows.                                 
+proccall zip        513 11/12/93 08:41a Passing functions as parameters                                            
+profiler zip        412 03/12/92 10:49a TURBO PROFILER ISSUES                                                      
+protint  pas       1637 01/29/93 11:39a Protected Mode Interrupt Handler                                           
+pxe3m    zip     350134 04/13/93 03:15p PX Engine Maintenance release                                              
+qwik55   zip      73175 10/18/90 06:27p TP 5.5 quick screen writing on ALL IBMs in ANY mode.                       
+rand2    zip        548 03/12/92 11:03a TPW: Pass parameters from Object Vision to TPW DLLs.                       
+readext  pas       1269 03/06/92 09:38a Reading F11 and F12 keys in DOS.                                           
+readonly txt        797 01/04/94 03:29p Notes on the readonly style that may or may not apply....                  
+readwrte pas       2721 03/08/93 01:52p Make an interrupt call in protected mode                                   
+reboot   zip        225 03/12/92 11:03a Example to reboot the computer.                                            
+rgb      pas       3630 10/13/92 09:55a SetRGBPalette example, improves on Borland DOCs                            
+rubber   zip       1191 11/13/91 06:33a Rubber band drawing                                                        
+script   zip        822 03/12/92 11:03a TPW: Manual installation instructions.                                     
+scroll1  pas       5073 11/17/93 04:34p Insert TSCROLLER in a non-resizable window on entire Desktop               
+scroll3  zip       1654 12/30/93 02:07p Using a TScroller in Turbo Vision                                          
+sdi      zip      24900 10/18/90 06:33p A Pascal unit saves and restores any BGI image to disk.                    
+sfirst   zip       1691 04/19/91 10:33a TVision: Simple load and store desktop.                                    
+sortin   zip       8372 10/18/90 06:36p A comparison of various sorting methods.                                   
+splash   zip       6756 11/13/91 06:34a Display a bitmap before your app loads                                     
+spool    zip       4697 10/18/90 09:48p                                                                            
+status   zip       1973 11/13/91 06:34a Creating a status line in an MDI app                                       
+status3  zip       1922 11/22/93 08:50a Simple status line, variation on STATUS.PAS from TPWBONUS                  
+stick    zip        765 03/12/92 11:03a Example to read the joystick position.                                     
+stream15 zip       3308 04/02/93 04:34p Sample streams with strings example                                        
+string   zip        478 03/12/92 10:49a READ vs. READLN on String Variables.                                       
+strobj   zip       5120 10/18/90 05:10p A unit for manipulating strings.                                           
+syntax   zip        704 03/12/92 10:49a CASE and Scalar Identifiers, PACKED, Nested FOR Loops                      
+syscolor zip      17840 05/22/91 09:36a TPW: Change the palette colors. Source included.                           
+tabtext  zip        681 05/11/93 10:21a How to use TabbedTextOut function.                                         
+talk     zip      26496 10/18/90 06:42p Produce speech through the PC's built in speaker.                          
+tbdata   txt       2184 05/11/93 03:48p Description of ToolbarData from the ToolBar example program                
+td1pat   zip       1668 03/26/89 12:45p Patch for TPC and TURBO: Fix for include file problem.                     
+tdta     zip      12047 03/12/92 10:49a Turbo Debugger, Turbo Assembler issues.                                    
+tess-5   zip      32212 10/18/90 07:49p Routines for Developing Ram Resident Programs.                             
+tess-d   zip      50279 10/18/90 08:03p Developing Ram-Resident Programs                                           
+textio   zip       4999 10/18/90 08:05p TextIO unit adds new functionality to Text files.                          
+textstr  zip       2881 06/29/93 01:33p Safe user input while in text mode. Accepts strings-numbers                
+ticker   pas        571 12/16/92 09:19a Read a real mode (ROM BIOS) address from protected mode.                   
+ticker2  zip       3198 09/01/93 04:36p Read all about the BIOS area in protected and real mode                    
+timage   zip      55680 12/03/93 04:31p PCX and other graphic info                                                 
+timecall zip        922 12/07/92 04:25p How to write a Windows call back function for Timers.                      
+topmost  pas       2318 05/06/93 09:55a How to make a window always appear on top of all others                    
+topten   zip       2681 03/12/92 10:49a Ten most frequently asked questions.                                       
+tp-asm   zip      68736 10/19/90 11:40a Internal assembler for Turbo/TPC 4.0 thru 5.5.                             
+tp-tsr   zip      27690 10/18/90 08:12p Sample/Model TP 4/5 Stay-Resident program.                                 
+tpenv    zip       9438 03/27/89 03:16p Code for changing environment variables.                                   
+tppcv    zip     133632 12/03/93 04:35p PCX viewer                                                                 
+tppcw    zip      66773 12/03/93 04:27p PCX viewer for windows                                                     
+tprat    zip      12579 01/20/89 10:10a Mouse support and menu for TP 4.0.                                         
+tprat5   zip      13772 01/20/89 10:11a Mouse support and menu for TP 5.0.                                         
+tptimer  pas       5868 08/15/88 07:24p Time (profile) the length of your routines. Microsecond res.               
+tptool   zip      15862 01/24/91 11:47a TP 6.0 public domain utility programs.                                     
+tpuobj   zip      12384 01/04/80 12:13a Utility to convert 4.0 TPU's to OBJ's.                                     
+tpw      zip       4494 03/12/92 10:50a TPW: Common questions and issues.                                          
+tpwcombo zip       2028 08/12/91 04:05p TPW: Transfer example for Combo Box                                        
+tpwn31   zip      99248 04/06/92 12:00p Windows 3.1 support for Turbo Pascal for                                   
+tpwpxeng zip      36747 07/22/91 04:16p TPW PXENG: Adendum to the Paradox Engine for Windows v2.0.                 
+transfer zip          0 09/28/93 11:09a Getting data from various dialog controls                                  
+tsrsrc   zip      61824 10/18/90 08:43p A set of programs to manage DOS memory allocation.                         
+tvbgi    zip       4322 05/03/93 04:59p How to switch between Turbo Vision and Graph mode and back                 
+tvgr70   zip     165376 10/14/93 08:36a Turbo Vision for Pascal - Graphic Code                                     
+tvscroll zip       1618 11/04/93 09:10a A Program demonstrating a scrolling dialog box                             
+twodlgs  pas       3527 10/04/93 12:08p Two Dialogs on the screen in Turbo Vision APP                              
+twoprogs zip       1373 12/07/92 04:21p Share an area of memory between two or more programs.                      
+ui       zip       2095 03/12/92 10:50a PICK FILES, System Lock Running in IDE Vs.                                 
+uicurpat zip        913 03/12/92 11:03a Patch for changing UI cursor in TP 5, 5.5                                  
+units    zip       2304 03/12/92 10:50a Unit Information.                                                          
+valid    zip       1623 11/13/91 06:35a Data validation from edit controls                                         
+vector   zip      10336 10/18/90 10:21p                                                                            
+version  pas        954 01/14/94 11:53a From DOS find if windows is running and what version.                      
+vgapal   zip      36680 12/03/93 04:30p pcx and palette info                                                       
+viewtext pas       3996 05/27/93 04:56p Insert a view into a Window and paint some text on it.                     
+vol      zip       5632 11/15/89 11:33a Creating a volume lable using DOS.                                         
+win87em  zip      18368 03/30/93 08:33a A Protected Mode floating point emulator for DOS DPMI progs                
+wincrt2  zip      12838 10/01/92 10:56a Simple example of printing from a Windows WinCRT program                   
+windemo  zip       4709 09/29/93 02:04p Example of linking ASM files and Pascal files, DOS Windows                 
+winfont  zip       1365 06/22/92 09:35a Unit for selecting fonts within TPW programs.                              
+wingif   zip      67910 11/11/93 03:22p Display and convert BMP and PCX files, etc.                                
+winwait  pas        541 04/16/93 09:30a Execute a program in Windows and wait until its run is over                
+wndw55   zip      94691 10/18/90 09:07p Turbo Pascal 5.5 unit of multi-level virtual windows.                      
+writenlf zip       1665 04/15/91 10:10a A screen write without scrolling                                           
+writestr zip       1258 12/22/93 09:16a How to use WriteStr in TV application                                      
+wsound   zip        757 02/04/92 04:07p TPW: Generate sound in Windows using the API.                              
+wvsprnt1 pas        552 06/09/93 11:17a Using WVSPRINTF to work with strings and multiple strings                  
+xdump    zip      29528 07/29/91 03:54p Impliment your own graphics screen dump routine.                           
+xgraf    zip      24694 10/18/90 09:14p Turbo Pascal BGI units to draw graphs and plot curves.                     
+

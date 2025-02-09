@@ -1,0 +1,12 @@
+/borlandcpp/devsupport/patches/bc4_5
+
+File     Ext     Size   Date     Time   Description
+------   ---     ------ -------- ------ -------------------------------------------------------------
+bc45m7   zip     563707 03/02/95 03:16p BC++ 4.5 patch for WIN95 release M7 CD-ROM SDK files.
+bc45p1   zip      31081 01/12/95 08:26a BC++ 4.5 patch 1. Fix 5 distinct problems in IDE & LIBs.
+bc45p2   zip     465402 02/27/95 09:55a BC++ 4.5 patch 2.  Corrects probs in source & standard libs
+bc45p3   zip    1028186 02/21/95 04:13p BC++ 4.5 patch 3.  Corrects problems in the debugging lib.
+bc45px   zip      20134 02/22/95 04:34P BC++ 4.5 patch.  "Error starting program" WIN95 Beta fix.
+bc45xp1  zip      37711 11/22/95 08:00a BC++ v4.2 patch xp1
+cgbc45p1 zip     187949 04/05/96 09:09a codeguard patch w/documentation corrected
+

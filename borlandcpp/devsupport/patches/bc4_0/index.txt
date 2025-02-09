@@ -1,0 +1,12 @@
+/borlandcpp/devsupport/patches/bc4_0
+
+File     Ext     Size   Date     Time   Description
+------   ---     ------ -------- ------ -------------------------------------------------------------
+bc4p01   zip       2777 02/28/94 03:31p BC++ 4.0 patch: Updates VBX files to correct debugging prob
+bc4p02   zip     129777 02/28/94 03:35p BC++ 4.0 patch: Allows for the creation of ".com" files
+bc4p03   zip     448838 02/28/94 03:37p BC++ 4.0 patch: Updates for use with WIN 4.0 (Chicago)
+bc4p04   zip      64219 02/28/94 03:40p BC++ 4.0 patch: Updates BWCC for Chicago compatibility
+bc4p05   zip       5637 12/20/94 08:00a BC++ v4.0 patch #5
+bc4p06   zip      65168 12/20/94 08:00a BC++ v4.0 patch #6
+wildargs zip       9786 01/26/94 10:09a Patch for WILDARGS problem
+

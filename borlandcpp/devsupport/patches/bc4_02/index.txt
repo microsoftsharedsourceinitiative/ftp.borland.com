@@ -1,0 +1,11 @@
+/borlandcpp/devsupport/patches/bc4_02
+
+File     Ext     Size   Date     Time   Description
+------   ---     ------ -------- ------ -------------------------------------------------------------
+bc42p1   zip       5597 12/14/94 10:00a Fixes editor icons restoring off the desktop.
+bc42p2   zip       3034 12/14/94 10:00a Fixes the 'Bad Handle in LoadBlock' error when the IDE's 16-
+bc42p3   zip       6449 12/14/94 10:00a Allows the Just-In-Time executable to modify WIN.INI
+bc42p4   zip       9046 12/14/94 10:00a This patch addresses a number of Project Manager related prb
+bc42p5   zip      10965 12/14/94 10:00a This patch addresses the IDE debugger limit problem.
+bc42p6   zip       6647 12/20/94 09:46p BC++ 4.2 patch #6
+

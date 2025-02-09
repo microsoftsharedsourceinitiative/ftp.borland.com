@@ -1,0 +1,34 @@
+Some notes on the readonly style, appropos nothing....
+
+ReadOnly in an Edit control only works if the .EXE file is marked 
+as 3.1 only - blame Microsoft.   Or use this...  (I think we're 
+considering making this a linker option.
+
+program Mark31;  
+{ utility to mark a Windows EXE as requiring 3.1 or above }
+
+const
+  Offset = $13E;
+  NewVersion: Word = $30A;
+
+var
+  F: File;
+
+begin
+  if ParamCount <> 1 then Halt(1);
+  Assign(F, ParamStr(1));
+  Reset(F, 1);
+  if IOResult <> 0 then
+  begin
+    Writeln('Error: Unable to open ', ParamStr(1));
+    Halt(1);
+  end;
+  Seek(F, Offset);
+  BlockWrite(F, NewVersion, SizeOf(NewVersion));
+  Close(F); 
+end.
+
+
+
+If you send a wm_ReadOnly message to the edit control, 
+it will be made read only regardless of your exe flags.

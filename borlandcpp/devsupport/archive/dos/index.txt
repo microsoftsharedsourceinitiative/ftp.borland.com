@@ -1,0 +1,48 @@
+/borlandcpp/devsupport/archive/dos
+
+File     Ext     Size   Date     Time   Description
+------   ---     ------ -------- ------ -------------------------------------------------------------
+bgikit   zip     268366 11/14/90 08:54a Font editor, BGI format, BGI drivers
+clock    zip       3447 10/06/92 05:14p C++ TSR example of a clock
+cmouse   zip      26945 09/20/90 01:44p "Mouse Mysteries, Part II: The Graphics Mouse" - Kent Porter
+cpptsr   zip      14716 10/06/92 05:14p Undocumented-DOS TSR ported to Borland
+crit     zip       1140 01/14/93 01:10p Example of Critical Error handler
+ctrlc    zip       1692 10/06/92 05:14p C++ TSR example to prevent
+cursor   zip        767 01/12/89 11:18a C Routines to control cursor via DOS services
+detmode  zip       2460 10/06/92 05:14p C++ code to detect video type
+dosisr   zip       1352 10/08/92 04:22p C++ TSR that switches stacks
+fonts    zip      71276 05/31/89 01:00a BGI Toolkit, Rev 1, May 15, 1989 (FONT SETS)
+ftime    zip        380 08/08/89 12:58p C routine to deomonstrate how to get file date time stamp
+getvect  zip        376 07/13/93 01:53p example of getvect()/setvect() from Borland C++ 2.0
+graphics zip       3933 04/07/92 02:46p modified graphics.h for additional fonts from Borland C++ 3.
+gray     zip        762 05/02/90 08:17a C routine to convert color to gray-scale image
+grdump   zip       2657 10/06/92 05:14p C routine to send graphics to Epson compatible printer
+harderr  zip       1110 12/20/89 09:25a Example hardware error handler for an unready floppy drive
+herc0990 zip      58055 02/05/91 12:41p BGI Toolkit, Rev 1, May 15, 1989 (Herc driver, 09-23-90)
+hilite   zip       1360 11/06/89 08:25p C Program demonstrates generating a graphics based menu
+int      zip        672 07/13/89 04:15p C routine that demonstrates user implemented 1C Int handler
+int21    zip       2833 10/06/92 05:14p Code segment variables, ISR in C
+interp   zip      29166 01/12/94 10:05a Command-line interpreter written in C
+intrpt   zip        673 03/06/91 10:22a C++ example: installing an interrupt
+isr      zip       1704 10/06/92 05:14p ISR in C that switches it's stack
+kbstuff  zip        486 12/27/88 12:12p C routine to insert characters directly in keyboard buffer
+mcmvsmem zip        644 03/12/92 10:37a Moves screen memory, doing snow control if necessary
+noclrbgi zip       1811 10/06/92 05:14p Spawned program doesn't clr scrn
+par256   zip       9995 08/30/89 12:29a SuperVGA BGI Driver for Turbo C Paradise Adaptor (16 color)
+prtgrap  zip       1308 03/12/92 10:25a How do I print graphics on my dot-matrix printer?
+putgenv  zip       3369 10/06/92 05:14p Modifing the global environment
+restart  zip       1662 10/06/92 05:14p Restarting main() w/o setjmp
+scancode zip       2285 10/06/92 05:14p Example to get extended chars
+sem      zip       4479 10/06/92 05:14p Code for using Novell Semaphores
+serial   zip       1024 11/01/91 01:08p C routines to implement interrupt driven serial comm handler
+setdev   zip       1524 03/12/92 10:38a Sets output device to DOS raw mode
+spawnbgi zip      69869 10/06/92 05:14p How to debug spawned (child) processes
+stkused  zip       2553 10/06/92 05:14p How to find ammount of used stack
+strstrea zip        358 11/02/93 11:17a example of dynamic strstream instance I/O
+tabs     zip       1755 06/24/91 08:59p Example that strips out <TAB> char
+timezone zip        364 03/12/92 10:38a C routine to demonstrate setting time zone
+tsr      zip        915 08/14/90 12:26p TSR with example INT 8 handler
+tsr_c    zip      24333 10/06/92 05:14p C example of an unloadable TSR
+tsrmcb   zip      33285 03/30/93 04:05p TSR program in C that walks MCB chain when SysReq is pressed
+vararg   zip        673 04/20/89 03:51p C Code to demonstrate use of variable arguments types
+

@@ -1,0 +1,12 @@
+/borlandcpp/devsupport/tasm
+
+File     Ext     Size   Date     Time   Description
+------   ---     ------ -------- ------ -------------------------------------------------------------
+exetrash zip       7187 02/26/91 02:37p TD: Trashes propritary code part of problem eval submission
+int_9    zip       1097 11/28/90 07:26a Skeletal example of a keyboard handler using INT 9 (ASM)
+pharlap  zip      11704 04/21/93 01:17p TDW Video DLL for use with Pharlap Dos Extender
+shellx   zip       9542 03/05/93 11:38a Assembly example of a TSR that loads/unloads itself low/high
+smallblk zip       4410 10/06/92 05:14p Assembly TSR that forces small cursor
+snap     zip      28749 09/28/93 09:55a Assembly TSR that grabs VGA image for later viewing.
+tdconvrt zip      27419 01/09/91 05:17p TD: Latest TDCONVRT.EXE beta (may fix MSC conv. problems)
+

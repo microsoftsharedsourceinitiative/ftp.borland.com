@@ -1,0 +1,11 @@
+/borlandcpp/devsupport/archive/os2
+
+File     Ext     Size   Date     Time   Description
+------   ---     ------ -------- ------ -------------------------------------------------------------
+notebook zip      24792 01/21/94 09:22a IBM's NOTEBOOK control example for OS/2 (and a BC .PRJ file)
+os2dde1  zip      77761 04/06/93 02:30p OS/2 DDE Alarm Clock Server and Testbed Client example
+os2start zip      35703 03/31/93 07:33a ZIP of the startup code for BC++ OS/2
+tdgx     zip     652585 10/04/93 01:21p Much improved (beta) OS/2 TDDEBUG.DLL repleacement
+tlink    zip      81139 01/03/94 07:44p New 1.01 version of linker (handles thread fixups)
+
+

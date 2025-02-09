@@ -1,0 +1,37 @@
+/borlandcpp/devsupport/general
+
+File     Ext     Size   Date     Time   Description
+------   ---     ------ -------- ------ -------------------------------------------------------------
+bc40exam zip      27990 01/07/94 03:52p Windows help file listing BC++ 4.0 example programs
+bc40ow   zip       2000 01/13/94 00:00a This makefile builds OWL 1.0 using Borland C++ 4.0.
+bc4grps  zip      49875 12/15/93 01:49p BC4 Icon generating program
+bcwdemo  zip      13215 03/14/91 03:59p BC++ BCWDEMO program files
+cdll     zip       8980 04/30/93 06:00p Creates a minimal DLL in C and calls a DLL function from EXE
+dllhwnd  zip      22877 07/19/93 11:04a Sample source illustrating window creation in a DLL
+easygrep zip     143000 06/11/96 00:00a Adds output of grep in an easygrep tab in message view
+eof      zip        559 04/21/93 01:35p Example using eof function
+exewrite zip        790 10/06/92 05:14p Writing to your own .EXE file
+farstr   zip      22243 01/22/93 10:49a Far-String - moves static strings out of DGROUP
+fgets    zip        430 03/12/92 10:35a Using fgets() and fputs() to copy a file
+fheap    zip       8933 07/16/93 11:13a RTL source code of the far heap routines [BC++ v3.1]
+filecomp zip       4102 03/12/92 10:37a File compare program, similar to unix diff
+filehand zip       2347 11/28/90 03:14p Extending DOS Files Handle: doesn't require RTL
+helpmenu zip       9000 06/11/96 00:00a A script to expand the Help menu in BC5.0x.
+iter     zip       2334 05/27/93 10:43a DoubleList and DoubleListIterator example
+iterate  zip       2978 12/15/92 10:22a Shows how to use BIDS list iterator on a user defined class
+loadbmp  zip       1435 10/06/92 05:14p Windows Function to paint a BMP in window
+makecur  zip        982 10/06/92 05:14p Windows How to load a BMP as a cursor
+manycurs zip       9213 10/06/92 05:14p Windows Loading different cursors
+mditbar  zip      12925 11/29/93 12:58p Example of a toolbar in a Windows 3.1 MDI App.
+member   zip       1310 11/02/90 02:26p Example of executing a member function via a pointer
+memptr   zip       1959 11/03/93 09:42a Examples of using and dereferencing class member pointers
+popupfnc zip       1881 06/26/96 04:23p A script that displays C++ functions used in a .cpp file.
+printw   zip      11457 04/08/93 04:12p Example program demonstrates printing from Windows
+ptrarrys zip      11039 11/18/91 08:11p Pointers and Arrays Storage and Parameter Passing
+scrolctl zip       7086 07/09/93 04:00p Using WM_CTLCOLOR to change color; problem with scrollbar
+syntax.zip         2000 06/11/96 00:00a BC5.0x script provides automatic syntax highlighting for C++, Scipt, and Java files.
+tdump    zip       2815 04/24/92 02:26p This file contains documentation for TDUMP
+template zip       3797 11/25/92 04:47a Placing template member functions in their own file
+w21code  zip     349982 01/05/94 04:00p Teach Yourself Windows Programming in 21 Days, Source Code
+xfind.zip         37000 08/14/96 00:00a BC5.0x script: Find text in multiple files from IDE.
+xproj.zip          3000 08/14/96 00:00a BC5.0x script: This project is a clone of the 'newproj' node in your original project.

@@ -1,0 +1,535 @@
+--------------------------------------------
+ BC50P2.RTP Borland C++ 5.0 UPDATE PATCH 2
+--------------------------------------------
+
+---------------
+*** Notice ***
+---------------
+This patch is intended for use only with Borland language products.
+The resulting file(s) are subject to the terms of the No-nonsense
+License Agreement which shipped with the Borland language product
+you purchased.
+
+BC50P2.RTP works only with the US version of BC5.0A. If the version
+shown in Help|About in BCW.EXE is not 5.0A, you must apply BC50P1.RTP
+before applying this patch. Please use the German patch for the German 
+BC5.0, available soon after this patch.
+
+Note:  Because CD-ROMs are not writable, this patch requires that
+Borland C++ be installed on to your hard drive before being applied.
+
+For the latest technical information, patches, and updates, be sure to
+check the following locations:
+
+World Wide Web:  http://www.borland.com
+CompuServe:      GO BCPP, section 3, "From Borland"
+FTP:             ftp.borland.com
+BBS:             (408)431-5096. 8-N-1 (8 bits, No parity, 1 stop bit)
+Listserv:        listserv@borland.com  Send an email message
+                 containing this text:
+
+     SUBSCRIBE<space>BCPP<space>FIRSTNAME<space>LASTNAME
+
+
+---------------
+Purpose
+---------------
+
+Below is a list of problems which have been fixed in this patch; please refer 
+to the file BC5\DOC\ADDON.TXT, which will be patched by BC50P2.RTP, for a list 
+of fixes pertaining to the addon interface.
+
+
+General command line and RTL
+----------------------------
+
+
+The macro defined for EV_LVN_DELETEITEM is incorrect in commctrl.h.
+
+
+A reference to $(...) for environment variables in a makefile
+may be expanded to a null string because variable matching is case
+sensitive.
+
+
+General IDE
+-----------
+
+
+The IDE may crash if it is shut down while the PVCS dialog is 
+running.
+
+
+Write block to file overwrites existing file without warning.
+
+
+With a message window active, clicking on an editor window 
+may not bring it to the top.
+
+
+Generate Makefile fails to strip $ENV for linker targets.
+
+
+A 32 bit application with vbx controls cannot be run in the ide, 
+causes "Can't init VBX library" message, or "VBX library init 
+failure" message.  
+
+
+After you run a 16-bit app from the IDE subsequent makes 
+may cause unwanted runs. 
+
+
+Overwriting or deleting a block of text may not position 
+the cursor in the expected location.
+
+
+Integrated Debugger
+-------------------
+
+
+Changing the current source file while stopped at a breakpoint, 
+then choosing run, may result in a crash.
+
+
+When running an app with Asynchronous mode turned off, the 
+application may not step to the entry point, but instead begin
+in startup code.
+
+
+On subsequent runs of a 16-bit process within the IDE,  
+"Run without debugger?" prompts may occur multiple times.
+
+
+AppExpert/ClassExpert
+---------------------
+
+
+Moving the Rescanning dialog leads to a locked system when 
+in Asynchronous mode.
+
+
+Instance variables for the new Common Controls cannot be 
+added in ClassExpert (for instance, TreeView).
+
+
+OWL (ObjectWindows) and OCF
+---------------------------
+
+
+BOCOLE/F requires modifications to properly handle current 
+controls from the current control pack published by Microsoft
+(particularly controls following ActiveX specifications).
+
+
+ActiveX controls cannot be hosted in a Borland C++ Application 
+using BOCOLE.                 
+
+
+Controls cannot be activated in an undocked toolbar unless 
+the control had focus beforehand.
+
+
+Resource Workshop
+-----------------
+
+
+Calling BRC to bind resources under NT 3.51 may result in 
+the message "Bad command or filename". 
+
+
+Selecting the arrow (select) control after selecting a control 
+on the control palette does not cancel selection of that 
+control.                  
+
+
+For appexpert generated menus under Windows 95, cutting 
+the last popup of a menu or the last menuitem from a menu 
+is not disabled, which can lead to a crash.
+
+
+Changing the file compression for a bitmap may lead to a GP fault.
+
+
+BRCC32.EXE fails to complete.                 
+
+
+_WIN32 is not defined within integrated RW. Required for 
+using windows.h and commctrl.h within an .RC File (_WIN32 is now 
+automatically defined in this patch when the resource compiler is 
+compiling a 32-bit resource file.)
+
+
+Using Bring To Front on a control within a dialog may 
+cause a dialog editor malfunction.
+
+
+The resource project window repaints excessively during keyboard 
+entry.
+
+
+Setting the system's TEMP environment variable to a non-existent 
+directory leads to a crash in the Dialog Editor. 
+
+
+After adding a non-existing file to a project, Resources/identifiers 
+cannot be placed in it until the RC file has been saved.
+
+
+A crash may result after deleting most of the menu items in 
+an AppExpert MDI menu.
+
+
+Justification of static text objects created by AppExpert
+in a dialog fails.
+
+
+Visual Database Tools
+---------------------
+
+Using TDBLookupCombo: The DropDown portion of the combobox does not stay
+down when clicked during runtime.
+
+Running the FISHFACT example built in 16-bits leaves the IDAPI DLLs
+in memory.
+
+A value cannot be deleted from a record using a DBEdit or DBComboBoxes.
+
+Values in DBListboxes retain a grayed selection box around them after
+they have been selected once.
+
+DBGrid performance is too slow.
+
+Using DBLookupCombo: Several "Record is already locked by this session" 
+errors may occur, which can lead to a crash.
+
+Using DBLookupCombo: "General SQL error" message box after clicking the 
+navigator's Edit button, making no change to the data, then clicking the 
+enabled Post button.
+
+Using DBNavigator: When holding down the PREVIOUS button to scroll back 
+to the first record in the dataset, and at the first record, the DELETE 
+button and the EDIT buttons are disabled.
+
+Intermittent error: "Cannot init VBX library", when attempting to
+run a VBDialog.exe that has had VDBT controls added to it.
+
+
+Java AddOn
+----------
+
+Runtime messages (applet viewer, debugger, etc.) now appear under the
+runtime tab of the message window.
+
+The message window will now automatically appear if there is a java compile
+error.
+
+Long messages are no longer truncated at 230 characters.
+
+Tab characters in compiler error messages are now converted to spaces.
+
+Java-related environment variables, typically set up by another java 
+development environment, are now ignored when running java tools from within
+the BCW IDE (they will continue to be present outside of BCW, however).
+
+
+---------------
+Instructions
+---------------
+Applying the patch file requires PATCH.EXE version 3.2 (or greater), which you will 
+find in the following locations: CompuServe, Borland's Download BBS (DLBBS), 
+and via Internet at ftp.borland.com. If you are running on Windows NT, and PATCH.EXE 
+does not complete, you can use PATCH-NT.EXE, which also requires PATCHW32.DLL, which 
+are available in the same locations.
+
+1) Copy BC50P2.RTP and PATCH.EXE into your \BC5 directory, or
+   to the root directory of the drive containing BC++ 5.0.
+
+2) Change directories to the directory used in step 1.  For a
+   default installation, enter the following commands at the
+   DOS prompt:
+
+       C:\> CD \BC5
+
+3) Enter the following command at the DOS prompt:
+
+       PATCH BC50P2.RTP
+
+To create backup copies of the original files while patching use:
+
+       PATCH -BACKUP BC50P2.RTP
+
+Backup copies of the original files will be placed into a directory called
+BACKUP.  If you create a backup, make sure that you have at least 35 MB
+free or the patch may fail.
+
+IMPORTANT: If you install addons or other components, like the Java compiler or 
+CodeGuard, you will need to reapply this patch to avoid errors.
+
+---------------
+Troubleshooting
+---------------
+
+If PATCH.EXE is unable to locate the correct files to
+patch, you will see the message:
+
+       Warning wpt0015: Old File does not exist
+
+This may indicate one of the following cases:
+
+1) You have previously deleted one or more files from your
+   installation that PATCH.EXE has attempted to patch.  In
+   this case, PATCH.EXE will skip the files you have deleted.
+   If you wish to replace a missing file, you must first
+   reinstall from your master diskettes before applying the
+   patch.
+
+2) You have copied PATCH.EXE and the RTP patch file to the wrong
+   directory or drive.  In this case, verify the directory
+   name in which you have installed and make sure PATCH.EXE
+   and the RTP patch file on the same drive and in a directory
+   above or equal to that installation.
+
+3) When you installed you chose not to install one or more of
+   the files that PATCH.EXE has attempted to patch.  In this case,
+   PATCH.EXE will skip the files you did not install.  If you wish
+   to add a missing file, you must first install from your master
+   diskettes before applying the patch.
+
+4) You don't currently have version 5.01A, and/or haven't applied
+   BC50P1.RTP. See "Notice" section at the top of this file.
+
+   This patch includes files for CodeGuard and Java support, which
+   are only available in the Borland C++ Developer's Suite. Some
+   messages you see may relate to these files, but the failure
+   to install them will not prevent the successful patching of
+   any files present on your system.
+
+
+PATCH.EXE will report the following message if it
+determines that a file does not need to be patched:
+
+       New Version of File 'FILENAME' already exists.
+
+This may indicate one of the following cases:
+
+1) You have purchased a recent copy of the software in
+   which the software changes have already been introduced.
+
+2) You have already applied the patch.
+
+In either case, PATCH.EXE has verified that your software is
+up to date and you need not take further action.
+
+error ept0001: Illegal Input Option '<Option>'
+---------------------------------------------
+The specified option is either an invalid option or the PATCH user
+does not have the user level to allow the use of the option.
+
+error ept0002: Insufficient Memory
+---------------------------------
+PATCH needs a certain amount of memory free for its internal tables.
+There was insufficient memory available when PATCH was run.
+
+error ept0003: Valid Password not entered. Patch File can not be applied
+-----------------------------------------------------------------------
+The PATCH user did not enter the valid password for this patch file.
+Remember that passwords are case sensitive.
+
+error ept0004: Specified Update Directory '<DirName>' does not exist
+-------------------------------------------------------------------
+The PATCH user specified a directory to update but that directory
+does not exist.
+
+error ept0005: Specified [Update|Backup] Directory '<DirName>' is
+               not a valid directory.
+----------------------------------------------------------------
+The user specified a directory name either for the Update or the
+Backup directory that is not a valid directory name. An existing file
+with the same name as the specified directory could cause this message.
+
+error ept0006: Can Not Find Patch File '<FileName>'
+--------------------------------------------------
+PATCH was not able to locate the specified PATCH file.
+
+error ept0007: Error Opening Patch File
+--------------------------------------
+PATCH was able to locate the patch file but could not open the file
+to read from it. This could be a DOS error or a corrupted disk.
+
+error ept0008: PATCH.EXE and Patch File incompatible - Need to
+               update PATCH.EXE
+--------------------------------------------------------------------------------
+PATCH.EXE and the patch file are incompatible versions. PATCH.EXE can
+update any old versions of patch files but not ones created with a
+newer version of the data file format. You need to get a newer version
+of the PATCH program to apply this patch.
+
+error ept0009: Invalid Patch File '<Name>'
+-------------------------------------
+PATCH.EXE was unable to read correct information from the patch file.
+The specified file is either not a patch file or has been corrupted.
+Get a new copy of the file and rerun PATCH.
+
+error ept0010: Failure Creating Backup Directory '<DirName>'
+-----------------------------------------------------------
+PATCH was unable to create the specified Backup Directory.
+
+error ept0011: Failure Creating Backup Log File '<FileName>'
+-----------------------------------------------------------
+PATCH was unable to create the file containing information about what
+files were backed up.
+
+error ept0012: Failure Opening Backup Source File '<FileName>'
+-------------------------------------------------------------
+PATCH was unable to open the file to be backed up.
+
+error ept0013: Failure Opening Backup Destination File '<FileName>'
+------------------------------------------------------------------
+PATCH was unable to open the new file to copy the original file to.
+
+error ept0014: Failure Writing Backup File '<FileName>'
+------------------------------------------------------
+PATCH was unable to write the original file to the backup version.
+
+error ept0015: Old File does not exist
+-------------------------------------
+PATCH needs bytes from the existing version of a  file in order to
+build the new file. However, it was unable to locate the old file.
+
+error ept0016: New File already exists.
+--------------------------------------
+There already exists a file by the same name as the new file being
+built. The existing file will be copied to the backup directory if
+the BACKUP option is on.
+
+error ept0017: Failure Opening Old File: 'filename'
+---------------------------------------------------
+PATCH was able to locate the old version of a file but the open
+failed. This is probably caused by a DOS error. Try rerunning PATCH.
+
+error ept0018: Failure Opening New File: '<FileName>'
+-----------------------------------------------------
+PATCH was unable to open the named file. It was attempting to open
+this file to create a file for the updated version of the system.
+This can be caused by a disk or network error or if a directory exists
+by the same name as the file that PATCH is trying to open.
+
+error ept0019: Failure Writing to File
+-------------------------------------
+An error occurred while PATCH was trying to write bytes to a new
+file.
+
+error ept0020: Failure Reading from File
+---------------------------------------
+An error occurred while PATCH was trying to read bytes from an old
+file.
+
+error ept0021: Failure Seeking to Position in File
+-------------------------------------------------
+PATCH was unable to seek to a position within a file. This is probably
+caused by a DOS error or corrupted disk.  Retry running the patch.
+
+error ept0022: Failure Renaming File
+-----------------------------------
+PATCH was unable to rename a file. This is probably caused by a DOS
+error or corrupted disk. Try rerunning PATCH.
+
+error ept0023: Patch for '<FileName>' not found in Patch File
+------------------------------------------------------------
+PATCH was unable to find an entry in the patch file matching
+the entry name specified by the user on the FILE option. Try using
+the LIST option to get a list of the entries in the patch file.
+
+error ept0024: New File already exists.
+---------------------------------------
+The specified file has already been patched. PATCH does not need
+to patch this file.
+
+error ept0025: Verify of New File Failed. Possible Internal Error.
+-----------------------------------------------------------------
+The file PATCH built is not valid. Users should never see this
+message.
+
+error ept0026: Failure Creating Overflow File: 'FileName'
+---------------------------------------------------------
+PATCH was unable to open a file for its overflow information. This is
+probably cause by a DOS error or by a full disk drive.
+
+error ept0027: Overflow File Write Failure
+----------------------------------------------------------------------
+PATCH was unable to read from the overflow table it created to hold
+data that did not fit in its internal tables. This was probably
+caused by some sort of DOS error or a corrupted disk or there was
+insufficient room on the disk for the file.
+
+error ept0028: Overflow File Read Failure
+----------------------------------------
+PATCH was unable to read from the overflow table it created to hold
+data that did not fit in its internal tables. This was probably
+caused by some sort of DOS error or a corrupted disk.
+
+error ept0029: Insufficient Disk Space to Apply Patch - You need
+               at least <Size> bytes free on drive <DriveLetter>
+               for <Feature>.
+----------------------------------------------------------------
+PATCH needs at least the specified number of bytes to perform the
+patch process. If UNDO or BACKUP is ON, PATCH needs room to backup
+all of the file making up the original system and also the room
+needed to build the new system. If both BACKUP and UNDO are OFF,
+PATCH only needs room to backup the biggest of the files being
+patched.
+
+error ept0030: Error opening serialization file '<FileName>'
+-----------------------------------------------------------
+PATCH either could not find the serialization file or the open
+failed. If the open failed, the probable cause is some kind of DOS
+error, retry the operation.
+
+error ept0031: Error reading serialization file '<FileName>'
+-------------------------------------------------------------
+PATCH cannot seek to the correct position in the serialization file
+or read the correct number of bytes from the file. Possible causes
+are invalid positions and lengths specified while running PATCHBLD.
+
+error ept0032: Failure Setting File's Time/Date Stamp
+-------------------------------------------------------------
+PATCH was unable to set the time/date stamp for the updated
+file or for a file freshly backed up. This error should never
+occur but if it does would probably be caused by some kind of
+disk failure or network file sharing problem.
+
+error ept0033: Failure creating temporary file.
+-----------------------------------------------
+PATCH was unable to create a temporary file to hold the new file
+or to hold overflow information. Try rerunning PATCH and if it still
+does not work reduce the number of temporary files required by
+disabling BACKUP and UNDO.
+
+error ept0034: Neither command line parameter specifed is an existing directory
+-------------------------------------------------------------------------------
+Multiple parameters were given on the PATCH command line that were neither
+valid PATCH options or existing directories. If the user specifies multiple
+parameters, at least one must be a valid existing update directory.
+
+error ept0035: Only one file and one directory may be specified on command line
+-------------------------------------------------------------------------------
+The user specified more than one patch file and one update directory on the
+PATCH command line.
+
+error ept0036: Old file not found. However, a file of the same name was
+               found. No update done since file contents do not match.
+-----------------------------------------------------------------------------
+PATCH was unable to locate an exact match for the original file to
+be updated. However, PATCH was able to locate a file with the same
+name as the original file. However, the file found did not have either
+the same size or checksum as the actual original file that PATCH is
+seeking in order to perform the update.
+
+error ept0037: Error opening error message file.
+-----------------------------------------------------------------------------
+PATCH was unable to open the file PATCH.ERR for storing error messages.
+The probable cause is some kind of DOS error, retry the operation or specify
+the NOERRORFILE option on the PATCH command line.
+
+
+

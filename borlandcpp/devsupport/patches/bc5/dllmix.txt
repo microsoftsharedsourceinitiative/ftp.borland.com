@@ -1,0 +1,44 @@
+Calling 32-bit DLL's built with Borland C++ from non-BC Apps.
+=============================================================
+
+Due to the way that exception handling was implemented in the Borland C++
+product, calling into a 32-bit DLL built with Borland C++ from an application
+that was not built with Borland C++ results in a failure (typically a system
+exception). Borland will be providing a complete correction to this problem in
+the future; however, that involves considerable work and cannot be made
+available in a short timeframe.
+
+By this document and the accompanying file c0d32dyn.obj, a solution is provided
+that allows calling a DLL compiled with Borland C++ from applications created
+with other tools. This solution supports only dynamic binding, which is achieved
+by the application calling LoadLibrary at run-time to load the DLL and then
+calling GetProcAddress to retrieve the entry points for the functions exported
+from the DLL.
+
+This solution does not support static binding. From a C or C++ application,
+static binding is achieved by linking import records (either import libraries or
+entries in the IMPORTS section of the application's Module Definition File) to
+the calling application. Using Delphi 2.0, static binding is achieved using a
+declaration such as:
+
+function Foo(parm: Integer): Integer; stdcall; external 'mytools.dll' name 'Foo';
+
+You can use either C++ or Structured Exception Handling in the DLL. For best
+results, exceptions should be caught within the scope of the DLL throwing the
+exception. If the calling application is built with Borland C++, Delphi or
+Microsoft Visual C++, the exception can be caught in the application calling the
+DLL. However, Visual Basic does not seem to have an exception handlng syntax.
+
+To create an EH-compatible 32-bit DLL, you just replace the default startup
+code, c0d32.obj for 32-bit DLL's, with c0d32dyn.obj and re-link the DLL. Using
+command-line tools, the startup code is the first object module specified to
+Tlink32. Using the Integrated Development Environment, select Options |
+Environment | Project View and check Show run-time nodes. In the project window,
+there will now be displayed entries for the startup module and all the libraries
+which are automatically linked in depending on your target. Remove the node for
+the startup code, c0d32.obj, and add c0d32dyn.obj in its place.
+
+Examples of using this mechanism with Delphi 2.0, Visual Basic 4.0 and Visual
+C++ 4.1, can be found in the file DLLMixEx.zip located on the Borland web page
+(http://www.borland.com), and on the Borland CompuServe forum (!go BCPP or
+BCPPLib, Library 2).

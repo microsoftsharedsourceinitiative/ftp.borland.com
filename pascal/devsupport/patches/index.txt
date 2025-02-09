@@ -1,0 +1,16 @@
+/pascal/devsupport/patches
+
+File     Ext     Size   Date     Time   Description
+------   ---     ------ -------- ------ -------------------------------------------------------------
+crtpat1  zip        932 09/28/89 12:05p Patch for TP 5.5 CRT unit: Fixes unpredictable delay times.
+delay6   zip        935 05/08/91 03:18p TP6.0 delay patch
+demofix  zip       2638 03/12/92 11:00a TPW: Patch for the MFILE demo program.
+editpat  zip        707 03/12/92 11:14a Fix for EDITOR.PAS example in TP 6.0
+int60    zip        716 03/12/92 11:14a Patch for TP 5.0: Fixes int vector $60 problem.
+netfix   zip        970 12/04/90 03:51p Allows TP 6.0 to execute from a network
+pxsrchfd zip       2958 01/11/93 10:09a PXE3.0 PXSrchFld workaround
+td1pat   zip       1668 03/26/89 12:45p Patch for TPC and TURBO: Fix for include file problem.
+tdovlpat zip       6503 08/23/89 11:21a Patch for TD 1.5: Fixes TDs trace problem.
+tpwn31   zip      99248 04/06/92 12:00p Windows 3.1 support for Turbo Pascal for
+upgrade  zip       3237 05/13/91 04:11p Utility for converting TP 3.0 programs.
+

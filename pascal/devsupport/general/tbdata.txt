@@ -1,0 +1,42 @@
+{
+  This unit contains a reuseable toolbar object which loads itself from
+  a custom resource type stored in the program exe or dll file.  The toolbar
+  can position itself above, to the left or to the right of the child windows
+  in an MDI client window.
+
+  The TOOLBARDATA custom resource type can be edited in Resource Workshop
+  as a text file.  TOOLBARDATA consists of a list of resource ids that
+  associates a tool glyph (bitmap) with a menu command.  When a tool button
+  is clicked upon, the toolbar will send out a message that looks just like
+  a command message issued when a menu item is selected.  The toolbar is
+  basically a graphical menubar, and your program code that responds to
+  menu commands doesn't need to know the toolbar even exists.
+
+  The format of the TOOLBARDATA resource is fairly simple:  a count of the
+  number of tool buttons in the resource, followed by a pair of resource ids
+  (numbers) for each tool button.  If you use Resource Workshop to construct
+  your toolbar resource, you can set up Resource Workshop to use Pascal
+  identifiers instead of raw numbers for the resource ids.  This makes it
+  much easier to read and edit the resource data.
+
+  For example:
+    (all numbers are word type)
+    (comments cannot appear in resource statements)
+  MyToolbar  TOOLBARDATA
+  BEGIN
+    4             ( number of id pairs in this resource, including spacers )
+    tbHelp        ( bitmap id (Pascal identifier) of the first tool button )
+    cm_Help       ( menu command id of the first tool button )
+    0             ( 'spacer' code - inserts a space between buttons )
+    8             ( also part of the special 'spacer' button code )
+    tbFileOpen    ( bitmap id of the FileOpen tool button )
+    cm_MDIFileOpen (menu command id of the FileOpen tool button and menu )
+    tbFileSave    ( bitmap id of the FileSave tool button )
+    cm_FileSave   ( menu command id of the FileSave tool button and menu )
+    0             ( terminating null character )
+  END
+
+  A program could create a toolbar from this resource data by calling:
+    MyTM := new(PToolbar, Init(@Self, 'MyToolbar', tbHorizontal));
+
+}

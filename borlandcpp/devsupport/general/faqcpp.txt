@@ -1,0 +1,2651 @@
+#$Nomenclature and common abbreviations
+Here are a few of the abbreviations/etc used in this article:
+Term	Meaning
+
+ctor	constructor
+copy-ctor	copy constructor (also "X(const X&)", pronounced "X-X-ref")
+dtor	destructor
+fn	function
+fns	functions
+ptr	pointer, a C/C++ construct declared by: int * p;
+ref	reference, a C++ construct declared by: int & r;
+const	a C++ keyword which is short for "constant"
+OO	object-oriented
+OOP	object-oriented programming
+OOPL	object-oriented programming language
+method	an alternate term for "member function"
+message	an alternate term for "invoking a member function"
+nil	the "zero" or "empty" pointer ("NULL" in C, "0" in C++)
+
+
+#$What books are available for C++?
+Lots, with more just about every other week.  Here are a few in no particular order (comments 
+are my own):
+"The C++ Programming Language, second edition", Stroustrup, Addison/Wesley
+	A rich, in-depth intro text; covers rudiments of OOD as well as OOP
+	ISBN 0-201-12078-X
+"A C++ Primer, 2nd edition", Lippman, Addison/Wesley
+	1st ed. considered std intro-C++ text; does not assume C; has some OOD
+	ISBN 0-201-54848-8
+"Annotated C++ Reference Manual", Ellis and Stroustrup, Addison/Wesley
+	Heavy reading; definitely not for beginners; gives *ALL* the details.
+	ISBN 0-201-51459-1
+"Advanced C++ Programming Styles and Idioms", Coplien, Addison-Wesley, 1992
+	ref-counting, wrappers, functionoids, "Self"/"Smalltalk" styles, etc
+	ISBN 0-201-54855-0
+"A C++ Toolkit", Shapiro, Prentice Hall
+	Provides many small stand-alone classes; code is publically usable
+	ISBN 0-13-127663-8
+"Mastering C++", Horstmann, Wiley
+	Wiley hasn't sent me one to review yet, but I hear it's great
+"Teach Yourself C++", Stevens, MIS Press
+	An easy-to-read short book for C++ beginners
+	ISBN 1-558-28027-8
+"A C++ Primer, first edition", Lippman, Addison/Wesley
+	Slightly out-of-date; solidly reference quality wrt the language proper
+	ISBN 0-201-16487-6
+"Programming in C++", Dewhurst and Stark, Prentice Hall
+	How-to-use C++, shows many idioms of the language
+"Using C++", Eckel, McGraw-Hill
+	Shows some of the ways C++ can be used as a better C; MS-DOS
+"Data Abstraction and OO Programming in C++", Gorlen/Orlow/Plexico, Wiley
+	Describes how to use NIHCL (see question on "NIHCL")
+	ISBN 0-471-92346-X
+"An Intro to OO Programming", Tim Budd, Addison-Wesley, 1991
+	Covers OOP in general; compares/contrasts several OOPLs including C++
+	ISBN 0-201-54709-0
+"Object-Oriented Design with Applications", Grady Booch, Benjamin/Cummings,1991
+	Excellent 1st book on OO design; read on Classification and Abstraction
+	ISBN 0-8053-0091-0
+"Object-Orientation: Concepts, Languages, Databases, User interfaces",
+	Khoshafian and Abnous, J.Wiley, 1990
+	ISBN 0-471-51801-8
+"The Waite Group's C++ Programming", Berry
+"An Introduction to Object-Oriented Programming and C++", Weiner & Pinson, A/W
+"Object-Oriented Program Design with Examples in C++", Mullin, Addison-Wesley
+"Hands-on C++ Programming", Isaac and Miller, Addison-Wesley
+"C++ for C Programmers", Pohl, Benjamin/Cummings
+"The C++ Programming Language, first edition", Stroustrup, Addison/Wesley
+	Out of date but a classic; get it to find out where the language "was"
+	ISBN 0-201-12078-X
+"The C++ Answer Book", Hansen, Addison/Wesley
+	Answers to the exercises in Stroustrup's first ed; solid "how-to" text
+	ISBN 0-201-11497-6
+"Turbo C++ DiskTutor", Greg Voss and Paul Chui, McGraw-Hill
+	ISBN 0-07-881526-6
+"Object-Oriented Software Construction", Meyer, Prentice Hall
+	Chaps 1-4 are about OOP in general; the rest is about Eiffel language
+	ISBN 0-13-629049-3
+Conference proceedings:
+	Proceedings of the "OOPSLA" conferences
+	Proceedings of the "C++ At Work" conferences
+	Proceedings of the "USENIX C++" conferences
+Periodicals:
+	The C++ Report
+	Journal of Object-Oriented Programming
+	Journal of C++
+	the working papers of the ANSI-C++ committee
+Usenix newsgroups and mailing lists:
+	comp.lang.c++
+	comp.std.c++
+	comp.object
+	BIX
+	Turbo-C++ mailing list
+
+
+#$Is C++ backward compatible with ANSI C?
+Almost. 
+C++ is as close as possible to compatible with C but no closer. In practice, the major 
+difference is that C++ requires prototypes, and that "f()" declares a function that takes no 
+parameters, while ANSI-C rules state that "f()" declares a function that takes any number of 
+parameters of any type. There are some very subtle differences as well, like the sizeof a char 
+literal being equal to the sizeof a char (in ANSI-C, sizeof('x') is the sizeof an int). Structure 
+"tags" are in the same namespace as other names in C++, but C++ has some warts to take 
+care of backward compatibility here.
+
+
+#$Where can I ftp a copy of the latest ANSI C++ draft standard?
+ANSI standards and/or drafts are NOT available in machine readable form.  There is NOT an 
+"ftp" site that has a copy.  You can get a paper copy ($65) from:
+
+     X3 Secretariat
+     CBEMA
+     1250 I Street NW
+     Suite 200
+     Washington, DC  20005
+     202-626-5738
+
+Ask for the latest version of "Working Paper for Draft Proposed American National Standard 
+for Information Systems -- Programming Language C++."
+
+
+#$Are there any C++ standardization efforts underway?
+Yes; ANSI (American) and ISO (International) groups are working closely with each other.  
+The ANSI-C++ committee is called "X3J16".  The ISO C++ standards group is called 
+"WG21".  The major players in the ANSI/ISO C++ standards process includes just about 
+everyone:
+AT&T, IBM, DEC, HP, Sun, MS, Borland, Zortech, Apple, OSF, etc ad nauseum. About 70 
+people attend each meeting.  People come from USA, UK, Japan, Germany, Sweden, 
+Denmark, France, ... (all have "local" committees sending official representatives and 
+conducting "local" meetings).
+
+
+#$Who uses C++?
+Lots and lots of companies and government sites.  Lots.
+Statistically, 5 people became new C++ programmers while you read the words of the 
+previous FAQ.
+
+
+#$What are some advantages of C++?
+GROWTH OF C++: C++ is by far the most popular OOPL.  The number of C++ users is 
+doubling every 7.5 to 9 months.  Knowing C++ is a good resume-stuffer (but use it as an 
+OOPL rather than just as a better C).
+
+ENCAPSULATION: Hiding our data structures allows us to change one chunk of a system 
+without breaking other chunks.  We provide our software chunks (we call them "classes") with 
+safe interfaces.  Users of a chunk use its interface only.The relatively volatile 
+"implementation" of this interface is "encapsulated" ("put into a capsule") to prevent users 
+from becoming reliant on its temporary decisions.  In simple C, this was done by making a 
+module's data "static", thus preventing another module from accessing our module's bits.
+
+MULTIPLE INSTANCES: The typical C solution to encapsulation (see above) doesn't support 
+multiple instances of the data (it's hard to make multiple instances of a module's "static" 
+data).  If we needed multiple instances in C, we used a "struct" (but this doesn't support 
+"encapsulation").  In C++, we can have both multiple instances and encapsulation via a 
+"class": the "public" part
+of a class contains the class's interface (normally these are a special kind of function called a 
+"member function"), and the "private" part of a class contains the class's implementation 
+(typically these are where the bits live).
+
+INLINE FUNCTION CALLS: In straight C, you can achieve "encapsulated structs" by putting 
+a "void*" in a struct (the access functions use pointer casts).  This forfeits type safety, and 
+also imposes a function call to access even trivial fields of the struct (if you allowed direct 
+access to
+the struct's fields, the underlying data structure would be difficult to change since too many 
+chunks would RELY on it being the "old" way). Function call overhead is small, but can add 
+up.  C++ classes allow function calls to be expanded "inline," so you have: 
+
+	1) safety of encapsulation
+	2) convenience of multiple instances
+	3) speed of direct access.  
+
+Furthermore the parameter types of these inline functions are checked by the compiler, an 
+improvement over C's #define macros.
+
+OVERLOADING OPERATORS: C++ lets you overload the standard operators on a class, 
+which lets users exploit their intuition (e.g., "myString + yourString" might do string 
+concatenation, "myDate++" might increment the date, "z1 * z2" might multiply complex 
+numbers z1 and z2,
+"a[i]" might access the "i"th element of the "linked list" called "a", etc.  You can even have 
+"smart pointers" that could "point" to a disk record or wherever ("x = *p" could "dereference" 
+such a pointer, which could seek to the location on disk where p "points" and return its 
+value").  This
+allows users to progrom in the language of the problem domain rather than in the language of 
+the machine.
+
+INHERITANCE: We still have just scratched the surface.  In fact, we haven't even gotten to 
+the "object-oriented" part yet!  Suppose you have a Stack data type with operations push, 
+pop, etc.  Suppose you want an InvertableStack, which is "just like" Stack except it also has 
+an "invert"
+operation.  In "C" style, you'd have to either (1) modify the existing Stack module (trouble if
+"Stack" is being used by others), or (2) copy Stack into another file and text edit that file 
+(results in lots of code duplication, another chance to break something tricky in the Stack part 
+of invertableStack, and especially twice as much code to maintain).  C++ provides a much
+cleaner solution: inheritance. You say "InvertableStack inherits everything from Stack, and
+InvertableStack adds the invert operation."  Done.  Stack itself remains "closed" (untouched, 
+unmodified), and InvertableStack doesn't duplicate the code for push/pop/etc.
+
+POLYMORPHISM AND DYNAMIC BINDING: The real power of OOP isn't just inheritance, 
+but is the ability to pass an InvertableStack around as if it actually were a Stack.  This is 
+"safe" since (in C++ at least) the is-a relation follows public inheritance (i.e., a 
+InvertableStack is-a Stack that can also invert itself). Polymorphism and dynamic binding are 
+easiest to understand from an
+example, so here's a "classic": a graphical draw package might deal with Circles, Squares,
+Rectangles, general Polygons, and Lines.  All of these are Shapes.  Most of the draw 
+package's functions need a "Shape" parameter (as opposed to some particular kind of shape 
+like Square).  E.g., if a Shape is picked by a mouse, the Shape might get dragged across the 
+screen and placed into a new location. Polymorphism and dynamic binding allow the code to 
+work correctly
+even if the compiler knows only that the parameter is a "Shape" without knowing the exact 
+kind of Shape it is.  Furthermore suppose the "pick_and_drag(Shape*) function just 
+mentioned was compiled on Tuesday, and on Wednesday you decide to add the Hexagon 
+shape.  Strange as it sounds, pick_and_drag() will still work with Hexagons, even though the 
+Hexagon didn't even exist when pick_and_drag() was compiled!!  (it's not really "amazing" 
+once you understand how the C++ compiler does it -- but it's still very convenient!)
+
+
+#$What is C++?  What is OOP?
+OO programming techniques are the best way we know of to develop large, complex software 
+applications and systems.
+C++ is an OO programming language.  C++ can be used both as an OOPL and simply
+"as a better C."  However if you use it "as a better C," don't expect to get the benefits of 
+object-oriented programming.
+OO hype: the software industry is "failing" to meet demands for large, complex software 
+systems.  But this "failure" is actually due to our SUCCESSES: our successes have propelled 
+users to ask for more. Unfortunately we created a market hunger that the "structured" 
+analysis,
+design and programming techniques couldn't satisfy.  This required us to create a better 
+paradigm.
+
+
+#$What is a class?
+A class defines a data type, much like a struct would be in C.  In a CompScience sense, a 
+type consists of two things: a set of values *and* a set of operations which operate on those 
+values.  Thus "int' all by itself isn't a true "type' until you add operations like "add two ints" or 
+"int*int", etc.  In exactly the same way, a "class" provides a set of (usually "public") 
+operations, and a set of (usually non-public) data bits representing the abstract values that 
+instances of the type can have.  From a C language perspective, a "class" is a "struct" whose 
+members default to "private".
+
+
+#$What is an object?
+An object is a region of storage with associated semantics.  After the declaration "int i;", we 
+say that "i is an object of type int".  In C++/OOP, "object" is usually used to mean "an 
+instance of a class".  Thus a classdefines the behavior of possibly many objects (instances).
+
+
+#$What is a reference?
+A reference is an alias (an alternate name) for an object.  It is frequently used for pass-by-
+reference; ex:
+	void swap(int& i, int& j)
+	{
+	  int tmp = i;
+	  i = j;
+	  j = tmp;
+	}
+	main()
+	{
+	  int x, y;
+	  //...
+	  swap(x,y);
+	}
+Here "i" and "j" are aliases for main's "x" and "y" respectively.  The effect is as if you used the 
+C style pass-by-pointer, but the "&" is moved from the caller into the callee.  Pascal 
+enthusiasts will recognize this as a VAR param.
+
+
+#$What happens if you assign to a reference?
+Assigning to a reference changes the referred-to value, thus a ref is an "Lvalue" (something 
+that can appear on the "Left-hand-side of an assignment statement) for the referred-to value.  
+This insight can be pushed a bit farther by allowing references to be *returned*, thus allowing 
+function calls on the left hand side of an assignment stmt.
+
+
+#$How can you reseat a reference to make it refer to a different object?
+Unlike a pointer, once a reference is bound to an object, it can NOT be "reseated" to another 
+object.  The reference itself isn't an object; you can't separate the reference from the referred-
+to-object.  Ex: "&ref" is the address of the referred-to-object, not of the reference itself.
+
+
+#$When should I use references, and when should I use pointers?
+Old line C programmers sometimes don't like references since the reference semantics they 
+provide isn't *explicit* in the caller's code. After a bit of C++ experience, however, one quickly 
+realizes this "information hiding" is an asset rather than a liability.  In particular, reuse-
+centered OOP tends to migrate the level of abstraction away from the language of the 
+machine toward the language of the problem.
+References are usually preferred over ptrs whenever you don't need "reseating" (see early 
+question on "How can you reseat a reference").  This usually means that references are most 
+useful in a class' public interface.  References then typically appear on the skin of an object, 
+and pointers on the inside.
+The exception to the above is where a function's parameter or return value needs a "sentinel" 
+reference.  This is usually best done by returning/taking a pointer, and giving the nil ptr (0) 
+this special significance (references should always alias *objects*, not a dereferenced nil ptr).
+
+
+#$What are inline fns? What are their advantages? How are they 
+declared?
+An inline function is a function which gets textually inserted by the compiler, much like a 
+macro.  Like macros, performance is improved by avoiding the overhead of the call itself, and 
+(especially!) by the compiler being able to optimize *through* the call ("procedural 
+integration").  Unlike macros, arguments to inline fns are always evaluated exactly once, so 
+the "call" is semantically like a regular function call only faster.  Also unlike macros, argument 
+types are checked and necessary conversions are performed correctly.
+Beware that overuse of inline functions can cause code bloat, which can in turn have a 
+negative performance impact in paging environments.
+They are declared by using the "inline" keyword when the function is defined:
+	inline void f(int i, char c) { /*...*/ }   //an inline function
+or by including the function definition itself within a class:
+	class X {
+	public:
+	  void f(int i, char c) { /*...*/ }   //inline function within a 
+class
+	};
+or by defining the member function as "inline" outside the class:
+	class X {
+	public:
+	  void f(int i, char c);
+	};
+	//...
+	inline void X::f(int i, char c) {/*...*/} //inline fn outside 
+the class
+Generally speaking, a function cannot be defined as "inline" after it has been called.  Inline 
+functions should be defined in a header file, with "outlined" functions appearing in a ".C" file 
+(or .cpp, etc; see question on file naming conventions).
+
+
+#$What is a constructor?  Why would I ever use one?
+Objects are required to establish and maintain their own internal coherence. The 
+"maintaining" part is done by ensuring self-consistency is restored after any operation 
+completes (ex: by incrementing the link count after adding a new link to a linked list).  The 
+part about "establishing coherence" is the job of a constructor.
+Constructors are like "init functions"; they build a valid object.  The constructor turns a pile of 
+incoherent arbitrary bits into a living object.
+Minimally it initializes any internally used fields that are needed, but it may also allocate 
+resources (memory, files, semaphores, sockets, ...).
+A constructor is like a "factory": it builds objects from dust.
+"ctor" is a typical abbreviation for constructor.
+
+
+#$What are destructors really for?  Why would I ever use them?
+Destructors are used to release any resources allocated by the object's constructor.  Ex: a 
+Lock class might lock a semaphore, and the destructor will release that semaphore.  The 
+usual "resource" being acquired in a constructor (and subsequently released in a destructor) 
+is dynamically allocated memory.
+"dtor" is a typical abbreviation for destructor
+
+
+#$What is operator overloading?
+Operator overloading allows the basic C/C++ operators to have user-defined meanings on 
+user-defined types (classes).  They are syntactic sugar for equivalent function calls; ex:
+	class X {
+	  //...
+	public:
+	  //...
+	};
+	X add(X, X);	//a top-level function that adds two X's
+	X mul(X, X);	//a top-level function that multiplies two X's
+	X f(X a, X b, X c)
+	{
+	  return add(add(mul(a,b), mul(b,c)), mul(c,a));
+	}
+Now merely replace "add" with "operator+" and "mul" with "operator*":
+	X operator+(X, X);	//a top-level function that adds two X's
+	X operator*(X, X);	//a top-level function that multiplies 
+two X's
+	X f(X a, X b, X c)
+	{
+	  return a*b + b*c + c*a;
+	}
+
+
+#$What operators can/cannot be overloaded?
+Most can be overloaded. The only C operators that can't be are "." and "?:" (and "sizeof", 
+which is technically an operator).  C++ adds a few of its own operators, most of which can be 
+overloaded except "::" and ".*".
+Here's an example of the subscript operator (it returns a reference). First withOUT operator 
+overloading:
+	class Vec {
+	  int data[100];
+	public:
+	  int& elem(unsigned i) { if (i>99) error(); return data[i]; }
+	};
+	main()
+	{
+	  Vec v;
+	  v.elem(10) = 42;
+	  v.elem(12) += v.elem(13);
+	}
+Now simply replace "elem" with "operator[]":
+	class Vec {
+	  int data[100];
+	public:
+	  int& operator[](unsigned i) { if (i>99) error(); return 
+data[i]; }
+	};   //^^^^^^^^^^--formerly "elem"
+	main()
+	{
+	  Vec v;
+	  v[10] = 42;
+	  v[12] += v[13];
+	}
+
+
+#$Can I create a "**" operator for "to-the-power-of" operations?
+No.
+The names of, precedence of, associativity of, and arity of operators is fixed by the language.  
+There is no "**" operator in C++, so you cannot create one for a class type.
+If you doubt the wisdom of this approach, consider the following code:
+	x = y ** z;
+Looks like your power operator?  Nope.  z may be a ptr, so this is actually:
+	x = y * (*z);
+Lexical analysis groups characters into tokens at the lowest level of the compiler's operations, 
+so adding new operators would present an implementation nightmare (not to mention the 
+increased maintenance cost to read the code!).
+Besides, operator overloading is just syntactic sugar for function calls.  It does not add 
+fundamental power to the language (although this particular syntactic sugar can be very 
+sweet, it is not fundamentally necessary).  I suggest you overload "pow(base,exponent)", for 
+which a double precision version is provided by the ANSI-C <math.h> library.
+By the way: operator^ looks like a good candidate for to-the-power-of, but it has neither the 
+proper precedence nor associativity.
+
+
+#$What is a "friend"?
+Friends can be either functions or other classes.  The class grants friends unlimited access 
+privileges.
+
+
+#$Do "friends" violate encapsulation?
+Friends can be looked at three ways: (1) they are not class members and they therefore 
+violate encapsulation of the class members by their mere existence, (2) a class' friends are 
+absorbed into that class' encapsulation barrier, and (3) any time anyone wants to do anything 
+tricky they textedit the header file and add a new friend so they can get right in there and 
+fiddle 'dem bits.
+No one argues that (3) is a Good Thing, and for good reasons. The arguments for (1) always 
+boil down to the rather arbitrary and somewhat naive view that a class' member functions 
+"should" be the *only* functions inside a class' encapsulation barrier.  I have not seen this 
+view bear fruit by enhancing software quality.  On the other hand, I have seen (2) bear fruit by 
+lowering the *overall* coupling in a software system.  Reason: friends can be used as 
+"liaisons" to provide safe, screened access for the whole world, perhaps in a way that the 
+class syntactically or semantically isn't able to do for itself.
+Conclusion: friend functions are merely a syntactic variant of a class' public access functions.  
+When used in this manner, they don't violate encapsulation any more than a member function 
+violates encapsulation.  Thus a class' friends and members *are* the encapsulation barrier, as 
+defined by the class itself.
+I've actually seen the "friends always violate encapsulation" view *destroy* encapsulation: 
+programmers who have been taught that friends are inherently evil want to avoid them, but 
+they have another class or fn that needs access to some internal detail in the class, so they 
+provide a member fn which exposes the class' internal details to the PUBLIC!  Private 
+decisions should stay private, and only those inside your encapsulation barrier (your 
+members, friends, and [for "protected" things] your subclasses) should have access.
+
+
+#$What are some advantages/disadvantages of using friends?
+The advantage of using friends is generally syntactic.  Ie: both a member fnand a friend are 
+equally privileged (100% vested), but a friend function can be called like f(obj), where a 
+member is called like obj.f().  When it's not for syntactic reasons (which is not a "bad" reason 
+-- making an abstraction's syntax more readable lowers maintenance costs!), friends are used 
+when two or more classes are designed to be more tightly coupled than you want for "joe 
+public" (ex: you want to allow class "ListIter" to have more privilege with class "List" than you 
+want to give to "main()").
+Friends have three disadvantages.  The first disadvantage is that they add to the global 
+namespace.  In contrast, the namespace of member functions is buried within the class, 
+reducing the chance for namespace collisions for functions.
+The second disadvantage is that they aren't inherited.  That is, the "friendship privilege" isn't 
+inherited.  This is actually an advantage when it
+comes to encapsulation.  Ex: I may declare you as my friend, but that doesn't mean I trust 
+your kids.
+The third disadvantage is that they don't bind dynamically.  Ie: they don't respond to 
+polymorphism.  There are no virtual friends; if you need one, have a friend call a hidden 
+(usually "protected:") virtual member fn.  Friends that take a ptr/ref to a class can also take a 
+ptr/ref to a publically derived class object, so they act as if they are inherited, but the 
+friendship *rights* are not inherited (the friend of a base has no special access to a class 
+derived from that base).
+
+
+#$What does it mean that "friendship is neither inherited nor transitive"?
+This is speaking of the access privileges granted when a class declares a friend.
+The access privilege of friendship is not inherited:
+	 * I may trust you, but I don't necessarily trust your kids.
+	 * My friends aren't necessarily friends of my kids.
+	 * Class "Base" declares f() to be a friend, but f() has no special access rights with class 
+"Derived".
+The access privilege of friendship is not transitive:
+		 * I may trust you, and you may trust Sam, but that doesn't necessarily mean that I trust 
+Sam.
+ 	 * A friend of a friend is not necessarily a friend.
+
+
+#$When would I use a member function as opposed to a friend function?
+Use a member when you can, and a friend when you have to.
+Like in real life, my family members have certain privileges that my friends do not have (ex: 
+my family members inherit from me, but my friends do not, etc). To grant privileged access to 
+a function, you need either a friend or a member; there is no additional loss of encapsulation 
+one way or the other.  Sometimes friends are syntactically better (ex: in class "X", friend fns 
+allow the "X" param to be second, while members require it to be first).  Another good use of 
+friend functions are the binary infix arithmetic operators.  Ex: "aComplex + aComplex" 
+probably should be defined as a friend rather than a member, since you want to allow "aFloat 
++ aComplex" as well (members don't allow promotion of the left hand arg, since that would 
+change the class of the object that is the recipient of the message).
+
+
+#$How can I provide printing for a "class X"?
+Provide a friend operator<<:
+    class X {
+      int i;    //just for illustration
+    public:
+      friend ostream& operator<<(ostream& o, const X& x) { return o 
+<< x.i; }
+      //...
+    };
+We use a friend rather than a member since the "X" parameter is 2nd, not 1st.
+Input is similar, but the signature is:
+	istream& operator>> (istream& i, X& x);  //not "const X& x" !!
+
+
+#$Why should I use <iostream.h> instead of the traditional <stdio.h>?
+See next question.
+
+
+#$Printf/scanf weren't broken; why "fix" them with ugly shift operators?
+The overloaded shift operator syntax is strange at first sight, but it quickly grows on you.  
+However syntax is just syntax; the real issues are deeper.  Printf is arguably not broken, and 
+scanf is perhaps livable despite being error prone, however both are limited with respect to 
+what C++ I/O can do.  C++ I/O (left/right shift) is, relative to C (printf/scanf):
+	 type safe -- type of object being I/O'd is known statically by the compiler rather than via 
+dynamically tested '%' fields
+	less error prone -- redundant info has greater chance to get things wrong C++ I/O has no 
+redundant '%' tokens to get right
+	faster -- printf is basically an "interpreter" of a tiny language whose constructs mainly 
+include '%' fields.  the proper low-level routine is chosen at runtime based on these fields.  
+C++ I/O picks these routines statically based on actual types of the args
+	extensible -- perhaps most important of all, the C++ I/O mechanism is Extensible to new 
+user-defined data types (imagine the chaos if
+everyone was simultaneously adding new incompatible '%' fields to printf and scanf?!).  
+Remember: we want to make user-defined 	types (classes) look and act like "built-in" 
+types.
+	subclassable -- ostream and istream (the C++ replacements for FILE*) are real classes, 
+and hence subclassable.  This means you can have other user defined things that look and 
+act like streams, yet that do whatever strange and wonderful things you want.  You 
+automatically
+get to use the zillions of lines of I/O code written by users you	don't even know, and they 
+don't need to know about your "extended
+stream' class.  Ex: you can have a "stream" that writes to a memory area (incore formatting 
+provided by the standard class "strstream"),
+or you could have it use the stdio buffers, or [you name it...].
+
+
+#$Does "delete ptr" delete the ptr or the pointed-to-data?
+The pointed-to-data.
+"delete" really means "delete the thing pointed to by."  The same abuse of English occurs 
+when "free"ing the memory pointed to by a ptr in C ("free(p)" really means 
+free_the_stuff_pointed_to_by(p)").
+
+
+#$Can I free() ptrs alloc'd with "new" or "delete" ptrs alloc'd w/ malloc()?
+No.
+It is perfectly legal, moral, and wholesome to use malloc/free and new/delete in the same 
+program, but it is illegal, immoral, and despicable to free a pointer allocated via new, or to 
+delete a pointer allocated via malloc.
+
+
+#$Why should I use "new" instead of trustworthy old malloc()?
+Constructors/destructors, type safety, overridability.
+Constructors/destructors: unlike "malloc(sizeof(Fred))", "new Fred()" calls Fred's constructor.  
+Similarly, "delete p" calls "*p"'s destructor.
+Type safety: malloc() returns a "void*" which isn't type safe.  "new Fred()" returns a ptr of the 
+right type (a "Fred*").
+Overridability: "new" is an operator that can be overridden by a class, while "malloc" is not 
+overridable on a per-class basis.
+
+
+#$Why doesn't C++ have a "realloc()" along with "new" and "delete"?
+To save you from disaster.
+When realloc() has to copy the allocation, it uses a BITWISE copy operation, which will tear 
+most C++ objects to shreds.  C++ objects should be allowed to copy themselves: they use 
+their own copy constructor or assignment operator.
+
+
+#$How do I allocate / unallocate an array of things?
+Use new[] and delete[]:
+	Thing* p = new Thing[100];
+	//...
+	delete [] p; //older compilers require you to use "delete[100]p"
+Any time you allocate an array of things (ie: any time you use the "[...]" in the "new" 
+expression) you *!*MUST*!* use the "[]" in the "delete" statement.
+The fact that there is no syntactic difference between a ptr to a thing and a ptr to an array of 
+things is an artifact we inherited from C.
+
+
+#$What if I forget the "[]" when "delete'ing array allocated via "new X[n]"?
+All life comes to a catastrophic end.
+It is the programmer's --not the compiler's-- responsibility to get the connection between new[] 
+and delete[] correct.  If you get it wrong, neither a compile-time nor a run-time error message 
+will be generated by the compiler. Heap corruption is a likely result.  Or worse.  Your program 
+will probably die.
+
+
+#$What's the best way to create a "#define macro" for "NULL" in C++?
+The best way is: don't do it.
+The most portable way to compare against the nil ptr is to compare against "0". Some 
+programmers use a #define to set NULL to "0", but that can conflict with the way the standard 
+libraries #define NULL.  There is no portable way to define a "const" ptr called "NULL" that 
+can be compared against any arbitrary ptr -- the literal "0" is acceptable for this however.
+
+
+#$How can I handle a constructor that fails?
+Throw an exception.
+Constructors don't have a return type, so it's not possible to use error codes. The best way to 
+signal constructor failure is therefore to throw an exception.
+Before C++ had exceptions, we signaled constructor failure by putting the object into a "half 
+baked" state (e.g., by setting an internal status bit).There was a query ("inspector") method to 
+check this bit, that allowed clients to discover whether they had a live object.  Other member 
+functions would also check this bit, and, if the object wasn't really alive, do a no-op (or 
+perhaps something more obnoxious such as "abort()"). This was really ugly.
+
+#$How can I compile-out my debugging print statements?
+This will NOT work, since comments are parsed before the macro is expanded:
+	#ifdef DEBUG_ON
+	  #define  DBG
+	#else
+	  #define  DBG  //
+	#endif
+	DBG cout << foo;
+This is the simplest technique:
+	#ifdef DEBUG_ON
+	  #define  DBG(anything)  anything
+	#else
+	  #define  DBG(anything)  /*nothing*/
+	#endif
+Then you can say:
+	//...
+	DBG(cout << "the value of foo is " << foo << '\n');
+	//                                                ^-- ";' 
+outside ()
+Any commas in your "DBG()" statement must be enclosed in a "()":
+	DBG(i=3, j=4);	//<---- C-preprocessor will generate error 
+message
+	DBG(i=3; j=4);	//<---- ok
+There are also more complicated techniques that use variable argument lists, but these are 
+primarily useful for "printf()' style (see question on the pros and cons of <iostream.h> as 
+opposed to <stdio.h> for more).
+
+
+#$What is "const correctness"?
+A good thing.
+Const correctness uses the keyword "const" to ensure const objects don't get mutated.  E.g., 
+if function "f()" accepts a "String", and "f()" wants to promise not to change the "String", you:
+	* can either pass by value:  void  f(      String  s   )  { /*...*/ }
+ 	* or by constant reference:  void  f(const String& s   )  { /*...*/ }
+ 	* or by constant pointer:    void  f(const String* sptr)  { /*...*/ }
+ 	* but NOT by non-const ref:  void  f(      String& s   )  { /*...*/ }
+ 	* NOR by non-const pointer:  void  f(      String* sptr)  { /*...*/ }
+Attempted changes to "s" within a fn that takes a "const String&" are flagged as compile-time 
+errors; neither run-time space nor speed is degraded.
+Declaring the "constness" of a parameter is just another form of type safety. It is almost as if 
+a constant String, for example, "lost" its various mutative operations.  If you find type safety 
+helps you get systems correct (it does; especially in large systems), you'll find const 
+correctness helps also.
+
+
+#$Is "const correctness" a good goal?
+Declaring the "constness" of a parameter is just another form of type safety.  It is almost as if 
+a constant String, for example, "lost" its various mutative operations.  If you find type safety 
+helps you get systems correct (especially large systems), you'll find const correctness helps 
+also.
+Short answer: yes, const correctness is a good goal.
+
+
+#$Is "const correctness" tedious?
+Type safety requires you to annotate your code with type information.  In theory, expressing 
+this type information isn't necessary -- witness untyped languages as an example of this.  
+However in practice, programmers often know in their heads a lot of interesting information 
+about their code, so type safety (and, by extension, const correctness) merely provide 
+structured ways to get this information into their keyboards.
+Short answer: yes, const correctness is tedious.
+
+
+#$Should I try to get things const correct "sooner" or "later"?
+At the very, very, VERY beginning.
+Back-patching const correctness results in a snowball effect: every "const" you add "over 
+here" requires four more to be added "over there."
+
+
+#$What is a "const member function"?
+A member function that inspects (rather than mutates) its object.
+     class Fred {
+     public:
+       void f() const;
+     };      // ^^^^^--- this implies "fred.f()" won't change "fred"
+This means that the ABSTRACT (client-visible) state of the object isn't going to change (as 
+opposed to promising that the "raw bits of the object"s struct aren't going to change).  C++ 
+compilers aren't allowed to take the "bitwise" interpretation, since a non-const alias could 
+exist which could modify the state of the object (gluing a "const" ptr to an object doesn't 
+promise the object won't change; it promises only that the object won't change VIA THAT 
+POINTER).
+"const" member functions are often called "inspectors."  Non-"const" member functions are 
+often called "mutators."
+
+
+#$What is an "inspector"?  What is a "mutator"?
+ An inspector inspects and a mutator mutates.  These different categories of member fns are 
+distinguished by whether the member fn is "const" or not.
+
+
+#$What is "casting away const in an inspector" and why is it legal?
+In current C++, const member fns are allowed to "cast away the const-ness of the "this" ptr".  
+Programmers use (some say "misuse") this to tickle internally used counters, cache values, or 
+some other non-client-visible change.  Since C++ allows you to use const member fns to 
+indicate the abstract/meaning-wise state of the object doesn't change (as opposed to the 
+concrete/bit-wise state), the "meaning" of the object shouldn't change during a const member 
+fn.
+Those who believe "const" member fns shouldn't be allowed to change the bits of the struct 
+itself call the "abstract const" view "Humpty Dumpty const" (Humpty Dumpty said that words 
+mean what he wants them to mean).  The response is that a class' public interface *should* 
+mean exactly what the class designer wants it to mean, in Humpty Dumpty's words, "nothing 
+more and nothing less".  If the class designer says that accessing the length of a List doesn't 
+change the List, then one can access the length of a "const" List (even though the 
+"len()"member fn may internally cache the length for future accesses).
+Some proposals are before the ANSI/ISO C++ standards bodies to provide syntax that allows 
+individual data members to be designated as "can be modified in a const member fn" using a 
+prefix such as "~const".  This would blend the best of the "give the compiler a chance to 
+cache data across a const member fn", but only if aliasing can be solved (see next question).
+
+
+#$But doesn't "cast away const" mean lost optimization opportunities?
+If the object is constructed in the scope of the const member fn invocation, and if all the non-
+const member function invocations between the object's construction and the const member 
+fn invocation are statically bound, and if every one of these invocations is also "inline"d, and 
+if the ctor itself is "inline", and if any member fns the ctor calls are inline, then the answer is 
+"Yes, the soon-to-be-standard interpretation of the language would prohibit a very smart 
+compiler from detecting the above scenario, and the register cache would be unnecessarily 
+flushed".  The reader should judge whether the above scenario is common enough to warrant 
+a language change which would break existing code.
+
+
+#$What is inheritance?
+Inheritance is what separates abstract data type (ADT) programming from OOP. It is not a 
+"dark corner" of C++ by any means.  In fact, everything discussed so far could be simulated 
+in your garden variety ADT programming language (ex: Ada, Modula-2, C [with a little work], 
+etc).  Inheritance and the consequent polymorphism are the two big additions which separate 
+a language like Ada from an object-oriented programming language.
+
+
+#$Ok, ok, but what is inheritance?
+Human beings abstract things on two dimensions: part-of and kind-of.  We say that a Ford 
+Taurus is-a-kind-of-a Car, and that a Ford Taurus has parts such as Engine, Tire, etc.  The 
+part-of hierarchy has been a first class part of software since the ADT style became relevant, 
+but programmers have had to whip up their own customized techniques for simulating kind-of 
+(usually in an ad hoc manner).  Inheritance changes that; it adds "the other" major dimension 
+of decomposition.
+An example of "kind-of decomposition", consider the genus/species biology charts.  Knowing 
+the internal parts of various fauna and flora is important for certain applications, but knowing 
+the groupings (kinds, categories) is equally important.
+
+
+#$How do you express inheritance in C++?
+By the ": public" syntax:
+     class Car : public Vehicle {
+             //^^^^^^^^---- ": public" is pronounced "is-a-kind-of-a"
+       //...
+     };
+We state the above relationship in several ways:
+ 	* Car is "a kind of a" Vehicle
+ 	* Car is "derived from" Vehicle
+ 	* Car is "a specialized" Vehicle
+ 	* Car is the "subclass" of Vehicle
+ 	* Vehicle is the "base class" of Car
+ 	* Vehicle is the "superclass" of Car (this not as common in the C++ community)
+
+
+#$What is "incremental programming"?
+In addition to being an abstraction mechanism that makes is-a-kind-of relationships explicit, 
+inheritance can also be used as a means of "incremental programming".  A derived class 
+inherits all the representation (bits) of its base class, plus all the base class' mechanism 
+(code).  Another device (virtual functions, described below) allows derived classes to 
+selectively override some or all of the base class' mechanism (replace and/or enhance the 
+various algorithms).
+This simple ability is surprisingly powerful: it effectively adds a "third dimension" to 
+programming.  After becoming fluent in C++, most programmers find languages like C and 
+Ada to be "flat" (a cute little book, "Flatland", aptly describes those living in a two dimensional 
+plane, and their disbelief about a strange third dimension that is somehow neither North, 
+South, East nor West, but is "Up").
+As a trivial example, suppose you have a Linked List that is too slow, and you wish to cache 
+its length.  You could "open up" the List "class" (or "module"), and modify it directly (which 
+would certainly be appropriate for such a simple situation), but suppose the List's physical 
+size is critical, and some important client cannot afford to add the extra machine word to 
+every List. Another option would be to textually copy the List module and modify the copy, but 
+this increases the amount of code that must be maintained, and also presumes you have 
+access to the internal source code of the List module.  The OO solution is to realize that a List 
+that caches its length is-a-kind-of-a List, so we inherit:
+	class FastList : public List {
+	  int length;	//cache the length here
+	public:
+	  //override operations so the cache stays "hot"
+	};
+
+
+#$Should I pointer-cast from a derived class to its base class?
+Yes.
+A derived class is a specialized version of the base class ("Derived is a kind-of Base").  The 
+upward conversion is perfectly safe, and happens all the time (if I am pointing at a car, I am 
+in fact pointing at a vehicle):
+     void f(Vehicle* v);
+     void g(Car* c) { f(c); } //perfectly safe; no cast
+Note that the answer to this FAQ assumes we're talking about "public" inheritance; see below 
+on "private/protected" inheritance for "the other kind".
+
+
+#$Derived* --> Base* works ok; why doesn't Derived** --> Base** work?
+C++ allows a Derived* to be converted to a Base*, since a Derived object is a kind of a Base 
+object.  However trying to convert a Derived** to a Base** is (correctly) flagged as an error (if 
+it was allowed, the Base** could be dereferenced (yielding a Base*), and the Base* could be 
+made to point to an object of a DIFFERENT derived class.  This would be an error.
+As a corollary, an array of Deriveds is-NOT-a-kind-of array of Bases.  At Paradigm Shift, Inc. 
+we use the following example in our C++ training sessions:
+               "A bag of apples is NOT a bag of fruit".
+If a bag of apples COULD be passed as a bag of fruit, someone could put a banana into the 
+bag of apples!
+
+
+#$Does array-of-Derived is-NOT-a-kind-of array-of-Base mean arrays are 
+bad?
+Yes, "arrays are evil" (jest kidd'n :-).
+There's a very subtle problem with using raw built-in arrays.  Consider this:
+     void f(Base* arrayOfBase)
+     {
+       arrayOfBase[3].memberfn();
+     }
+     main()
+     {
+       Derived arrayOfDerived[10];
+       f(arrayOfDerived);
+     }
+The compiler thinks this is perfectly type-safe, since it can convert a Derived* to a Base*.  But 
+in reality it is horrendously evil: since Derived might be larger than Base, the array index in f() 
+not only isn't type safe, it may not even be pointing at a real object!  In general it'll be pointing 
+somewhere into the innards of some poor Derived.
+The root problem is that C++ can't distinguish between a ptr-to-a-thing and a ptr-to-an-array-
+of-things.  Naturally C++ "inherited" this feature from C.
+NOTE: if we had used an array-like CLASS instead of using a raw array (e.g., an "Array<T>" 
+rather than a "T[]"), this problem would have been properly trapped as an error at compile 
+time rather than at run-time.
+
+
+#$What is a "virtual member function"?
+A virtual function allows derived classes to replace the implementation provided by the base 
+class.  The compiler ensures the replacement is always called whenever the object in 
+question is actually of the derived class, even if the object is accessed by a base pointer 
+rather than a derived pointer. This allows algorithms in the base class to be replaced in the 
+derived class, even if users don't know about the derived class.
+Note: the derived class can partially replace ("override") the base class method (the derived 
+class method can invoke the base class version if desired).
+
+
+#$What's the big deal of separating interface from implementation?
+Separating interface from implementation is a key to reusable software. Interfaces are a 
+company's most valuable resources.  Designing an interface takes longer than whipping 
+together a concrete class which fulfills that interface.  Furthermore interfaces require the 
+resources of more expensive people (for better and worse, most companies separate 
+"designers" from "coders").  Since they're so valuable, they should be protected from being 
+tarnished by data structures and other artifacts of the implementation (any data structures you 
+put in a class can never be "revoked" by a derived class, which is why you want to "separate" 
+the interface from the implementation).
+
+
+#$What is dynamic dispatch?  Static dispatch?
+In the following discussion, "ptr" means either a pointer or a reference.
+When you have a ptr to an object, there are two distinct types in question: the static type of 
+the ptr, and the dynamic type of the pointed-to object (the object may actually be of a class 
+that is derived from the class of the ptr).
+The "legality" of the call is checked based on the static type of the ptr, which gives us static 
+type safety (if the type of the ptr can handle the member fn, certainly the pointed-to object 
+can handle it as well, since the pointed-to object is of a class that is derived from the ptr's 
+class).
+Suppose ptr's type is "List" and the pointed-to object's type is "FastList". Suppose the fn 
+"len()" is provided in "List" and overridden in "FastList".  The question is: which function 
+should actually be invoked: the function attached to the pointer's type ("List::len()") or the 
+function attached to the object itself ("FastList::len()")?
+If "len()" is a virtual function, as it would be in the above case, the fn attached to the object is 
+invoked.  This is called "dynamic binding", since the actual code being called is determined 
+dynamically (at run time).
+On the other hand, if "len()" were non-virtual, the dispatch would be resolved statically to the 
+fn attached to the ptr's class.
+
+
+#$Can I override a non-virtual fn?
+It's legal, but it ain't moral.
+Experienced C++ programmers will sometimes redefine a non-virtual fn for efficiency (the 
+alternate implementation might make better use of the derived class' resources), or to get 
+around the hiding rule (see below, and ARM sect.13.1).  However the client-visible effects 
+must be IDENTICAL, since non-virtual fns are dispatched based on the static type of the 
+ptr/ref rather than the dynamic type of the pointed-to/referenced object.
+
+
+#$Can I "revoke" or "hide" public member fns inherited from my base 
+class?
+Never never never do this.  Never.  NEVER!
+Attempting to hide (eliminate, revoke) inherited public member functions is an all-too-
+common design error.  It usually stems from muddy thinking.
+
+
+#$Is a "Circle" a kind-of an "Ellipse"?
+Not if Ellipse promises to be able to change its size asymmetrically.
+For example, suppose Ellipse has a "setSize(x,y)" method, and suppose this method 
+promises "the Ellipse's width() will be x, and its height() will be y". In this case, Circle can't be 
+a kind-of Ellipse.  Simply put, if Ellipse can do something Circle can't, then Circle can't be a 
+kind of Ellipse.
+This leaves two potential (valid) relationships between Circle and Ellipse:
+ 	* Make Circle and Ellipse completely unrelated classes.
+ 	* Derive Circle and Ellipse from a base class representing "Ellipses that can't 	 
+NECESSARILY perform an unequal-setSize operation."
+In the first case, Ellipse could be derived from class "AsymmetricShape" (with setSize(x,y) 
+being introduced in AsymmetricShape), and Circle could be derived from "SymmetricShape," 
+which has a setSize(size) member fn.
+In the second case, class "Oval" could only have "setSize(size)" which sets both the "width()" 
+and the "height()" to "size", then derive both Ellipse and Circle from Oval.  Ellipse --but not 
+Circle-- adds the "setSize(x,y)" operation (see the "hiding rule" for a caveat if the same 
+method name "setSize()" is used for both operations).
+
+
+#$Are there other options to the "Circle is/isnot kind-of Ellipse" dilemma?
+If you claim that all Ellipses can be squashed asymmetrically, and you claim that Circle is a 
+kind-of Ellipse, and you claim that Circle can't be squashed asymmetrically, clearly you've got 
+to adjust (revoke, actually) one of your claims.  Thus you've either got to get rid of 
+"Ellipse::setSize(x,y)", get rid of the inheritance relationship between Circle and Ellipse, or 
+admit that your "Circle"s aren't necessarily circular.
+Here are the two most common traps new OO/C++ programmers regularly fall into. They 
+attempt to use coding hacks to cover up a broken design (they redefine Circle::setSize(x,y) to 
+throw an exception, call "abort()", or choose the average of the two parameters, or to be a no-
+op).  Unfortunately all these hacks will surprise users, since users are expecting "width() ==x" 
+and "height() == y".
+The only rational way out of this would be to weaken the promise made by Ellipse's 
+"setSize(x,y)" (e.g., you'd have to change it to, "This method MIGHT set width() to x and 
+height() to y, or it might do NOTHING"). Unfortunately this dilutes the contract into dribble, 
+since the user can't rely on any meaningful behavior.  The whole hierarchy therefore begins 
+to be worthless (it's hard to convince someone to use an object if you have to shrug your 
+shoulders when asked what the object does for them).
+
+
+#$Why can't I access "private" things in a base class from a derived 
+class?
+To protect you from future changes to the base class.
+Derived classes do not get access to private members of a base class. This effectively "seals 
+off" the derived class from any changes made to the private members of the base class.
+
+
+#$What's the difference between "public:", "private:", and "protected:"?
+"Private:" is discussed in the previous section, and "public:" means "anyone can access it."  
+The third option, "protected:", makes a member (either data member or member fn) 
+accessible to subclasses.
+
+
+#$How can I protect subclasses from breaking when I change internal 
+parts?
+A class has two distinct interfaces for two distinct sets of clients:
+ 	* its "public:" interface serves unrelated classes.
+ 	* its "protected:" interface serves derived classes.
+Unless you expect all your subclasses to be built by your own team, you should consider 
+making your base class's bits be "private:", and use "protected:" inline access functions to 
+access these data.  This way the private bits can change, but the derived class's code won't 
+break unless you change the protected access functions.
+
+
+#$Why does my base ctor get *base*'s virtual fn instead of the derived 
+version?
+During the Base class's constructor, the object isn't yet a Derived, so if "Base::Base()" calls a 
+virtual function "virt()", the "Base::virt()" will be invoked, even if "Derived::virt()" exists.
+Similarly, during Base's destructor, the object is no longer a Derived, so when Base::~Base() 
+calls "virt()", "Base::virt()" gets control, NOT the "Derived::virt()" override.
+You'll quickly see the wisdom of this approach when you imagine the disaster if 
+"Derived::virt()" touched a member object from the Derived class.
+
+
+#$Does a derived class dtor need to explicitly call the base destructor?
+No, never explicitly call a destructor (where "never" means "rarely").
+A derived class's destructor (whether or not you explicitly define one) AUTOMATICALLY 
+invokes the destructors for member objects and base class subobjects.  Member objects are 
+destroyed in the reverse order they appear within the class, then base class subobjects are 
+destroyed in the reverse order that they appear in the class's list of base classes.
+You should explicitly call a destructor ONLY in esoteric situations, such as when destroying 
+an object created by the "placement new operator."
+
+
+#$How do you express "private inheritance"?
+When you use ": private" instead of ": public".  Ex:
+	class Foo : private Bar {
+	  //...
+	};
+
+
+#$How are "private derivation" and "containment" similar? dissimilar?
+Private inheritance is a syntactic variant of composition (has-a).
+
+E.g., the "car has-a engine" relationship can be expressed using composition:
+
+     class Engine {
+     public:
+       Engine(int numCylinders);
+       void start();               //starts this Engine
+     };
+
+     class Car {
+     public:
+       Car() : e_(8) { }      //initializes this Car with 8 cylinders
+       void start() { e_.start(); }     //start this Car by starting 
+its engine
+     private:
+       Engine e_;
+     };
+
+The same "has-a" relationship can also be expressed using private inheritance:
+
+     class Car : private Engine {
+     public:
+       Car() : Engine(8) { }       //initializes this Car with 8
+cylinders
+       Engine::start;         //start this Car by starting its engine
+     };
+
+There are several similarities between these two forms of composition:
+	* in both cases there is exactly one Engine member object contained in a Car.
+	* in neither case can users (outsiders) convert a Car* to an Engine*.
+
+There are also several distinctions:
+	* the first form is needed if you want to contain several Engines per Car.
+ 	* the second form can introduce unnecessary multiple inheritance.
+ 	* the second form allows members of Car to convert a Car* to an Engine*.
+ 	* the second form allows access to the "protected" members of the base class.
+ 	* the second form allows Car to override Engine's virtual functions.
+
+Note that private inheritance is usually used to gain access into the "protected:" members of 
+the base class, but this is usually a short-term solution (translation: a band-aid; see below).
+
+
+#$Should I pointer-cast from a "privately" derived class to its base class?
+The short answer: no, but yes too (better read the long answer!)
+>From "inside" the privately derived class (ie: in the body of members or friends of the 
+privately derived class), the relationship to the base class is known, and the upward 
+conversion from PrivatelyDer* to Base* (or PrivatelyDer& to Base&) is safe and doesn't need 
+a cast.
+>From "outside" the privately derived class, the relationship to "Base" is a "private" decision 
+of "PrivatelyDer", so the conversion requires a cast. Clients should not exercise this cast, 
+since private derivation is a private implementation decision of the privately derived class, 
+and the coercion will fail after the privately derived class privately chooses to change this 
+private implementation decision.
+Bottom line: only a class and its friends have the right to convert a ptr to a derived class into 
+a ptr to its private base class.  They don't need a cast, since the relationship with the base 
+class is accessible to them.  No one else can convert such ptrs without pointer-casts, so no 
+one else should.
+
+
+#$Should I pointer-cast from a "protected" derived class to its base 
+class?
+Generally, No.
+From a method or friend of a privately derived class, the relationship to the base class is 
+known, and the upward conversion from PrivatelyDer* to Base* (or PrivatelyDer& to Base&) 
+is safe; no cast is needed or recommended.
+However users of PrivateDer should avoid this unsafe conversion, since it is based on a 
+"private" decision of PrivateDer, and is subject to change without notice.
+
+
+#$What are the access rules with "private" and "protected" inheritance?
+Take these classes as examples:
+	class B { /*...*/ };
+	class D_priv : private   B { /*...*/ };
+	class D_prot : protected B { /*...*/ };
+	class D_publ : public    B { /*...*/ };
+	class Client { B b; /*...*/ };
+Public and protected parts of B are "private" in D_priv, and are "protected" in D_prot.  In 
+D_publ, public parts of B are public (D_prot is-a-kind-of-a B), and protected parts of B remain 
+protected in D_publ.  Naturally *none* of the subclasses can access anything that is private in 
+B.  Class "Client" can't even access the protected parts of B (ie: it's "sealed off").
+It is often the case that you want to make some but not all inherited member functions public 
+in privately/protectedly derived classes.  Ex: to make member fn B::f(int,char,float) public in 
+D_prot, you would say:
+	class D_prot : protected B {
+	  //...
+	public:
+	  B::f;    //note: not  B::f(int,char,float)
+	};
+There are limitations to this technique (can't distinguish overloaded names, and you can't 
+make a feature that was "protected" in the base "public" in the derived).  Where necessary, 
+you can get around these by a call-through fn:
+	class D_prot : protected B {
+	public:
+	  short f(int i, char c, float f) { return B::f(i,c,f); }
+	};
+
+
+#$Do most C++ programmers use composition or private inheritance?
+Composition.
+Normally you don't WANT to have access to the internals of too many other classes, and 
+private inheritance gives you some of this extra power (and responsibility).  But private 
+inheritance isn't evil; it's just more expensive to maintain, since it increases the probability 
+that someone will change something that will break your code.
+A legitimate, long-term use for private inheritance is when you want to build a class Fred that 
+uses code in a class Wilma, and the code from class Wilma needs to invoke methods from 
+your new class, Fred.  In this case, Fred calls non-virtuals in Wilma, and Wilma calls (usually 
+pure) virtuals in itself, which are overridden by Fred.  This would be much harder to do with 
+composition.
+
+     class Wilma {
+     protected:
+       void fredCallsWilma()
+         { cout << "Wilma::fredCallsWilma()\n"; wilmaCallsFred(); }
+       virtual void wilmaCallsFred() = 0;
+     };
+
+     class Fred : private Wilma {
+     public:
+       void barney()
+         { cout << "Fred::barney()\n"; Wilma::fredCallsWilma(); }
+     protected:
+       virtual void wilmaCallsFred()
+         { cout << "Fred::wilmaCallsFred()\n"; }
+     };
+
+
+#$How do I separate interface from implementation in C++ (like Modula-
+2)?
+Use an ABC (see next question for what an ABC is).
+
+
+#$What is an ABC ("abstract base class")?
+At the design level, an ABC corresponds to an abstract concept.  If you asked a
+Mechanic if he repaired Vehicles, he'd probably wonder what KIND-OF Vehicle you had in 
+mind.  Chances are he doesn't repair space shuttles, ocean liners, bicycles, or nuclear 
+submarines.  The problem is that the term "Vehicle" is an abstract concept (e.g., you can't 
+build a "vehicle"
+unless you know what kind of vehicle to build).  In C++, class Vehicle would be an ABC, with 
+Bicycle, SpaceShuttle, etc, being subclasses (an OceanLiner is-a-kind-of-a Vehicle).  In real-
+world OOP, ABCs show up all over the place. 
+As programming language level, an ABC is a class that has one or more pure virtual member 
+functions (see next FAQ).  You cannot make an object (instance) of an ABC.
+
+
+#$What is a "pure virtual" member function?
+Some member functions exist in concept, but can't have any actual defn.  Ex: Suppose I 
+asked you to draw a Shape at location (x,y) that has size 7.2.  You'd ask me "what kind of 
+shape should I draw", since circles, squares, hexagons, etc, are drawn differently.  In C++, we 
+indicate the existence of the "draw()" method, but we recognize it can only be defined in 
+subclasses:
+	class Shape {
+	public:
+	  virtual void draw() const = 0;
+	  //...                     ^^^--- "=0" means it is "pure 
+virtual"
+	};
+This pure virtual makes "Shape" an ABC.  The "const" says that invoking the "draw()" method 
+won't change the Shape object (ie: it won't move around on the screen, change sizes, etc).  If 
+you want, you can think of it as if the code were at the nil pointer.
+Pure virtuals allow you to express the idea that any actual object created from a [concrete] 
+class derived from the ABC *will* have the indicated member fn, but we simply don't have 
+enough information to actually *define* it yet.  They allow separation of interface from 
+implementation, which ultimately allows functionally equivalent subclasses to be produced 
+that can "compete" in a free market sense (a technical version of "market driven economics").
+
+
+#$How can I provide printing for an entire hierarchy rooted at "class X"?
+Provide a friend operator<< that calls a protected virtual function:
+    class X {
+    protected:
+      virtual void print(ostream& o) const;  //or "=0;" if "X" is 
+abstract
+    public:
+      friend ostream& operator<<(ostream& o,const X& x) {x.print(o); 
+return o;}
+      //...
+    };
+Now all subclasses of X merely provide their own "print(ostream&)const" member function, 
+and they all share the common "<<" operator.  Friends don't bind dynamically, but this 
+technique makes them *act* as if they were.
+
+
+#$What is a "virtual destructor"?
+In general, a virtual fn means to start at the class of the object itself, not the type of the 
+pointer/ref ("do the right thing based on the actual class of" is a good way to remember it).  
+Virtual destructors (dtors) are no different: start the destruction process "down" at the object's 
+actual class,
+rather than "up" at the ptr's class (ie: "destroy yourself using the *correct* destruction 
+routine").
+Virtual destructors are so valuable that some people want compilers to holler at you if you 
+forget them.  In general there's only one reason *not* to make a class' dtor virtual: if that class 
+has no virtual fns, the introduction of the first virtual fn imposes typically 4 bytes overhead in 
+the size of each object (there's a bit of magic for how C++ "does the right thing", and it boils 
+down to an extra ptr per object called the "virtual table pointer" or "vptr").
+
+
+#$What is a "virtual constructor"?
+Technically speaking, there is no such thing.  You can get the effect you desire by a virtual 
+"clone()" member fn (for copy constructing), or a "fresh()" member fn (also virtual) which 
+constructs/creates a new object of the same class but is "fresh" (like the "default" [zero 
+parameter] ctor would do).
+The reason ctors can't be virtual is simple: a ctor turns raw bits into a living object.  Until 
+there's a living respondent to a message, you can't
+expect a message to be handled "the right way".  You can think of ctors as "class" [static] 
+functions, or as "factories" which churn out objects.
+Thinking of ctors as "methods" attached to an object is misleading.
+Here is an example of how you could use "clone()" and "fresh()" methods:
+	class Set {  //normally this would be a template
+	public:
+	  virtual void insert(int);	//Set of "int"
+	  virtual int  remove();
+	  //...
+	  virtual Set& clone() const = 0;	//pure virtual; Set is an 
+ABC
+	  virtual Set& fresh() const = 0;
+	  virtual ~Set() { }	//see on "virtual destructors" for more
+	};
+	class SetHT : public Set {
+	  //a hash table in here
+	public:
+	  //...
+	  Set& clone() const { return *new SetHT(*this); }
+	  Set& fresh() const { return *new SetHT(); }
+	};
+"new SetHT(...)" returns a "SetHT*", so "*new" returns a SetHT&.  A SetHT is-a Set, so the 
+return value is correct.  The invocation of "SetHT(*this)" is that of copy construction ("*this" 
+has type "SetHT&").  Although "clone()" returns a new SetHT, the caller of clone() merely 
+knows he has a Set, not a SetHT (which is desirable in the case of wanting a "virtual ctor").  
+"fresh()" is similar, but it constructs an "empty" SetHT.
+Clients can use this as if they were "virtual constructors":
+	void client_code(Set& s)
+	{
+	  Set& s2 = s.clone();
+	  Set& s3 = s.fresh();
+	  //...
+	  delete &s2;	//relies on destructor being virtual!!
+	  delete &s3;	// ditto
+	}
+This fn will work correctly regardless of how the Set is implemented (hash table based, AVL 
+tree based, etc).
+See above on "separation of interface from implementation" for more.
+
+
+#$What are some good C++ coding standards?
+Thank you for reading this answer rather than just trying to set your own coding standards.
+But please don't ask this question on comp.lang.c++.  Nearly every software engineer has, at 
+some point, felt that coding standards are or can be used as a "power play."  Furthermore 
+some attempts to set C++ coding standards have been made by those unfamiliar with the 
+language and/or paradigm, so the standards end up being based on what WAS the state-of-
+the-art when the standards setters where writing code.  Such impositions generate an attitude 
+of mistrust for coding standards.
+Obviously anyone who asks this question on comp.lang.c++ wants to be trained so they 
+DON'T run off on their own ignorance, but nonetheless the answers tend to generate more 
+heat than light.
+
+
+#$Are coding standards necessary?  sufficient?
+Coding standards do not make non OO programmers into OO programmers; only training and 
+experience do that.  If coding standards have merit, it is that they discourage the petty 
+fragmentation that occurs when large organizations coordinate the activities of diverse groups 
+of programmers. 
+But you really want more than a coding standard.  The structure provided by coding standards 
+gives neophytes one less degree of freedom to worry about, however pragmatics go well 
+beyond pretty-printing standards.  Organizations need a consistent PHILOSOPHY of design 
+and implementation.  E.g., strong or weak typing?  references or ptrs in interfaces?  stream 
+I/O or stdio?  should C++ code call our C?  vise versa?  how should ABCs be used?  should 
+inheritance be used as an implementation technique or as a specification technique?  what 
+testing strategy should be employed?  inspection strategy?  should interfaces uniformly have 
+a "get" and/or "set" method for each data member?  should interfaces be designed from the 
+outside-in or the inside-out?  should errors be handled by try/catch/throw or return codes?  
+etc.
+What is needed is a "pseudo standard" for detailed DESIGN.  I recommend a three-pronged 
+approach to achieving this standardization: training, mentoring, and libraries.  Training 
+provides "intense instruction," mentoring allows OO to be caught rather than just taught, and 
+a high quality C++ class library provides "long term instruction."  There is a thriving 
+commercial market for all three kinds of "training."  Advice by organizations who have been 
+through the mill is consistent: Buy, Don't Build.  Buy libraries, buy training, buy tools, buy 
+consulting.  Companies who have attempted to become a self-taught tool-shop as well as an 
+application/system shop have found success difficult.
+Few argue that coding standards are "ideal," or even "good," however they are necessary in 
+the kind of organizations/situations described above.
+The following FAQs provide some basic guidance in conventions and styles.
+
+
+#$Should our organization determine coding standards from our C 
+experience?
+No!
+No matter how vast your C experience, no matter how advanced your C expertise, being a 
+good C programmer does not make you a good C++ programmer.  Converting from C to C++ 
+is more than just learning the syntax and semantics of the "++" part of C++.  Organizations 
+who want the promise of OOP, but who fail to put the "OO" into OOP, are fooling themselves; 
+the balance sheet will show their folly.
+C++ coding standards should be tempered by C++ experts.  Asking comp.lang.c++ is a start 
+(but don't use the term "coding standard" in the question; instead simply say, "what are the 
+pros and cons of this technique?").  Seek out experts who can help guide you away from 
+pitfalls.  Get training.  Buy libraries and see if "good" libraries pass your coding standards.  Do 
+NOT set standards by yourself unless you have considerable experience in C++.  Having no 
+standard is better than having a bad standard, since improper "official" positions "harden" bad 
+brain traces.  There is a thriving market for both C++ training and libraries from which to pool 
+expertise.
+One more thing: whenever something is in demand, the potential for charlatans increases.  
+Look before you leap.  Also ask for student-reviews from past companies, since not even 
+expertise makes someone a good communicator. Finally, select a practitioner who can teach, 
+not a full time teacher who has a passing knowledge of the language/paradigm.
+
+
+#$Should I declare locals in the middle of a fn or at the top?
+Declare near first use.
+An object is initialized (constructed) the moment it is declared.  If you don't have enough 
+information to initialize an object until half way down the fn, you can either initialize it to an 
+"empty" value at the top then "assign" it later, or initialize it correctly half way down the fn.  It's 
+cheaper (in runtime performance) to get it right the first time than to build it once, tear it 
+down, and build it again.  Simple examples show a factor of 350% speed hit for simple 
+classes like "String".  Your mileage may vary; surely the overall system degradation will be 
+less that 300+%, but there WILL be degradation. UNNECESSARY degradation.
+A common retort to the above is: "we"ll provide "set" methods for every datum in our objects, 
+so the cost of construction will be spread out." This is worse than the performance overhead, 
+since now you're introducing a maintenance nightmare.  Providing "set" methods for every 
+datum is tantamount to public data: you've exposed your implementation technique to the 
+world.  The only thing you've hidden is the physical NAMES of your member objects, but the 
+fact that you're using a List and a String and a float (for example) is open for all to see.  
+Maintenance generally consumes far more resources than run-time CPU.
+Locals should be declared near their first use.  Sorry that this isn't familiar to C experts, but 
+"new" doesn't necessarily mean "bad."
+
+
+#$What source-file-name convention is best? "foo.C"? "foo.cc"? 
+"foo.cpp"?
+If you already have a convention, use it.  If not, consult your compiler to see what the 
+compiler expects.  Typical answers are: ".C", ".cc", ".cpp", or ".cxx" (naturally the ".C" 
+extension assumes a case-sensitive file system to distinguish ".C" from ".c").
+At Paradigm Shift, Inc., we use ".C" in our Makefiles even on case-insensitive file systems 
+(on case-insensitive file systems, we supply the compiler option that means "assume all .c 
+files are C++ source files"; e.g., "-Tdp" for IBM CSet++, "-cpp" for Zortech C++, "-P" for 
+Borland C++, etc).
+
+
+#$What header-file-name convention is best? "foo.H"? "foo.hh"? 
+"foo.hpp"?
+The naming of your source files is cheap since it doesn't effect your source code.  Your 
+substantial investment is your source code.  Therefore the names of your header files must 
+be chosen with much greater care.  The preprocessor will accept whatever name you give it 
+in the #include line, but whatever you choose, you will want to plan on sticking with it for a 
+long time, since it is more expensive to change (though certainly not as difficult as, say, 
+porting to a new language).
+Almost all vendors ship their C++ header files using a ".h" extension, which
+means you can reliably do things like:
+		#include <iostream.h>
+Well, *almost*.  There are one or two vendors that provide <iostream.hpp>.  A few #ifdef"s, 
+suffice.  There are also tools that recognize the language of a file by its extension rather than 
+its contents (gnu emacs looks in the first few lines for a string magic token in a comment 
+identifying the language). Some of these extension-based tools use ".hh" or ".H" to identify 
+C++ headers, however most of the world is leaning toward ".h" for C++ headers.  C++ 
+specific information in a ".h" that is to be shared with a C compiler can be #ifdef'd sing:
+	#ifdef __cplusplus /*all C++ compilers define _cplusplus*/
+		  // ... C++ specific stuff here ...
+	#endif
+
+
+#$Are there any lint-like guidelines for C++?
+Yes, there are some practices which are generally considered dangerous. However none of 
+these are universally "bad," since situations arise when even the worst of these is needed:
+	* a class "Fred"s assignment operator should return "*this" as an "Fred&" (allows 
+chaining of assignments)
+ 	* a class with any virtual fns ought to have a virtual destructor
+ 	* a class with any of {destructor, assignment operator, copy constructor} generally 
+needs all 3
+ 	* a class "Fred"s copy constructor and assignment operator should have "const" in the 
+parameter: respectively "Fred::Fred(const Fred&)" and "Fred& Fred::operator=(const Fred&)".
+ 	* always use initialization lists for class sub-objects rather than assignment the 
+performance difference for user-defined classes can be substantial (3x!)
+ 	* many assignment operators should start by testing if "we" are "them"; e.g.,
+
+     Fred& Fred::operator= (const Fred& fred)
+     {
+       if (this == &fred) return *this;
+       //...normal assignment duties...
+       return *this;
+     }
+sometimes there is no need to check, but these situations generally correspond to when 
+there's no need for an explicit user-specified assignment op (as opposed to a compiler-
+synthesized assignment-op).
+ 	* in classes that define both "+=," "+" and "=," "a+=b" and "a=a+b" should generally do 
+the same thing; ditto for the other identities of builtin types (e.g., a+=1 and ++a; p[i] and 
+*(p+i); etc).  This can be enforced by writing the binary ops using the "op=" forms; e.g.,
+     Fred operator+ (const Fred& a, const Fred& b)
+     {
+       Fred ans = a;
+       ans += b;
+       return ans;
+     }
+This way the "constructive" binary ops don't even need to be friends. But it is sometimes 
+possible to more efficiently implement common ops (e.g.,if class "Fred" is actually "String," 
+and "+=" has to reallocate/copy string memory, it may be better to know the eventual length 
+from the beginning).
+
+
+#$Why does C++'s FAQ have a section on Smalltalk? Is this Smalltalk-
+bashing?
+The two "major" OOPLs in the world are C++ and Smalltalk.  Due to its popularity as the 
+OOPL with the second largest user pool, many new C++ programmers come from a Smalltalk 
+background.  This section answers the questions:
+ 	* what's different about the two languages
+ 	* what must a Smalltalk-turned-C++ programmer know to master C++
+This section does *!*NOT*!* attempt to answer the questions:
+ 	* which language is "better"?
+ 	* why is Smalltalk "bad"?
+ 	* why is C++ "bad"?
+Nor is it an open invitation for some Smalltalk terrorist to slash my tires while I sleep (on 
+those rare occasions when I have time to rest these days :-).
+
+
+#$What's the difference between C++ and Smalltalk?
+The most important differences are:
+ 	* static typing vs dynamic typing?
+ 	* must inheritance be used for subtyping only?
+ 	* value vs reference semantics?
+The first two differences are illuminated in the remainder of this section; the third point is the 
+subject of the section that follows.
+If you're a Smalltalk programmer who wants to learn C++, you'd be very wise to study the 
+next three FAQs carefully.
+
+
+#$What is "static typing", and how is it similar/dissimilar to Smalltalk?
+Static typing says the compiler checks the type-safety of every operation STATICALLY (at 
+compile-time), rather than to generate code which will check things at run-time.  For example, 
+with static typing, the signature matching of fn arguments is checked, and an improper match 
+is flagged as an error by the COMPILER, not at run-time.
+In OO code, the most common "typing mismatch" is invoking a member function against an 
+object which isn't prepared to handle the operation. E.g., if class "Fred" has member fn "f()" 
+but not "g()", and "fred" is an instance of class "Fred", then "fred.f()" is legal and "fred.g()" is 
+illegal.  C++ (statically typed) catches the error at compile time, and Smalltalk (dynamically 
+typed) catches the error at run-time.  (Technically speaking, C++ is like Pascal--PSEUDO 
+statically typed-- since ptr casts and unions can be used to violate the typing system; which 
+reminds me: only use ptr casts and unions as often as you use "goto"s).
+
+
+#$Which is a better fit for C++: "static typing" or "dynamic typing"?
+If you want to use C++ most effectively, use it as a statically typed language.
+C++ is flexible enough that you can (via ptr casts, unions, and #defines) make it "look" like 
+Smalltalk.  But don't.  Which reminds me: try to avoid #define.
+There are places where ptr casts and unions are necessary and even wholesome, but they 
+should be used carefully and sparingly.  A ptr cast tells the compiler to believe you.  An 
+incorrect ptr cast might corrupt your heap, scribble into memory owned by other objects, call 
+nonexistent ethods, and cause general failures.  It's not a pretty sight.  If you avoid these and 
+related constructs, you can make your C++ code both safer and faster, since anything that 
+can be checked at compile time is something that doesn't have to be done at run-time.
+Even if you're in love with dynamic typing, please avoid it in C++, or else please consider 
+using another language that better supports your desire to defer typing decisions to run-time.  
+C++ performs 100% of its type checking at compile time; it has NO built-in mechanism to do 
+ANY type checking at run-time. If you use C++ as a dynamically typed OOPL, your life is in 
+your own ands.
+
+
+#$How can you tell if you have a dynamically typed C++ class library?
+Hint #1: when everything is derived from a single root class, usually "Object."
+Hint #2: when the container classes (List, Stack, Set, etc) are non-templates.
+Hint #3: when the container classes (List, Stack, Set, etc) insert/extract elements as pointers 
+to "Object" (you can put an Apple into such a container, but when you get it out, the compiler 
+knows only that it is derived from Object, so you have to use a pointer cast to convert it back 
+to an Apple*; and you better pray a lot that it really IS an Apple, cause your blood is on your 
+own head).
+You can make the pointer cast "safe" by using "dynamic_cast" (see earlier), but this dynamic 
+testing is just that: dynamic.  This coding style is the essence of dynamic typing in C++.  You 
+call a function that says "convert this Object into an Apple or give me NULL if its not an 
+Apple," and you've got dynamic typing: you don't know what will happen until run-time.
+When you use with templates to implement your containers, the C++ compiler can statically 
+validate 99% of an application's typing information (the figure "99%" is apocryphal; some 
+claim they always get 100%, those who need persistence get something less than 100% static 
+type checking). The point is:C++ gets genericity from templates, not from inheritance.
+
+
+#$Will "standard C++" include any dynamic typing primitives?
+The ANSI/ISO C++ standardization committees are considering proposals to add type-safe 
+pointer casts and other run-time type mechanisms into the C++ standard.  When this 
+happens, it will be easier to do run-time typing in those cases where it truly is needed (ex: for 
+persistence), but hopefully the new syntax won't encourage abuses where if-then-else'ing the 
+run-time type is used to replace a virtual function call.
+Note that the effect of a down-cast and a virtual fn call are similar: in the member fn that 
+results from the virtual fn call, the "this" ptr is a downcasted version of what it used to be (it 
+went from ptr-to-Base to ptr-to-Derived). The difference is that the virtual fn call *always* 
+works: it never makes the wrong "down-cast" and it automatically extends itself whenever a 
+new subclass is created -- as if an extra "case" or "if/else" magically appearing in the weak 
+typing technique.  The other difference is that the client gives control to the object rather than 
+reasoning *about* the object.
+
+
+#$What is value and/or reference semantics, and which is best in C++?
+With reference semantics, assignment is a pointer-copy (i.e., a REFERENCE). Value (or 
+"copy") semantics mean assignment copies the value, not just the pointer.  C++ gives you the 
+choice: use the assignment operator to copy the value (copy/value semantics), or use a ptr-
+copy to copy a pointer (reference semantics).  C++ allows you to override the assignment 
+operator to do anything your heart desires, however the default (and most common) choice is 
+to copy the VALUE.
+Pros of reference semantics: flexibility and dynamic binding (you get dynamic binding in C++ 
+only when you pass by ptr or pass by ref, not when you pass by value).
+Pros of value semantics: speed.  "Speed" seems like an odd benefit to for a feature that 
+requires an object (vs a ptr) to be copied, but the fact of the matter is that one usually 
+accesses an object more than one copies the object, so the cost of the occasional copies is 
+(usually) more than offset by the benefit of having an actual object rather than a ptr to an 
+object.
+There are three cases when you have an actual object as opposed to a pointer to an object: 
+local vars, global/static vars, and fully contained member objects in a class.  The most 
+important of these is the last ("composition").
+More info about copy-vs-reference semantics is given in the next FAQs. Please read them all 
+to get a balanced perspective.  The first few have intentionally been slanted toward value 
+semantics, so if you only read the first few of the following FAQs, you'll get a warped 
+perspective.
+Assignment has other issues (e.g., shallow vs deep copy) which are not covered here.
+
+
+#$What is "virtual data", and how-can / why-would I use it in C++?
+Virtual data allows a derived class to change the exact class of a base class's member object.  
+Virtual data isn't strictly "supported" by C++, however it can be simulated in C++.  It ain't 
+pretty, but it works.
+To simulate virtual data in C++, the base class must have a pointer to the member object, 
+and the derived class must provide a "new" object to be pointed to by the base class's pointer.  
+The base class would also have one or more normal constructors that provide their own 
+referrent (again via "new"), and the base class's destructor would "delete" the referent.
+For example, class "Stack" might have an Array member object (using a pointer), and derived 
+class "StretchableStack" might override the base class member data from "Array" to 
+"StretchableArray".  For this to work, StretchableArray would have to inherit from Array, so 
+Stack would have an "Array*".  Stack's normal constructors would initialize this "Array*" with a 
+"new Array", but Stack would also have a (possibly "protected:") constructor that would accept 
+an "Array*" from a derived class. StretchableArray's constructor would provide a "new 
+StretchableArray" to this special constructor.
+Pros:
+ 	* Easier implementation of StretchableStack (most of the code is inherited).
+ 	* Users can pass a StretchableStack as a kind-of Stack.
+Cons:
+ 	* Adds an extra layer of indirection to access the Array.
+ 	* Adds some extra freestore allocation overhead (both new and delete).
+ 	* Adds some extra dynamic binding overhead (reason given in next FAQ).
+In other words, we succeeded at making OUR job easier as the implementor of 
+StretchableStack, but all our users pay for it.  Unfortunately the extra overhead was imposed 
+on both users of StretchableStack AND on users of Stack.
+See the FAQ after the next to find out how much the users "pay."  Also: PLEASE read the few 
+FAQs that follow the next one too (YOU WILL NOT GET A BALANCED PERSPECTIVE 
+WITHOUT THE OTHERS).
+
+
+#$What's the difference between virtual data and dynamic data?
+The easiest way to see the distinction is by an analogy with "virtual fns":
+A virtual member fn means the declaration (signature) must stay the same in subclasses, but 
+the defn (body) can be overridden.  The overriddenness of an inherited member fn is a static 
+property of the subclass; it doesn't change dynamically throughout the life of any particular 
+object, nor is it possible for distinct objects of the subclass to have distinct defns of the 
+member fn.
+Now go back and re-read the previous paragraph, but make these substitutions:
+ 	* "member fn" 	--> "member object"
+ 	* "signature" 	--> "type"
+ 	* "body"      	--> "exact class"
+After this, you'll have a working definition of virtual data.
+Another way to look at this is to distinguish "per-object" member functions from "dynamic" 
+member functions.  A "per-object" member fn is a member fn that is potentially different in 
+any given instance of an object, and could be implemented by burying a function ptr in the 
+object; this pointer could be "const", since the pointer will never be changed throughout the 
+object's life. A "dynamic" member fn is a member fn that will change dynamically over time; 
+this could also be implemented by a function ptr, but the fn ptr would not be const.
+Extending the analogy, this gives us three distinct concepts for data members:
+ 	* virtual data: the defn ("class") of the member object is overridable in subclasses 
+provided its declaration ("type") remains the same, and this overriddenness is a static 
+property of the subclass.
+ 	* per-object-data: any given object of a class can instantiate a different conformal 
+(same type) member object upon initialization (usually a "wrapper" object), and the exact 
+class of the member object is a static property of the object that wraps it.
+ 	* dynamic-data: the member object's exact class can change dynamically over time.
+The reason they all look so much the same is that none of this is "supported" in C++.  It's all 
+merely "allowed," and in this case, the mechanism for faking each of these is the same: a ptr 
+to a (probably abstract) base class.  In a language that made these "first class" abstraction 
+mechanisms, the difference would be more striking, since they'd each have a different 
+syntactic variant.
+
+
+#$Should class subobjects be ptrs to freestore allocated objs, or should I 
+use "composition"?
+Composition.
+Your member objects should normally be "contained" in the composite object (but not always; 
+"wrapper" objects are a good example of where you want a ptr/ref; also the N-to-1-uses-a 
+relationship needs something like a ptr/ref).
+There are three reasons why fully contained member objects ("composition") has better 
+performance than ptrs to freestore-allocated member objects:
+ 	* Extra layer to indirection every time you need to access the member object.
+ 	* Extra freestore allocations ("new" in constructor, "delete" in destructor).
+ 	* Extra dynamic binding (reason given below).
+
+
+#$What are relative costs of the 3 performance hits of allocated 
+subobjects?
+The three performance hits are enumerated in the previous FAQ:
+ 	* By itself, an extra layer of indirection is small potatoes.
+ 	* Freestore allocations can be a performance issue (the performance of the
+typical implementation of malloc degrades when there are many allocations; OO s/w can 
+easily become "freestore bound" unless you're careful).
+ 	* The extra dynamic binding comes from having a ptr rather than an object. Whenever 
+the C++ compiler can know an object's EXACT class, virtual fn calls can be STATICALLY 
+bound, which allows inlining.  Inlining allows zillions (would you believe half a dozen :-) 
+optimization opportunities such as procedural integration, register lifetime issues, etc.  The 
+C++ compiler can know an object's exact class in three circumstances:
+	local variables, global/static variables, and fully-contained member objects.
+Thus fully-contained member objects allow significant optimizations that wouldn't be possible 
+under the "member objects-by-ptr" approach.  This is the main reason that languages which 
+enforce reference-semantics have "inherent" performance challenges.
+NOTE: PLEASE READ THE NEXT THREE FAQs TO GET A BALANCED PERSPECTIVE!
+
+
+
+#$What is an "inline virtual member fn"?  Are they ever actually "inlined"?
+Yes but...
+A virtual call via a ptr or ref is always resolved dynamically, which can never be inlined.  
+Reason: the compiler can't know which actual code to call until run-time (i.e., dynamically), 
+since the code may be from a derived class that was created after the caller was compiled.
+Therefore the only time an inline virtual call can be inlined is when the compiler knows the 
+"exact class" of the object which is the target of the virtual function call.  This can happen 
+only when the compiler has an actual object rather than a pointer or reference to an object.  
+I.e., either with a local object, a global/static object, or a fully contained object inside a 
+composite.
+Note that the difference between inlining and non-inlining is normally MUCH more significant 
+than the difference between a regular fn call and a virtual fn call.  For example, the difference 
+between a regular fn call and a virtual fn call is often just two extra memory references, but 
+the difference between an inline function and a non-inline function can be as much as an 
+order of magnitude (for zillions of calls to insignificant member fns, loss of inlining virtual fns 
+can result in 25X speed degradation!  [Doug Lea, "Customization in C++," proc Usenix C++ 
+1990]).
+A practical consequence of this insight: don't get bogged down in the endless debates (or 
+sales tactics!) of compiler/language vendors who compare the cost of a virtual function call 
+on their language/compiler with the same on another language/compiler.  Such comparisons 
+are largely meaningless when compared with the ability of the language/compiler to "inline 
+expand" member function calls. I.e., many language implementation vendors make a big 
+stink about how good their dispatch strategy is, but if these implementations don't INLINE 
+method calls, the overall system performance would be poor, since it is inlining --NOT 
+dispatching-- that has the greatest performance impact.
+NOTE: PLEASE READ THE NEXT TWO FAQs TO SEE THE OTHER SIDE OF THIS COIN!
+
+
+#$Sounds like I should never use reference semantics, right?
+Wrong.
+Reference semantics are A Good Thing.  We can't live without pointers. We just don't want 
+our s/w to be One Gigantic Rats Nest Of Pointers.  In C++, you can pick and choose where 
+you want reference semantics (ptrs/refs) and where you'd like value semantics (where objects 
+physically contain other objects etc).  In a large system, there should be a balance.  However 
+if you implement absolutely EVERYTHING as a pointer, you'll get enormous speed hits.
+Objects near the problem skin are larger than higher level objects.  The IDENTITY of these 
+"problem space" abstractions is usually more important than their "value."  Thus reference 
+semantics should be used for problem-space objects.
+Note that these problem space objects are normally at a higher level of abstraction than the 
+solution space objects, so the problem space objects normally have a relatively lower 
+frequency of interaction.  Therefore C++ gives us an IDEAL situation: we choose reference 
+semantics for objects that need unique identity or that are too large to copy, and we can 
+choose value semantics for the others.  Thus the highest frequency objects will end up with 
+value semantics, since we install flexibility where it doesn't hurt us (only), and we install 
+performance where we need it most!
+These are some of the many issues the come into play with real OO design. OO/C++ mastery 
+takes time and high quality training.
+
+
+#$Does the poor performance of ref semantics mean I should pass-by-
+value?
+No.  In fact, "NO!" :-)
+The previous questions were talking about *subobjects*, not parameters.  Pass-by-value is 
+usually a bad idea when mixed with inheritance (larger subclass objects get "sliced' when 
+passed by value as a base class object).  Generally, objects that are part of an inheritance 
+hierarchy should be passed by ref or by ptr, but not by value, since only then do you get the 
+(desired) dynamic binding.
+Unless compelling reasons are given to the contrary, subobjects should be by value and 
+parameters should be by reference.  The discussion in the previous few questions indicates 
+some of the "compelling reasons" for when subobjects should be by reference.
+
+
+#$How can I call a C function "f(int,char,float)" from C++ code?
+Tell the C++ compiler that it is a C function:
+     extern "C" void f(int,char,float);
+Be sure to include the full function prototype.  A block of many C functions can be grouped 
+via braces, as in:
+     extern "C" {
+       void* malloc(size_t);
+       char* strcpy(char* dest, const char* src);
+       int   printf(const char* fmt, ...);
+     }
+
+
+#$How can I create a C++ function "f()" that is callable by my C code?
+The C++ compiler must know that "f(int,char,float)" is to be called by a C compiler using the 
+same "extern C" construct detailed in the previous FAQ. Then you define the function in your 
+C++ module:
+     void f(int x, char y, float z)
+     {
+       //...
+     }
+The "extern C" line tells the compiler that the external information sent to the linker should 
+use C calling conventions and name mangling (e.g., preceded by a single underscore).  Since 
+name overloading isn't supported by C, you can't make several overloaded fns 
+simultaneously callable by a C program.
+Caveats and implementation dependencies:
+ 	* your "main()" should be compiled with your C++ compiler (for static init).
+ 	* your C++ compiler should direct the linking process (for special libraries).
+ 	* your C and C++ compilers may need to come from same vendor and have 
+compatible versions (i.e., needs same calling convention, etc.).
+
+
+#$Why's the linker giving errors for C/C++ fns being called from C++/C 
+fns?
+See the previous two FAQs on how to use "extern "C"."
+
+
+#$How can I pass an object of a C++ class to/from a C function?
+Here's an example:
+
+     /****** C/C++ header file: Fred.h ******/
+     #ifdef __cplusplus    /*"__cplusplus" is #defined if/only-if compiler is C++*/
+       extern "C" {
+     #endif
+
+     #ifdef __STDC__
+       extern void c_fn(struct Fred*);  /* ANSI-C prototypes */
+       extern struct Fred* cplusplus_callback_fn(struct Fred*);
+     #else
+       extern void c_fn();              /* K&R style */
+       extern struct Fred* cplusplus_callback_fn();
+     #endif
+
+     #ifdef __cplusplus
+       }
+     #endif
+
+     #ifdef __cplusplus
+       class Fred {
+       public:
+         Fred();
+         void wilma(int);
+       private:
+         int a_;
+       };
+     #endif
+
+"Fred.C" would be a C++ module:
+
+     #include "Fred.h"
+     Fred::Fred() : a_(0) { }
+     void Fred::wilma(int a) : a_(a) { }
+
+     Fred* cplusplus_callback_fn(Fred* fred)
+     {
+       fred->wilma(123);
+       return fred;
+     }
+"main.C" would be a C++ module:
+     #include "Fred.h"
+     int main()
+     {
+       Fred fred;
+       c_fn(&fred);
+       return 0;
+     }
+"c-fn.c" would be a C module:
+     #include "Fred.h"
+     void c_fn(struct Fred* fred)
+     {
+       cplusplus_callback_fn(fred);
+     }
+Passing ptrs to C++ objects to/from C fns will FAIL if you pass and get back something that 
+isn't EXACTLY the same pointer.  For example, DON'T pass a base class ptr and receive 
+back a derived class ptr, since your C compiler won't understand the pointer conversions 
+necessary to handle multiple and/or virtual inheritance.
+
+
+#$Can my C function access data in an object of a C++ class?
+Sometimes.
+(First read the previous FAQ on passing C++ objects to/from C functions.)
+You can safely access a C++ object's data from a C function if the C++ class:
+ 	* has no virtual functions (including inherited virtual fns)
+ 	* has all its data in the same access-level section (private/protected/public)
+ 	* has no fully-contained subobjects with virtual fns
+If the C++ class has any base classes at all (or if any fully contained subobjects have base 
+classes), accessing the data will TECHNICALLY be non-portable, since class layout under 
+inheritance isn't imposed by the language.  However in practice, all C++ compilers do it the 
+same way: the base class object appears first (in left-to-right order in the event of multiple 
+inheritance), and subobjects follow.
+Furthermore, if the class (or any base class) contains any virtual functions, you can often (but 
+less than always) assume a "void*" appears in the object either at the location of the first 
+virtual function or as the first word in the object.  Again, this is not required by the language, 
+but it is the way "everyone" does it.
+If the class has any virtual base classes, it is even more complicated and less portable.  One 
+common implementation technique is for objects to contain an object of the virtual base class 
+(V) last (regardless of where "V" shows up as a virtual base class in the inheritance 
+hierarchy).  The rest of the object's parts appear in the normal order.  Every derived class that 
+has V as a virtual base class actually has a POINTER to the V part of the final object.
+
+
+#$Why do I feel like I'm "further from the machine" in C++ as opposed to 
+C?
+Because you are.
+As an OOPL, C++ allows you to model the problem domain itself, which allows you to 
+program in the language of the problem domain rather than in the language of the solution 
+domain.
+One of C's great strengths is the fact that it has "no hidden mechanism": what you see is what 
+you get.  You can read a C program and "see" every clock cycle. This is not the case in C++; 
+old line C programmers (such as many of us once were) are often ambivalent (can anyone 
+say, "hostile") about this feature, but they soon realize that it provides a level of abstraction 
+and economy of expression which lowers maintenance costs without destroying run-time 
+performance.
+Naturally you can write bad code in any language; C++ doesn't guarantee any particular level 
+of quality, reusability, abstraction, or any other measure of "goodness."  C++ doesn't try to 
+make it impossible for bad programmers to write bad programs; it enables reasonable 
+developers to create superior software.
+
+
+#$What is the type of "ptr-to-member-fn"?  Is it diffn't from "ptr-to-fn"?
+A member fn of class X has type:  Returntype (X::*)(Argtypes)  while a plain function has type:  
+Returntype (*)   (Argtypes)
+
+
+#$How can I ensure "X"s objects are only created with new, not on the 
+stack?
+Make sure the class's constructors are "private:", and define "friend" or "static" fns that return 
+a ptr to the objects created via "new" (make the constructors "protected:" if you want to allow 
+derived classes). 
+class Fred {   //only want to allow dynamicly allocated Fred's
+     public:
+       static Fred* create()                 { return new Fred();     }
+       static Fred* create(int i)            { return new Fred(i);    }
+       static Fred* create(const Fred& fred) { return new Fred(fred);
+}
+     private:
+       Fred();
+       Fred(int i);
+       Fred(const Fred& fred);
+       virtual ~Fred();
+     };
+
+     main()
+     {
+       Fred* p = Fred::create(5);
+       ...
+       delete p;
+     }
+
+
+#$How do I pass a ptr to member fn to a signal handler,X event 
+callback,etc?
+Don't.
+Because a member function is meaningless without an object to invoke it on, you can't do this 
+directly (if The X Windows System was rewritten in C++, it would probably pass references to 
+OBJECTS around, not just pointers to fns; naturally the objects would embody the required 
+function and probably a whole lot more).
+As a patch for existing software, use a top-level (non-member) function as a wrapper which 
+takes an object obtained through some other technique (held in a global, perhaps).  The top-
+level function would apply the desired member function against the global object.
+E.g., suppose you want to call Fred::memfn() on interrupt:
+     class Fred {
+     public:
+       void memfn();
+       static void staticmemfn();  //a static member fn can handle it
+       //...
+     };
+
+     //wrapper fn remembers the object on which to invoke memfn in a global:
+     Fred* object_which_will_handle_signal;
+     void Fred_memfn_wrapper() {
+object_which_will_handle_signal->memfn(); }
+
+     main()
+     {
+       /* signal(SIGINT, Fred::memfn); */   //Can NOT do this
+       signal(SIGINT, Fred_memfn_wrapper);  //Ok
+       signal(SIGINT, Fred::staticmemfn);   //Also Ok
+     }
+Note: static member functions do not require an actual object to be invoked, so ptrs-to-static-
+member-fns are type compatible with regular ptrs-to-fns (see ARM p.25, 158).
+
+
+#$Why am I having trouble taking the address of a C++ function?
+This is a corollary to the previous FAQ.
+Long answer: In C++, member fns have an implicit parameter which points to the object (the 
+"this" ptr inside the member fn).  Normal C fns can be thought of as having a different calling 
+convention from member fns, so the types of their ptrs (ptr-to-member-fn vs ptr-to-fn) are 
+different and incompatible.  C++ introduces a new type of ptr, called a ptr-to-member, which 
+can be invoked only by providing an object (see ARM 5.5).
+NOTE: do NOT attempt to "cast" a ptr-to-mem-fn into a ptr-to-fn; the result is undefined and 
+probably disastrous.  E.g., a ptr-to- member-fn is NOT required to contain the machine addr 
+of the appropriate fn (see ARM, 8.1.2c, p.158).  As was said in the last example, if you have a 
+ptr to a regular C fn, use either a top-level (non-member) fn, or a "static" (class) member fn.
+
+
+#$How do I declare an array of pointers to member functions?
+Keep your sanity with "typedef".
+     class Fred {
+     public:
+       int f(char x, float y);
+       int g(char x, float y);
+       int h(char x, float y);
+       int i(char x, float y);
+       //...
+     };
+
+     typedef  int (Fred::*FredPtr)(char x, float y);
+
+Here's the array of pointers to member functions:
+
+     FredPtr a[4] = { &Fred::f, &Fred::g, &Fred::h, &Fred::i };
+
+To call one of the member functions on object "fred":
+
+     void userCode(Fred& fred, int methodNum, char x, float y)
+     {
+       //assume "methodNum" is between 0 and 3 inclusive
+       (fred.*a[methodNum])(x, y);
+     }
+
+You can make the call somewhat clearer using a #define:
+     #define  callMethod(object,ptrToMethod)  
+((object).*(ptrToMethod))
+     callMethod(fred, a[methodNum]) (x, y);
+
+
+#$How can I insert/access/change elements from a linked 
+list/hashtable/etc?
+I'll use an "inserting into a linked list" as a prototypical example.  It's easy to allow insertion at 
+the head and tail of the list, but limiting ourselves to these would produce a library that is too 
+weak (a weak library is almost worse than no library).
+This answer will be a lot to swallow for novice C++'ers, so I'll give a couple of options.  The 
+first option is easiest; the second and third are better.
+[1] Empower the "List" with a "current location," and methods such as advance(), backup(), 
+atEnd(), atBegin(), getCurrElem(), setCurrElem(Elem), insertElem(Elem), and removeElem().  
+Although this works in small examples, the notion of "a" current position makes it difficult to 
+access elements at two or more positions within the List (e.g., "for all pairs x,y do the 
+following...").
+[2] Remove the above methods from the List itself, and move them to a separate class, 
+"ListPosition."  ListPosition would act as a "current position" within a List.  This allows multiple 
+positions within the same List.  ListPosition would be a friend of List, so List can hide its 
+innards from the outside world (else the innards of List would have to be publicized via public 
+methods in List). Note: ListPosition can use operator overloading for things like advance() 
+and backup(), since operator overloading is syntactic sugar for normal methods.
+[3] Consider the entire iteration as an atomic event, and create a class template to embodies 
+this event.  This enhances performance by allowing the public access methods (which may be 
+virtual fns) to be avoided during the inner loop.  Unfortunately you get extra object code in the 
+application, since templates gain speed by duplicating code.  For more, see [Koenig, 
+"Templates as interfaces," JOOP, 4, 5 (Sept 91)], and [Stroustrup, "The C++ Programming 
+Language Second Edition," under "Comparator"].
+
+
+#$What's the idea behind "templates"?
+A template is a cookie-cutter that specifies how to cut cookies that all look pretty much the 
+same (although the cookies can be made of various kinds of dough, they'll all have the same 
+basic shape).  In the same way, a class template is a cookie cutter to description of how to 
+build a family of classes that all look basically the same, and a function template describes 
+how to build a family of similar looking functions.
+Class templates are often used to build type safe containers (although this only scratches the 
+surface for how they can be used).
+
+
+#$What's the syntax / semantics for a "function template"?
+Consider this function that swaps its two integer arguments:
+     void swap(int& x, int& y)
+     {
+       int tmp = x;
+       x = y;
+       y = tmp;
+     }
+
+If we also had to swap floats, longs, Strings, Sets, and FileSystems, we'd get pretty tired of 
+coding lines that look almost identical except for the type. Mindless repetition is an ideal job 
+for a computer, hence a function template:
+
+     template<class T>
+     void swap(T& x, T& y)
+     {
+       T tmp = x;
+       x = y;
+       y = tmp;
+     }
+Every time we used "swap()" with a given pair of types, the compiler will go to the above 
+definition and will create yet another "template function" as an instantiation of the above.  
+E.g.,
+     main()
+     {
+       int    i,j;  /*...*/  swap(i,j);  //instantiates a swap for "int"
+       float  a,b;  /*...*/  swap(a,b);  //instantiates a swap for "float"
+       char   c,d;  /*...*/  swap(c,d);  //instantiates a swap for "char"
+       String s,t;  /*...*/  swap(s,t);  //instantiates a swap for "String"
+     }
+(note: a "template function" is the instantiation of a "function template").
+
+
+#$What's the syntax / semantics for a "class template"?
+Consider a container class of that acts like an array of integers:
+     //this would go into a header file such as "Array.h"
+     class Array {
+     public:
+       Array(int len=10)                  : len_(len), data_(new int[len]){}
+      ~Array()                            { delete [] data_; }
+       int len() const                    { return len_;     }
+       const int& operator[](int i) const { data_[check(i)]; }
+             int& operator[](int i)       { data_[check(i)]; }
+       Array(const Array&);
+       Array& operator= (const Array&);
+     private:
+       int  len_;
+       int* data_;
+       int  check(int i) const
+         { if (i < 0 || i >= len_) throw BoundsViol("Array", i, len_);
+           return i; }
+     };
+
+Just as with "swap()" above, repeating the above over and over for Array of float, of char, of 
+String, of Array-of-String, etc, will become tedious.
+
+     //this would go into a header file such as "Array.h"
+     template<class T>
+     class Array {
+     public:
+       Array(int len=10)                : len_(len), data_(new T[len]) { }
+      ~Array()                          { delete [] data_; }
+       int len() const                  { return len_;     }
+       const T& operator[](int i) const { data_[check(i)]; }
+             T& operator[](int i)       { data_[check(i)]; }
+       Array(const Array<T>&);
+       Array& operator= (const Array<T>&);
+     private:
+       int len_;
+       T*  data_;
+       int check(int i) const
+         { if (i < 0 || i >= len_) throw BoundsViol("Array", i, len_);
+           return i; }
+     };
+Unlike template functions, template classes (instantiations of class templates) need to be 
+explicit about the parameters over which they are instantiating:
+
+     main()
+     {
+       Array<int>           ai;
+       Array<float>         af;
+       Array<char*>         ac;
+       Array<String>        as;
+       Array< Array<int> >  aai;
+     }              // ^^^-- note the space; do NOT use
+"Array<Array<int>>"
+                    //       (the compiler sees ">>" as a single token).
+
+
+
+#$What is a "parameterized type"?
+Another way to say, "class templates."
+A parameterized type is a type that is parameterized over another type or some value.  
+List<int> is a type ("List") parameterized over another type ("int")..
+
+
+#$What is "genericity"?
+Yet another way to say, "class templates."
+Not to be confused with "generality" (which just means avoiding solutions which are overly 
+specific), "genericity" means class templates.
+
+
+#$How can I fake templates if I don't have a compiler that supports them?
+The best answer is: buy a compiler that supports templates.  When this is not feasible, the 
+next best answer is to buy or build a template preprocessor (ex: reads C++-with-templates, 
+outputs C++-with-expanded-template-classes; such a system needn't be perfect; it cost my 
+company about three man-weeks to develop such a preprocessor).  If neither of these is 
+feasible, you can use the macro preprocessor to fake templates.  But beware: it's tedious; 
+templates are a better solution wrt development and maintenance costs.
+Here's how you'd declare my "Vec" example from above.  First we define "Vec(T)" to 
+concatenate the name "Vec" with that of the type T (ex: Vec(String) becomes "VecString").  
+This would go into a header file such as Vec.h:
+	#include <generic.h>	//to get the "name2()" macro
+	#define  Vec(T)  name2(Vec,T)
+Next we declare the class Vec(T) using the name "Vecdeclare(T)" (in general you would 
+postfix the name of the class with "declare", such as "Listdeclare" etc):
+	#define Vecdeclare(T)						\
+	class Vec(T) {							\
+	  int  xlen;							\
+	  T*   xdata;							\
+	  int  check(int i);  /*return i if in bounds else throw*/	\
+	public:								\
+	  int       len()             const { return xlen;     }	\
+	  const T&  operator[](int i) const { xdata[check(i)]; }	\
+	        T&  operator[](int i)       { xdata[check(i)]; }	\
+	            Vec(T)(int L=10): xlen(L), xdata(new T[L]) 
+{/*...*/}\
+	           ~Vec(T)()                   { delete [] xdata; }	\
+	};
+Note how each occurrence of "Vec" has the "(T)" postfixed.  Finally we set up another macro 
+that "implements" the non-inline member function(s) of Vec:
+	//strangely enough this can also go into Vec.h
+	#define Vecimplement(T)						\
+	int Vec(T)::check(int i)					\
+	{								\
+	  if (i < 0 || i >= xlen) throw BoundsViol("Vec", i, xlen);	\
+	  return i;							\
+	}
+When you which to use a Vec-of-String and Vec-of-int, you would say:
+	#include "Vec.h"     //pulls in <generic.h> too; see below...
+	declare(Vec,String)  //"declare()" is a macro defined in 
+<generic.h>
+	declare(Vec,int)
+	Vec(String) vs;      //Vec(String) becomes the single token 
+"VecString"
+	Vec(int)    vi;
+In exactly one source file in the system, you must provide implementations for the non-inlined 
+member functions:
+	#include "Vec.h"
+	declare  (Vec,String)   declare  (Vec,int)   declare  
+(Vec,float)
+	implement(Vec,String)   implement(Vec,int)   
+implement(Vec,float)
+Note that types whose names are other than a single identifier do not work properly.  Ex: 
+Vec(char*) creates a class whose name is "Vecchar*".  The patch is to create a typedef for 
+the appropriate type:
+	#include "Vec.h"
+	typedef char* charP;
+	declare(Vec,charP)
+It is important that every declaration of what amounts to "Vec<char*>" must all use exactly 
+the same typedef, otherwise you will end up with several equivalent classes, and you"ll have 
+unnecessary code duplication.  This is the sort of tedium which a template mechanism can 
+handle for you.
+
+
+#$Why are classes with static data members getting linker errors?
+Static data members must be explicitly defined in exactly one module. 
+E.g.,
+     class Fred {
+     public:
+       //...
+     private:
+       static int i_;  //declares static data member "Fred::i_"
+       //...
+     };
+The linker will holler at you ("Fred::i_ is not defined") unless you define (as opposed to 
+declare) "Fred::i_" in (exactly) one of your source files:
+     int Fred::i_ = some_expression_evaluating_to_an_int; or:
+     int Fred::i_;
+The usual place to define static data members of class "Fred" is file "Fred.C" (or "Fred.cpp", 
+etc; whatever filename extension you use).
+
+
+#$What's the difference between the keywords struct and class?
+The members and base classes of a struct are public by default, while in class, they default to 
+private.  Note: you should make your base classes EXPLICITLY public, private, or protected, 
+rather than relying on the defaults.
+"struct" and "class" are otherwise functionally equivalent.
+
+
+#$Why can't I overload a function by its return type?
+If you declare both "char f()" and "float f()", the compiler gives you an error message, since 
+calling simply "f()" would be ambiguous.
+
+
+#$What is "persistence"?  What is a "persistent object"?
+A persistent object can live after the program which created it has stopped. Persistent objects 
+can even outlive different versions of the creating program, can outlive the disk system, the 
+operating system, or even the hardware on which the OS was running when they were 
+created.
+The challenge with persistent objects is to effectively store their method code out on 
+secondary storage along with their data bits (and the data bits and method code of all 
+member objects, and of all their member objects and base classes, etc).  This is non-trivial 
+when you have to do it yourself.  In C++, you have to do it yourself.  C++/OO databases can 
+help hide the mechanism for all this.
+
+
+#$Which newsgroup should I post my questions?
+Comp.lang.c++ is the best place to discuss the C++ language itself (e.g., C++ code design, 
+syntax, style). Other newsgroups exist for discussion of topics which are specific to a 
+particular system (e.g., MS indows or UNIX) or topics which are not directly related to the C++ 
+language (e.g., how to use your compiler). Here's a list of some very active newsgroups and 
+excerpts from their Frequently Asked Questions lists. 
+These excerpts should give you an idea of the type of topics frequently discussed there.
+comp.os.ms-windows.programmer.tools
+This group is intended for discussions about the selection and use of tools for Windows 
+software development.
+comp.os.ms-windows.programmer.misc
+This group is for all other discussions about Windows software development.
+[There's one FAQ list for all the comp.os.ms-windows.programmer.* groups]
+{bmc bullet.mrb}	FAQ 5.7.1. Accessing C++ classes in a DLL
+{bmc bullet.mrb}	FAQ 6.1.1. A dialog as an MDI child window [with OWL]
+{bmc bullet.mrb}	FAQ 6.2.1. Disabled menu choices become enabled [with MFC]
+{bmc bullet.mrb}	FAQ 8.1.5. Using STRICT with windows.h
+{bmc bullet.mrb}	FAQ 10. A programmer's bibliography
+comp.os.msdos.programmer
+Much of the traffic is about language products (chiefly from Borland and Microsoft).
+{bmc bullet.mrb}	FAQ 301. How can I read a character without [waiting for] the Enter 
+key?
+{bmc bullet.mrb}	FAQ 412. How can I read, create, change, or delete the volume label?
+{bmc bullet.mrb}	FAQ 504. How do I configure a COM port and use it to transmit data?
+{bmc bullet.mrb}	FAQ 602. How can a C program send control codes to my printer?
+{bmc bullet.mrb}	FAQ 606. How can I find the Microsoft mouse position and button 
+status?
+{bmc bullet.mrb}	FAQ 707. How can I write a TSR (terminate-stay-resident) utility?
+{bmc bullet.mrb}	FAQ B0. How can I contact [Borland, Microsoft]?
+Note: this FAQ is not available at rtfm.mit.edu; it is at Simtel (e.g., oak.oakland.edu) in 
+/pub/msdos/info/faqp*.zip and Garbo (garbo.uwasa.fi) in /pc/doc-net/faqp*.zip]
+comp.os.msdos.programmer.turbovision [Borland's character-mode framework]
+comp.unix.programmer
+{bmc bullet.mrb}	FAQ 4.5:  How do I use popen() to open a process for reading AND 
+writing?
+{bmc bullet.mrb}	FAQ 4.6:  How do I sleep() in a C program for less than one second?
+comp.unix.solaris (covers SunOS 4.x and Solaris)
+{bmc bullet.mrb}	FAQ 4:  Signal Primer
+{bmc bullet.mrb}	FAQ 5:  Waiting for Children to Exit
+gnu.g++.help
+{bmc bullet.mrb}	FAQ: Where can I find a demangler?
+{bmc bullet.mrb}	FAQ: Getting gcc/g++ binaries for Solaris 2.x
+{bmc bullet.mrb}	FAQ: What documentation exists for g++ 2.x?
+gnu.g++.bug [bug reports for g++ -- see the g++ docs]
+comp.lang.c
+{bmc bullet.mrb}	FAQ 1.10: I'm confused. NULL is guaranteed to be 0, but the null 
+pointer is not?
+{bmc bullet.mrb}	FAQ 2.3:  So what is meant by the "equivalence of pointers and 
+arrays" in C?
+{bmc bullet.mrb}	FAQ 4.2:  [Why doesn't "printf("%d\n," i++ * i++);" work?]
+{bmc bullet.mrb}	FAQ 7.1:  How can I write a function that takes a variable number of 
+arguments? [stdarg.h or varargs.h]
+{bmc bullet.mrb}	FAQ 10.4: How do I declare an array of pointers to functions returning 
+pointers to functions returning pointers to characters?
+Also check out the newsgroups comp.graphics, comp.sources.wanted, comp.programming, 
+and comp.object (its FAQ is an excellent introduction and overview of OOP terms and 
+concepts). 
+Remember that comp.std.c++ is for discussion DIRECTLY related to the evolving ANSI/ISO 
+C++ Standard (see more below). 
+There's rarely a need to crosspost a question to one of the above newsgroups and 
+comp.lang.c++ (readers in the system-specific newsgroups aren't programming in machine 
+language, ya know). It's bad netiquette to crosspost widely because your problem is "really 
+important."  If you don't get an answer in the "right" newsgroup and feel you must post here, 
+at least consider redirecting followups back to the appropriate newsgroup.
+Before posting a question to any newsgroup you should read it's FAQ list. An answer to your 
+question is likely to be there, saving you the time of posting and saving thousands of other 
+people around the world the time of reading your question. People answering a FAQ are likely 
+to be annoyed for having to answer it for the umpteenth time, or they're likely to be giving you 
+a wrong or incomplete answer since they haven't read the FAQ either.
+Frequently Asked Questions lists are available 24-hours a day via anonymous ftp 
+(rtfm.mit.edu in /pub/usenet/comp.what.ever) or e-mail server (send a message with the line 
+"help" to mail-server@rtfm.mit.edu). See the article "Introduction to the *.answers 
+newsgroups" in the newsgroup news.answers or news.announce.newusers (which contains 
+many other must-read articles) for more information.
+
+
+#$How do I post a question about code that doesn't work correctly?
+Here's some guidelines you should follow that will help people reading comp.lang.c++ help 
+you with an answer to your programming problem.
+1.	Please read the previous FAQ to make sure that your question is about the C++ language 
+and not a question about programming on your system (e.g., graphics, printers, devices, 
+etc.) or using your compilation environment (e.g., "the IDE crashes when I...," "how do you 
+turn off warnings about...," "how do I tell it to link my libraries"). If you want to know why 
+your virtual CmOk() function isn't being called in your OWL program, your question is 
+probably more appropriate in the Windows programming newsgroup. If you can write a 
+small stand-alone program which exhibits the same undesired compiler error or behavior 
+as your OWL program, by all means post here in comp.lang.c++ since C++ programmers 
+using other systems could be of help.
+2.	Be descriptive in the subject line. "C++ problem" leaves a lot to the imagination. "Problem 
+new'ing a multi-dimensional array" is good. Refrain from exclamation points, cries for 
+HELPPP, and the once funny "SEX SEX SEX."  If you think the problem is specific to your 
+compiler, you might want to mention the compiler/version in the subject line.
+3.	Post code that is complete and compilable. It's extremely difficult to debug or reconstruct a 
+program from a human language description. By "complete code" I mean that any types 
+and functions used are declared, headers are #include'd, etc. Please strip the code down to 
+the bare essentials. We don't need a program that does something useful at run-time, or 
+even links. We just need to be able to reproduce the undesired compiler error (possibly on 
+a different compiler). By "compilable code" I mean that it doesn't contain a bunch of 
+uncommented ellipses or line numbers at the beginning of each line:
+	14:  #include <iostream.h>
+	15:  class Foo { ... };  // this is annoying
+Try to organize the code into one linear program instead of making us cut out and create 
+header files. Be very careful if you are typing the code into your article -- it's often difficult 
+to tell whether something is a typo or the real cause of the problem. Try using your editor's 
+cut&paste or "insert file" feature instead.
+4.	Mention what compiler, compiler version, and system you're using. I know, I just said that 
+system-specific questions should go to a system-specific newsgroup, but compiler 
+information is often very useful in diagnosing the problem: ("yeah, I remember Acme 1.2 
+having lots of problems in this area"). It also warns other users of that compiler about 
+possible bugs.
+5.	Show us the exact compiler and linker options and libraries you used when building your 
+program.
+6.	List the exact error message and where the error was given. "Virtual functions don't work" 
+doesn't tell us whether its a compile-, link-, or run-time problem. If the problem is at run-
+time, give a good description of the behavior and any relevant information about your 
+system setup.
+7.	Include a working e-mail address in your signature. If the address in given your article's 
+"From:" line is not correct, please notify your system administrator. Until it is fixed, add a 
+"Reply-To:" line to your headers that uses your correct e-mail address.
+8.	Please read the rest of this FAQ -- chances are your problem, or a closely related problem, 
+is discussed here. Thank you and I hope these suggestions help you find a solution to your 
+problem.
+
+
+#$How should I handle resources if my constructors may throw 
+exceptions?
+Every data member inside your object should clean up its own mess.
+If a constructor throws an exception, the object's destructor is NOT run. If your object has 
+already done something that needs to be undone (such as allocating some memory, opening 
+a file, or locking a semaphore), this "stuff that needs to be undone" MUST be remembered by 
+a data member inside the object.
+For example, rather than allocating memory into a raw "Fred*" data member, put the 
+allocated memory into a "smart pointer" member object, and the destructor of this smart 
+pointer will delete the Fred object when the smart pointer dies.
+
+
+#$What do I do if I want to update an "invisible" data member inside a 
+"const" member function?
+Use "mutable", or use "const_cast".
+A small percentage of inspectors need to make innocuous changes to data members
+(e.g., a "Set" object might want to cache its last lookup in hopes of improving the 
+performance of its next lookup). By saying the changes are "inocuous," I mean that the 
+changes wouldn't be visible from outside the object's interface (otherwise the method would 
+be a mutator rather than an inspector).
+When this happens, the data member which will be modified should be marked as "mutable" 
+(put the "mutable" keyword just before the data member's declaration; i.e., in the same place 
+where you could put "const"). This tells the compiler that the data member is allowed to 
+change during a const member function. If you can't use "mutable", you can cast away the 
+constness of "this" via "const_cast". E.g., in "Set::lookup() const", you might say,
+Set* self = const_cast<Set*>(this);
+After this line, "self" will have the same bits as "this" (e.g., "self==this"), but "self" is a "Set*" 
+rather than a "const Set*". Therefore you can use "self" to modify the object pointed to by 
+"this".
+
+
+#$Does "const_cast" mean lost optimization opportunities?
+In theory, yes; in practice, no.
+Even if a compiler outlawed "const_cast", the only way to avoid flushing the register cache 
+across a "const" member function call would be to ensure that there are no non-const pointers 
+that alias the object. This can happen only in rare cases (when the object is constructed in the 
+scope of the const member fn invocation, and when all the non-const member function 
+invocations between the object's construction and the const member fn invocation are 
+statically bound, and when every one of these invocations is also "inline"d, and when the 
+constructor itself is "inline"d, and when any member fns the constructor calls are inline).
+
+
+#$How do you use inheritance in C++, and is that different from 
+Smalltalk?
+Some people believe that the purpose of inheritance is code reuse. In C++, this is wrong. 
+Stated plainly, "inheritance is not 'for' code reuse."
+The purpose of inheritance in C++ is to express interface compliance (subtyping), not to get 
+code reuse. In C++, code reuse usually comes via composition rather than via inheritance. In 
+other words, inheritance is mainly a specification technique rather than an implementation 
+technique.
+This is a major difference with Smalltalk, where there is only one form of inheritance (C++ 
+provides "private" inheritance to mean "share the code but don't conform to the interface", 
+and "public" inheritance to mean "kind-of"). The Smalltalk language proper (as opposed to 
+coding practice) allows you to have the EFFECT of "hiding" an inherited method by providing 
+an override that calls the "does not understand" method. Furthermore Smalltalk allows a 
+conceptual "is-a" relationship to exist APART from the subclassing hierarchy (subtypes don't 
+have to be subclasses; e.g., you can make something that is-a Stack yet doesn't inherit from 
+class Stack).
+In contrast, C++ is more restrictive about inheritance: there's no way to make a "conceptual 
+is-a" relationship without using inheritance (the C++ work-around is to separate interface from 
+implementation via ABCs). The C++ compiler exploits the added semantic information 
+associated with public inheritance to provide static typing.
+
+
+#$What are the practical consequences of the differences in 
+Smalltalk/C++ inheritance?
+Smalltalk lets you make a subtype that isn't a subclass, and allows you to make a subclass 
+that isn't a subtype. This allows Smalltalk programmers to be very carefree in putting data 
+(bits, representation, data structure) into a class (e.g., you might put a linked list into a Stack 
+class). After all, if someone wants an array-based-Stack, they don't have to inherit from 
+Stack; they could inherit such a class from Array if desired, even though an ArrayBasedStack 
+is NOT a kind-of Array!
+In C++, you can't be nearly as carefree. Only mechanism (method code), but not 
+representation (data bits) can be overridden in subclasses. Therefore you're usually better off 
+NOT putting the data structure in a class. This leads to a stronger reliance on Abstract Base 
+Classes (ABCs).
+I like to think of the difference between an ATV and a Maseratti. An ATV (all terrain vehicle) 
+is more fun, since you can "play around" by driving through fields, streams, sidewalks, and 
+the like. A Maseratti, on the other hand, gets you there faster, but it forces you to stay on the 
+road. My advice to C++ programmers is simple: stay on the road. Even if you're one of those 
+people who like the "expressive freedom" to drive through the bushes, don't do it in C++; it's 
+not a good fit.
+
+
+#$Do you need to learn a "pure" OOPL before you learn C++?
+No (in fact, doing so might actually hurt you).
+(Note that Smalltalk is a "pure" OOPL, and C++ is a "hybrid" OOPL). Before reading this, 
+please read the previous FAQs on the difference between C++ and Smalltalk.
+The "purity" of the OOPL doesn't make the transition to C++ any easier. In fact, the typical 
+use of dynamic typing and non-subtyping inheritance can make it even harder for Smalltalk 
+programmers to learn C++. Paradigm Shift, Inc., has taught OO technology to literally 
+thousands of people, and we have noticed that people who want to learn C++ from a 
+Smalltalk background usually have just as hard a time as those who've never seen 
+inheritance before. In fact, those with extensive experience with a dynamically typed OOPL 
+(usually but not always Smalltalk) might even have a HARDER time, since it's harder to 
+UNLEARN habits than it is to learn the statically typed way from the beginning.
+
+
+#$What is the NIHCL?  Where can I get it?
+NIHCL stands for "national-institute-of-health's-class-library." it can be acquired via 
+anonymous ftp from [128.231.128.7] in the file pub/nihcl-3.0.tar.Z
+NIHCL (some people pronounce it "N-I-H-C-L," others pronounce it like "nickel") is a C++ 
+translation of the Smalltalk class library. There are some ways where NIHCL's use of dynamic 
+typing helps (e.g., persistent objects). There are also places where its use of dynamic typing 
+creates tension with the static typing of the C++ language.
+See previous FAQs on Smalltalk for more.
+
+
+#$Where can I get a copy of "STL"?
+"STL" is the "Standard Templates Library". You can get a copy from:
+STL HP official site:	ftp://butler.hpl.hp.com/stl
+STL code alternate:	ftp://ftp.cs.rpi.edu/stl
+STL code + examples:	http://www.cs.rpi.edu/~musser/stl.html
+hacks for GCC-2.6.3:	ftp://ftp.uni-bremen.de/pub/.mount/ruin/C++/STL
+
+
+
+# Which_newsgroup_should_I_post_my_questions_
+$ Which newsgroup should I post my questions?
+# How_do_I_post_a_question_about_code_that_doesn_t_work_correctly_
+$ How do I post a question about code that doesn't work correctly?
+# How_should_I_handle_resources_if_my_constructors_may_throw_exceptions_
+$ How should I handle resources if my constructors may throw exceptions?
+# 
+What_do_I_do_if_I_want_to_update_an__invisible__data_member_inside_a__const__memb
+er_function_
+$ What do I do if I want to update an "invisible" data member inside a "const" member 
+function?
+# Does__const_cast__mean_lost_optimization_opportunities_
+$ Does "const_cast" mean lost optimization opportunities?
+# How_do_you_use_inheritance_in_C____and_is_that_different_from_Smalltalk_
+$ How do you use inheritance in C++, and is that different from Smalltalk?
+# What_are_the_practical_consequences_of_the_differences_in_Smalltalk_C___inheritance_
+$ What are the practical consequences of the differences in Smalltalk/C++ inheritance?
+# Do_you_need_to_learn_a__pure__OOPL_before_you_learn_C___
+$ Do you need to learn a "pure" OOPL before you learn C++?
+# What_is_the_NIHCL___Where_can_I_get_it_
+$ What is the NIHCL?  Where can I get it?
+# Where_can_I_get_a_copy_of__STL__
+$ Where can I get a copy of "STL"?
+# Nomenclature_and_common_abbreviations
+$ Nomenclature and common abbreviations
+# What_books_are_available_for_C___
+$ What books are available for C++?
+# Is_C___backward_compatible_with_ANSI_C_
+$ Is C++ backward compatible with ANSI C?
+# Where_can_I_ftp_a_copy_of_the_latest_ANSI_C___draft_standard_
+$ Where can I ftp a copy of the latest ANSI C++ draft standard?
+# Are_there_any_C___standardization_efforts_underway_
+$ Are there any C++ standardization efforts underway? 
+# Who_uses_C___
+$ Who uses C++? 
+# What_are_some_advantages_of_C___
+$ What are some advantages of C++? 
+# What_is_C_____What_is_OOP_
+$ What is C++?  What is OOP?
+# What_is_a_class_
+$ What is a class?
+# What_is_an_object_
+$ What is an object?
+# What_is_a_reference_
+$ What is a reference?
+# What_happens_if_you_assign_to_a_reference_
+$ What happens if you assign to a reference?
+# How_can_you_reseat_a_reference_to_make_it_refer_to_a_different_object_
+$ How can you reseat a reference to make it refer to a different object?
+# When_should_I_use_references__and_when_should_I_use_pointers_
+$ When should I use references, and when should I use pointers?
+# What_are_inline_fns__What_are_their_advantages__How_are_they_declared_
+$ What are inline fns? What are their advantages? How are they declared?
+# What_is_a_constructor___Why_would_I_ever_use_one_
+$ What is a constructor?  Why would I ever use one?
+# What_are_destructors_really_for___Why_would_I_ever_use_them_
+$ What are destructors really for?  Why would I ever use them?
+# What_is_operator_overloading_
+$ What is operator overloading?
+# What_operators_can_cannot_be_overloaded_
+$ What operators can/cannot be overloaded?
+# Can_I_create_a______operator_for__to_the_power_of__operations_
+$ Can I create a “**' operator for “to-the-power-of' operations?
+# What_is_a__friend__
+$ What is a “friend'?
+# Do__friends__violate_encapsulation_
+$ Do “friends' violate encapsulation
+# What_are_some_advantages_disadvantages_of_using_friends_
+$ What are some advantages/disadvantages of using friends?
+# What_does_it_mean_that__friendship_is_neither_inherited_nor_transitive__
+$ What does it mean that “friendship is neither inherited nor transitive'?
+# When_would_I_use_a_member_function_as_opposed_to_a_friend_function_
+$ When would I use a member function as opposed to a friend function?
+# How_can_I_provide_printing_for_a__class_X__
+$ How can I provide printing for a “class X'?
+# Why_should_I_use__iostream_h__instead_of_the_traditional__stdio_h__
+$ Why should I use <iostream.h> instead of the traditional <stdio.h>?
+# Printf_scanf_weren_t_broken__why__fix__them_with_ugly_shift_operators_
+$ Printf/scanf weren't broken; why “fix' them with ugly shift operators?
+# Does__delete_ptr__delete_the_ptr_or_the_pointed_to_data_
+$ Does “delete ptr' delete the ptr or the pointed-to-data?
+# Can_I_free___ptrs_alloc_d_with__new__or__delete__ptrs_alloc_d_w__malloc___
+$ Can I free() ptrs alloc'd with “new' or “delete' ptrs alloc'd w/ malloc()?
+# Why_should_I_use__new__instead_of_trustworthy_old_malloc___
+$ Why should I use “new' instead of trustworthy old malloc()?
+# Why_doesn_t_C___have_a__realloc____along_with__new__and__delete__
+$ Why doesn't C++ have a “realloc()' along with “new' and “delete'?
+# How_do_I_allocate___unallocate_an_array_of_things_
+$ How do I allocate / unallocate an array of things?
+# What_if_I_forget_the______when__delete_ing_array_allocated_via__new_X_n___
+$ What if I forget the “[]' when “delete'ing array allocated via “new X[n]'?
+# What_s_the_best_way_to_create_a___define_macro__for__NULL__in_C___
+$ What's the best way to create a “#define macro_ for _NULL_ in C___
+# How_can_I_handle_a_constructor_that_fails_
+$ How can I handle a constructor that fails?
+# How_can_I_compile_out_my_debugging_print_statements_
+$ How can I compile-out my debugging print statements?
+# What_is__const_correctness__
+$ What is “const correctness'?
+# Is__const_correctness__a_good_goal_
+$ Is “const correctness' a good goal?
+# Is__const_correctness__tedious_
+$ Is “const correctness' tedious?
+# Should_I_try_to_get_things_const_correct__sooner__or__later__
+$ Should I try to get things const correct “sooner' or “later'?
+# What_is_a__const_member_function__
+$ What is a “const member function'?
+# What_is_an__inspector____What_is_a__mutator__
+$ What is an “inspector'?  What is a “mutator'?
+# What_is__casting_away_const_in_an_inspector__and_why_is_it_legal_
+$ What is “casting away const in an inspector' and why is it legal?
+# But_doesn_t__cast_away_const__mean_lost_optimization_opportunities_
+$ But doesn't 'cast away const' mean lost optimization opportunities?
+# What_is_inheritance_
+$ What is inheritance?
+# Ok__ok__but_what_is_inheritance_
+$ Ok, ok, but what is inheritance?
+# How_do_you_express_inheritance_in_C___
+$ How do you express inheritance in C++?
+# What_is__incremental_programming__
+$ What is “incremental programming'?
+# Should_I_pointer_cast_from_a_derived_class_to_its_base_class_
+$ Should I pointer-cast from a derived class to its base class?
+# Derived______Base__works_ok__why_doesn_t_Derived_______Base___work_
+$ Derived* --> Base* works ok; why doesn't Derived** --> Base** work?
+# Does_array_of_Derived_is_NOT_a_kind_of_array_of_Base_mean_arrays_are_bad_
+$ Does array-of-Derived is-NOT-a-kind-of array-of-Base mean arrays are bad?
+# What_is_a__virtual_member_function__
+$ What is a “virtual member function'?
+# What_s_the_big_deal_of_separating_interface_from_implementation_
+$ What's the big deal of separating interface from implementation?
+# What_is_dynamic_dispatch___Static_dispatch_
+$ What is dynamic dispatch?  Static dispatch?
+# Can_I_override_a_non_virtual_fn_
+$ Can I override a non-virtual fn?
+# Can_I__revoke__or__hide__public_member_fns_inherited_from_my_base_class_
+$ Can I “revoke' or “hide' public member fns inherited from my base class?
+# Is_a__Circle__a_kind_of_an__Ellipse__
+$ Is a “Circle' a kind-of an “Ellipse'?
+# Are_there_other_options_to_the__Circle_is_isnot_kind_of_Ellipse__dilemma_
+$ Are there other options to the “Circle is/isnot kind-of Ellipse' dilemma?
+# Why_can_t_I_access__private__things_in_a_base_class_from_a_derived_class_
+$ Why can't I access “private' things in a base class from a derived class?
+# What_s_the_difference_between__public_____private____and__protected___
+$ What's the difference between “public:', “private:', and “protected:'?
+# How_can_I_protect_subclasses_from_breaking_when_I_change_internal_parts_
+$ How can I protect subclasses from breaking when I change internal parts?
+# Why_does_base_ctor_get__base__s_virtual_fn_instead_of_the_derived_version_
+$ Why does base ctor get *base*'s virtual fn instead of the derived version?
+# Does_a_derived_class_dtor_need_to_explicitly_call_the_base_destructor_
+$ Does a derived class dtor need to explicitly call the base destructor?
+# How_do_you_express__private_inheritance__
+$ How do you express “private inheritance'?
+# How_are__private_derivation__and__containment__similar__dissimilar_
+$ How are “private derivation' and “containment' similar? dissimilar?
+# Should_I_pointer_cast_from_a__privately__derived_class_to_its_base_class_
+$ Should I pointer-cast from a “privately' derived class to its base class?
+# Should_I_pointer_cast_from_a__protected__derived_class_to_its_base_class_
+$ Should I pointer-cast from a “protected' derived class to its base class?
+# What_are_the_access_rules_with__private__and__protected__inheritance_
+$ What are the access rules with “private' and “protected' inheritance?
+# Do_most_C___programmers_use_containment_or_private_inheritance_
+$ Do most C++ programmers use containment or private inheritance?
+# How_do_I_separate_interface_from_implementation_in_C____like_Modula_2__
+$ How do I separate interface from implementation in C++ (like Modula-2)?
+# What_is_an_ABC___abstract_base_class___
+$ What is an ABC (“abstract base class')?
+# What_is_a__pure_virtual__member_function_
+$ What is a “pure virtual' member function?
+# How_can_I_provide_printing_for_an_entire_hierarchy_rooted_at__class_X__
+$ How can I provide printing for an entire hierarchy rooted at “class X'?
+# What_is_a__virtual_destructor__
+$ What is a “virtual destructor'?
+# What_is_a__virtual_constructor__
+$ What is a “virtual constructor'?
+# What_are_some_good_C___coding_standards_
+$ What are some good C++ coding standards?
+# Are_coding_standards_necessary___sufficient_
+$ Are coding standards necessary?  sufficient?
+# Should_our_organization_determine_coding_standards_from_our_C_experience_
+$ Should our organization determine coding standards from our C experience?
+# Should_I_declare_locals_in_the_middle_of_a_fn_or_at_the_top_
+$ Should I declare locals in the middle of a fn or at the top?
+# What_source_file_name_convention_is_best___foo_C____foo_cc____foo_cpp__
+$ What source-file-name convention is best? “foo.C'? “foo.cc'? “foo.cpp'?
+# What_header_file_name_convention_is_best___foo_H____foo_hh____foo_hpp__
+$ What header-file-name convention is best? “foo.H'? “foo.hh'? “foo.hpp'?
+# Are_there_any_lint_like_guidelines_for_C___
+$ Are there any lint-like guidelines for C++?
+# Why_does_C___s_FAQ_have_a_section_on_Smalltalk__Is_this_Smalltalk_bashing_
+$ Why does C++'s FAQ have a section on Smalltalk? Is this Smalltalk-bashing?
+# What_s_the_difference_between_C___and_Smalltalk_
+$ What's the difference between C++ and Smalltalk?
+# What_is__static_typing___and_how_is_it_similar_dissimilar_to_Smalltalk_
+$ What is “static typing', and how is it similar/dissimilar to Smalltalk?
+# Which_is_a_better_fit_for_C_____static_typing__or__dynamic_typing__
+$ Which is a better fit for C++: “static typing' or “dynamic typing'?
+# How_can_you_tell_if_you_have_a_dynamically_typed_C___class_library_
+$ How can you tell if you have a dynamically typed C++ class library?
+# Will__standard_C____include_any_dynamic_typing_primitives_
+$ Will “standard C++' include any dynamic typing primitives?
+# What_is_value_and_or_reference_semantics__and_which_is_best_in_C___
+$ What is value and/or reference semantics, and which is best in C++?
+# What_is__virtual_data___and_how_can___why_would_I_use_it_in_C___
+$ What is “virtual data', and how-can / why-would I use it in C++?
+# What_s_the_difference_between_virtual_data_and_dynamic_data_
+$ What's the difference between virtual data and dynamic data?
+# Should_class_subobjects_be_ptrs_to_freestore_allocated_objs__or_contained_
+$ Should class subobjects be ptrs to freestore allocated objs, or contained?
+# What_are_relative_costs_of_the_3_performance_hits_of_allocated_subobjects_
+$ What are relative costs of the 3 performance hits of allocated subobjects?
+# What_is_an__inline_virtual_member_fn____Are_they_ever_actually__inlined__
+$ What is an “inline virtual member fn'?  Are they ever actually “inlined'?
+# Sounds_like_I_should_never_use_reference_semantics__right_
+$ Sounds like I should never use reference semantics, right?
+# Does_the_poor_performance_of_ref_semantics_mean_I_should_pass_by_value_
+$ Does the poor performance of ref semantics mean I should pass-by-value?
+# How_can_I_call_a_C_function__f____from_C___code_
+$ How can I call a C function “f()' from C++ code?
+# How_can_I_create_a_C___function__f____that_is_callable_by_my_C_code_
+$ How can I create a C++ function “f()' that is callable by my C code?
+# Why_s_the_linker_giving_errors_for_C_C___fns_being_called_from_C___C_fns_
+$ Why's the linker giving errors for C/C++ fns being called from C++/C fns?
+# How_can_I_pass_an_object_of_a_C___class_to_from_a_C_function_
+$ How can I pass an object of a C++ class to/from a C function?
+# Can_my_C_function_access_data_in_an_object_of_a_C___class_
+$ Can my C function access data in an object of a C++ class?
+# Why_do_I_feel_like_I_m__further_from_the_machine__in_C___as_opposed_to_C_
+$ Why do I feel like I'm “further from the machine' in C++ as opposed to C?
+# What_is_the_type_of__ptr_to_member_fn____Is_it_diffn_t_from__ptr_to_fn__
+$ What is the type of “ptr-to-member-fn'?  Is it diffn't from “ptr-to-fn'?
+# How_can_I_ensure__X_s_objects_are_only_created_with_new__not_on_the_stack_
+$ How can I ensure “X's objects are only created with new, not on the stack?
+# How_do_I_pass_a_ptr_to_member_fn_to_a_signal_handler_X_event_callback_etc_
+$ How do I pass a ptr to member fn to a signal handler,X event callback,etc?
+# Why_am_I_having_trouble_taking_the_address_of_a_C___function_
+$ Why am I having trouble taking the address of a C++ function?
+# How_do_I_declare_an_array_of_pointers_to_member_functions_
+$ How do I declare an array of pointers to member functions?
+# How_can_I_insert_access_change_elements_from_a_linked_list_hashtable_etc_
+$ How can I insert/access/change elements from a linked list/hashtable/etc?
+# What_s_the_idea_behind__templates__
+$ What's the idea behind “templates'?
+# What_s_the_syntax___semantics_for_a__function_template__
+$ What's the syntax / semantics for a “function template'?
+# What_s_the_syntax___semantics_for_a__class_template__
+$ What's the syntax / semantics for a “class template'?
+# What_is_a__parameterized_type__
+$ What is a “parameterized type'?
+# What_is__genericity__
+$ What is “genericity'?
+# How_can_I_fake_templates_if_I_don_t_have_a_compiler_that_supports_them_
+$ How can I fake templates if I don't have a compiler that supports them?
+# Why_are_classes_with_static_data_members_getting_linker_errors_
+$ Why are classes with static data members getting linker errors?
+# What_s_the_difference_between_the_keywords_struct_and_class_
+$ What's the difference between the keywords struct and class?
+# Why_can_t_I_overload_a_function_by_its_return_type_
+$ Why can't I overload a function by its return type?
+# What_is__persistence____What_is_a__persistent_object__
+$ What is “persistence'?  What is a “persistent object'?

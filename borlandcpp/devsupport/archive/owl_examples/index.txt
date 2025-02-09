@@ -1,0 +1,66 @@
+/borlandcpp/devsupport/archive/owl_examples
+
+File     Ext     Size   Date     Time   Description
+------   ---     ------ -------- ------ -------------------------------------------------------------
+256capp  zip     158490 10/06/92 05:14p OWL 256 color Bitmap example
+3dbttn   zip       5006 06/29/93 04:00p Uses BWCC to add a 3 state bitmap button to a TDialog in OWL
+acchelp  zip       2860 10/06/92 05:14p OWL Example of Accelerators
+bi7      zip      12685 08/28/95 10:01a How to create a TEdit with default selected text.
+bi8      zip      12931 08/28/95 10:01a How to use OWL2 TApplication::PumpWaitingMessages
+bitsave  zip       4145 06/23/93 09:00a Save bitmap to memory DC using Bitblt CreatCompatibleDC
+childdlg zip       2875 01/05/93 11:47a OWL Example of Child Dialog
+combtr   zip      20916 08/06/92 08:24a Addresses problems in ComboBox transfer in BC3.1 OWL
+copylz   zip       3865 09/02/93 03:42p Uses Windows API  LZOpenFile and LZCopy to copy file
+ctlbar   zip     128404 09/24/92 01:12p Bar Chart Custom Controls; Sizable Text Custom Controls
+ctldlt   zip      94460 09/21/92 03:35p Dialog box with Colored Rectangle CC and Digital Display CC
+ctlpct   zip     344080 09/25/92 09:45a Custom control to display 256 color bitmaps
+ctltxt   zip      37019 10/06/92 05:14p OWL Custom control example
+ddispatc zip       3512 12/05/91 12:17p How OWL does dynamic dispatch virtual table's (DDVT's).
+dlgicon  zip       1488 10/06/92 05:14p OWL example Uses a Dialog and Icon
+dlgmain  zip      54488 10/06/92 05:14p OWL example Makes a Dialog the main Window
+dualdial zip       4117 05/21/93 04:54p OWL posting/responding messages to show and hide child windo
+dynmenu  zip       5785 01/23/93 12:00p OWL dynamic menu manipulation Appends to Popup menu
+fontcdlg zip       5169 10/06/92 05:14p OWL example with Font common dialog example
+groups   zip       1309 03/12/92 11:19a OWL 2 example of DDE to ProgMan to install BC4 icons.
+lallen   zip     108084 12/30/93 04:12p Modifications to code.  I've included the DLL and EXE
+lboxtran zip       3194 10/27/93 07:00a Two sets of ListBoxData used with transfer mechanism
+logo     zip      19364 01/19/93 11:02a Displays a logo bitmap splashscreen at start of application
+logo2    zip      21445 05/13/93 02:15p Bitmap splashscreen is displayed while main window is hidden
+mdiall   zip     138585 05/28/93 06:14p OWL: modify an MDI app: sets hook, uses MDIS_ALLCHILDSTYLES
+mdibar   zip       5309 10/06/92 05:14p OWL MDI ToolBar example
+mdidlg   zip       2699 10/06/92 05:14p OWL Keyboard handling in MDI child DLG
+mdimenu  zip       4762 12/17/92 02:59p OWL MDI example that modifies menu dependent on current chil
+mpd      zip      60153 01/12/94 01:07p A multiple-page dialog example using OWL 2
+o2acchlp zip       4539 01/20/94 01:16p OWL 2 examples of using accelerators.
+o2mdidlg zip       6696 01/20/94 07:32a OWL 2 example of dialog in MDI.
+o2mdimnu zip       5680 01/20/94 07:32a OWL 2 example of each MDI child adding their own menus.
+o2splash zip       5181 01/19/94 02:24p OWL 2 example of creating a splash screen similar to BC4.
+opencdlg zip      65159 10/06/92 05:14p OWL File Open common dialog
+owmdlg   zip       2613 04/28/92 03:09p Keyboard Handling within child Dialogs in an OWL MDI App.
+ownerlb  zip       5950 01/19/94 02:24p An OWL 2 example of owner-drawn listbox
+owl2dib  zip     129771 01/19/94 02:23p OWL 2 example of displaying a .BMP and printing a .BMP
+owlbwcc  zip     110900 01/26/93 12:03p Borland Windows Custom Control using ObjectWindows and BC++
+owlcct   zip     169288 08/17/92 09:12a Custom controls that interface with the Resource Workshop
+owldlgs  zip      32706 01/12/92 01:36p Seven examples of using dialog boxes
+owldrp   zip      63518 12/09/92 12:49p How to make a drag and drop server
+owlhoo   zip      79016 10/30/92 02:10p Uses Windows hook function to hook the keyboard
+owllst   zip      79255 10/06/92 05:14p OWL Owner-draw listbox
+owlopn   zip      70752 01/07/93 07:40a OWL program
+owlsnd   zip      88910 10/06/92 05:14p OWL Plays simple musical notes
+owlsound zip       6203 01/26/93 12:03p Output a song from within Windows to the normal PC speaker
+owltim   zip      78504 12/09/92 12:51p Demonstrates hooking the multimedia timer using timeSetEvent
+owlwav   zip      70474 10/30/92 12:17p Demonstrates playing wav files using MCI string commands
+owlxfr   zip      10882 01/22/93 02:42p Example of using OWL transfer
+scroller zip       2770 12/28/93 08:20a Defines type TScroller
+sdibar   zip       5138 01/20/94 07:28a OWL 2 example of simple SDI app. with tool and status bar.
+sndwave  zip      60235 10/06/92 05:14p OWL Listbox to play .WAV files
+stsbar   zip      32584 12/17/93 08:29a Status bar example
+tlclas   zip      42359 12/17/93 08:25a Status bar, toolbar example
+transmdi zip       4093 07/19/93 06:45a Uses MDIS_ALLCHILDSTYLES to set child style in an MDI app
+transp   zip       4011 05/28/93 09:08a An MDI APP example that creates a transparent child window
+trantest zip     101196 10/06/92 05:14p OWL Transfer buffer example
+uae      zip      69605 08/31/93 03:30p Uses Windows API InterruptRegister to catch GP fault
+validate zip       3408 01/05/93 11:38a OWL Example of control validation
+wstop    zip        934 10/06/92 05:14p OWL: Example of TOPMOST Window
+xfer     zip      39729 10/06/92 05:14p OWL: Another Transfer buffer example
+

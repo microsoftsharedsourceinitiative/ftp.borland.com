@@ -1,0 +1,32 @@
+/borlandcpp/devsupport/archive/dpmi
+
+File     Ext     Size   Date     Time   Description
+------   ---     ------ -------- ------ -------------------------------------------------------------
+32isr    zip       1 Kb 11/6/96  5:00 p Adding and removing an interrupt handler in DPMI32    
+bueh16   zip      22 Kb 11/6/96  5:00 p Example of the Borland Unresolved Entry Hook
+callit   zip      45 Kb 11/6/96  5:00 p Demonstrates calling a real mode procedure from protected 
+                                        mode and passes it a real mode callback address. 
+cbreak   zip       1122 03/12/92 10:35a Implements CTL-C/SCROLL-LOCK/BREAK sensitive keyboard handle
+d32dll   zip       1 Kb 11/6/96  5:00 p Demonstrates loading a 32-bit .dll in DPMI32.
+d32hook  zip       3 Kb 11/6/96  5:00 p Demonstrates thuning from DPMI32.
+dpi07    zip       3 Kb 11/6/96  5:00 p Borland Powerpak and DPMI Q and A.
+dpiinst  exe      34 Kb 11/6/96  5:00 p DPMI server installer.
+dpip1    zip     135 Kb 11/6/96  5:00 p DPMI Spec in PostScript format.
+dpiv1    zip      56 Kb 11/6/96  5:00 p DPMI Spec in .txt format.
+fl2pp    zip       7 Kb 11/6/96  5:00 p Implements a few of the Phar Lapp DOS extender API functions 
+                                        using the PowerPak DPMI interrupts.
+int32    zip       5 Kb 11/6/96  5:00 p Library for creating thunks for interrupt functions in 32bit
+                                        DOS extended applications.
+isr71    zip      19 Kb 11/6/96  5:00 p An example interrupt handler for DPMI.
+linear   zip       2 Kb 11/6/96  5:00 p An example of mapping physical memory into process space and 
+                                        addressing it via a 32-bit near offset from DS.
+m32      zip       1 Kb 11/6/96  5:00 p An example mouse interrupt handler for DPMI.
+mouse32  zip       2 Kb 11/6/96  5:00 p An example mouse handler for DPMI 16/32.
+pp10e1   zip      41 Kb 11/6/96  5:00 p Four example programs for DPMI.
+pwrpak   zip     126000 02/13/95 00:00a Documentation for PowerPak
+rseg16   zip       3 Kb 11/6/96  5:00 p Demonstrates allocating a real/protected mode buffer that a 
+                                        real mode interrupt handler can access.
+rtldlx   zip      10 Kb 11/6/96  5:00 p Generates a DLL for use with DPMI-16 on a machine without
+                                        a floating point coprocessor.
+tduser   zip      54 Kb 11/6/96  5:00 p DLL for use with TurboDebugger in DPMI 16 & 32.
+

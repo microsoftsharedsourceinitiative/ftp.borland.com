@@ -1,0 +1,7 @@
+/borlandcpp/devsupport/patches/tasm
+
+File     Ext     Size   Date     Time   Description
+------   ---     ------ -------- ------ -------------------------------------------------------------
+ta4p01   zip      50000 12/06/95 00:00a Tasm 4.0 patch 1, fixes long file names (use under Win95)
+
+
